@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
 const Header = () => {
     return <div className="row navbar-light bg-light">
         <div className="col-6">

@@ -5,13 +5,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './Components/header';
-import LogInPaciente from "./Paginas/Pacientes/LogInPaciente";
+import Rutas from "./Rutas/Rutas";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
-    <LogInPaciente/>
+    <Rutas/>
     
   </React.StrictMode>
 );
