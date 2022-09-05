@@ -1,21 +1,35 @@
 .containerPrincipal {
-  position:absolute;
+    position:absolute;
+    padding: 70px;
+    padding-right: 10%;
+    padding-top: 1.5%;
+    padding-left: 3%;
     left: 50%;
     top: 50%;
+    align-items: center;
+    align-content: center;
     transform: translate(-50%, -50%);
-    border-radius: 4%;
-    border: 1px solid blue;
-    padding: 80px;
-    background-color: white;
+    border-radius: 6%;
+    border: 1px solid rgb(255, 255, 255);
+
+    background-color: rgb(119, 119, 119);
 }
 
 .containerSecundario{
+  
   text-align: center;
+  align-items: center;
 }
 
 .titulo{
+  color: azure;
   font-size:  35px;
   text-align: left;
   font-weight: bold;
+  padding-bottom: 5%;
+}
 
+.form-control{
+  position:relative;
+  
 }
