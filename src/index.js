@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import Header from './Components/header';
 import Rutas from "./Rutas/Rutas";
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
