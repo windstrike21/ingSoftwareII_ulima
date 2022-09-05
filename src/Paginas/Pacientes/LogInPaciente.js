@@ -1,42 +1,39 @@
 import { render } from '@testing-library/react';
 import React, {Component} from 'react';
+import '../../css/LogIn.css';
 
 const LogInPaciente = () => {
   return (
-      <div className='coutainerPrincipal'>
+      <div className='containerPrincipal'>
         <div className='containerSecundario'>
           <div className='form-group'>
 
-            <label> Tipo documento</label>
-            <br/>
-            <input type="text" className='form-control'/>
-            <br/>
+            <h1 className='titulo'>Bienvenido</h1>
 
-            <label> Nro de documento</label>
-            <br/>
-            <input type="text" className='form-control'/>
-            <br/>
+            <input type="text" className='form-control' placeholder='Tipo documento'/>
 
-            <label> Contraseña </label>
             <br/>
-            <input type="password" className='form-control'/>
+            <input type="text" className='form-control' placeholder='Nro de documento'/>
+
+            <br/>
+            <input type="password" className='form-control' placeholder='Contraseña'/>
             <br/>
 
             <label> Código Captcha </label>
             <br/>
 
-            <label> Código Captcha </label>
+
             <br/>
-            <input type="password" className='form-control'/>
+            <input type="password" className='form-control' placeholder='Código Captcha'/>
             <br/>
 
             <botton className = "btn btn-primary"> Iniciar Sesión</botton>
+            <br/>
             <br/>
             <label> ¿Olvidaste tu contraseña? </label>
             <br/>
-
-            <botton className = "btn btn-primary"> Iniciar Sesión</botton>
-
+            <botton className = "btn btn-primary"> Registrate</botton>
+            
           </div>
         </div>
       </div>
