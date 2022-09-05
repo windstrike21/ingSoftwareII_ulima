@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import Modal1 from './modals/modal_Registrar1';
-import Modal2 from './modals/modal_Registrar2';
-import Modal3 from './modals/modal_Delete';
+import Modal1 from "../Personal/modals/modal_Registrar1";
+import Modal2 from "../Personal/modals/modal_Registrar2";
+import Modal3 from "../Personal/modals/modal_Delete";
+import Modal4 from "../Personal/Actualizar hoja filiacion";
 
 function Registro_Personal() {
+  const [modalOpen4, setModalOpen4] = useState(false);
   const [modalOpen3, setModalOpen3] = useState(false);
   const [modalOpen1, setModalOpen1] = useState(false);
   const [modalOpen2, setModalOpen2] = useState(false);
@@ -11,30 +13,32 @@ function Registro_Personal() {
   return (
     <div className="Registro_Personal mt-5">
 
-      <h1>Registro De Afiliación</h1>
+      <div className="d-grid gap-2 col-6 mx-auto">
+        <h1>Registro De Afiliación</h1>
+      </div>
       
-      <div className="container border 2px mt-3">
-      <div className="container mt-3">
+      <div className="d-grid gap-2 col-6 mx-auto">
+      <div className="row mt-3">
       <button
-        className="openModalBtn" role="dialog"
+        className="openModalBtn  btn btn-md btn-primary" role="dialog"
         onClick={() => {
           setModalOpen1(true);
         }}
       >
-       Abrir modal 1 - Registrar
+       Registrar Paciente
       </button>
       {modalOpen1 && <Modal1 setOpenModal1={setModalOpen1} />}
       </div>
 
 
-      <div className="container mt-3">
+      <div className="row mt-3">
       <button
-        className="openModalBtn"
+        className="openModalBtn mb-3 btn btn-md btn-primary"
         onClick={() => {
           setModalOpen2(true);
         }}
       >
-       Abrir modal 2 - Siguiente 
+      Siguiente 
       </button>
       
       {modalOpen2 && <Modal2 setOpenModal2={setModalOpen2} />}
@@ -54,12 +58,21 @@ function Registro_Personal() {
             Codigo usuario 
           </div>
         </td>
-        <td>    
-          <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#ModalShow3">
-            Hoja de Afiliado
-          </button>
+        <td> 
+        <div className="container d-grid gap-2 "> 
+        <button
+            className = "openModalBtn btn btn-md btn-primary" 
+            onClick   = {() => {
+            setModalOpen4(true);
+            }}
+      >
+            Abrir modal 3 - Ver hoja de Afiliación
+            </button>
+             {modalOpen4 && <Modal4 setOpenModal4={setModalOpen4} />}
+            
+            
             <button
-            className = "openModalBtn btn btn-danger" 
+            className = "openModalBtn btn btn-md  btn-danger" 
             onClick   = {() => {
             setModalOpen3(true);
             }}
@@ -67,6 +80,7 @@ function Registro_Personal() {
             Abrir modal 3 - Eliminar
             </button>
              {modalOpen3 && <Modal3 setOpenModal3={setModalOpen3} />}
+             </div> 
         </td>
       </tr>
     </tbody>
