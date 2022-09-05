@@ -7,40 +7,52 @@ import '../../css/LogIn.css';
 const LogInPaciente = () => {
   
   return (
-    
-      <div className='containerPrincipal'>
-        <div className='containerSecundario'>
-          <div className='form-group'>
+  <body className='logpaciente'>
+    <div className='container rounded-4 '>
+      <div class = "row align-items-stretch px-5 ">
+        <div class = "col d-lg-block col-md-5"></div>
+          <h2 class ="titulo fw-bold py-4">Bienvenido</h2>
 
-            <h1 className='titulo'>Bienvenido</h1>
+          <form action='#'>
+            <div class="mb-4">
+              <input type="text" className='form-control' placeholder='Tipo documento'/>
+            </div>
 
-            <input type="text" className='form-control' placeholder='Tipo documento'/>
+            <div class="mb-4">
+              <input type="text" className='form-control' placeholder='Nro de documento'/>
+            </div>
 
-            <br/>
-            <input type="text" className='form-control' placeholder='Nro de documento'/>
+            <div class="mb-4">
+              <input type="password" className='form-control' placeholder='Contraseña'/>
+            </div>
 
-            <br/>
-            <input type="password" className='form-control' placeholder='Contraseña'/>
-            <br/>
+            <div>
+              <label> Código Captcha </label>
+              <input type="password" className='form-control' placeholder='Código Captcha'/>
+              <br></br>
+            </div>
 
-            <label> Código Captcha </label>
-            <br/>
+            <div class="d-grid">
+              <botton type="submit" class="btn btn-primary"> INICIAR SESIÓN</botton>
+            </div>
+
+            <div class="my-3">
+              <span><a href='#'>¿Olvidaste tu Contraseña?</a></span>
+            </div>
+
+            <div class="d-grid">
+              <botton type="submit" class="btn btn-primary"> Registrate ahora</botton>
+            </div>
 
 
-            <br/>
-            <input type="password" className='form-control' placeholder='Código Captcha'/>
-            <br/>
 
-            <botton className = "btn btn-primary"> Iniciar Sesión</botton>
-            <br/>
-            <br/>
-            <label> ¿Olvidaste tu contraseña? </label>
-            <br/>
-            <botton className = "btn btn-primary"> Registrate</botton>
-            
-          </div>
-        </div>
+          </form>
+
+
       </div>
+
+    </div>
+  </body>
   );
 }
 
