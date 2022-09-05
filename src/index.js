@@ -4,14 +4,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
 import Header from "./Components/header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Carousel from "./Components/Personal/Carousel";
 import ContenidoInferior from "./Components/Personal/ContenidoInferior";
+=======
+import Header from './Components/header';
+import Rutas from "./Rutas/Rutas";
+
+>>>>>>> 060f520a121de154edb769c7c69b75b43670654c
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <Router>
       
         <Header />
@@ -30,6 +37,10 @@ root.render(
         <div className="col-2"></div>
       </div>
     </div>
+=======
+    <Rutas/>
+    
+>>>>>>> 060f520a121de154edb769c7c69b75b43670654c
   </React.StrictMode>
 );
 
