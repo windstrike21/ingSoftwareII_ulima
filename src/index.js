@@ -9,9 +9,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import indexPersonal from "./Paginas/Personal/canalSoporte";
 import ChatArea from "./Components/Personal/ChatArea";
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <Router>
       <Header />
     </Router>
@@ -25,6 +27,9 @@ root.render(
             <div className="col-2"></div>
         </div>
     </div>
+=======
+    <Header />
+>>>>>>> 2fa99ab8f512883d27b5c7c4c09905a4c96122be
   </React.StrictMode>
 );
 
