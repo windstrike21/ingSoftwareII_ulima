@@ -4,43 +4,27 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-<<<<<<< HEAD
 import Header from "./Components/header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Carousel from "./Components/Personal/Carousel";
-import ContenidoInferior from "./Components/Personal/ContenidoInferior";
-=======
-import Header from './Components/header';
-import Rutas from "./Rutas/Rutas";
+import ChatArea from "./Components/Personal/ChatArea"
 
->>>>>>> 060f520a121de154edb769c7c69b75b43670654c
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<<<<<<< HEAD
     <Router>
-      
-        <Header />
-      
+      <Header />
     </Router>
     <div className="px-4 py-3">
       <div className="row py-2 bg-light">
+        <h3 className="text-center mt-2 mb-3"><b>Chatea con soporte técnico</b></h3>
         <div className="col-2"></div>
-        <div className="col-8">
-          <h1 className="text-center mt-2 mb-4">Bienvenido @getusername</h1>
-          <Carousel />
-          <br />
-          <h2 className="text-center mt-3 mb-4">Texto de relleno para la página principal...</h2>
-          <ContenidoInferior />
+        <div className="col-8 bg-white rounded-4 border border-secondary shadow">
+          <ChatArea />
         </div>
         <div className="col-2"></div>
       </div>
     </div>
-=======
-    <Rutas/>
-    
->>>>>>> 060f520a121de154edb769c7c69b75b43670654c
   </React.StrictMode>
 );
 
