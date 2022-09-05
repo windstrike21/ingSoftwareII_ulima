@@ -1,49 +1,38 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
-    return <div className="row navbar-light bg-light">
-        <div className="col-6">
-            <nav className="navbar navbar-expand-lg">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Logo</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" key="navbarNavDropdown">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" key="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Pacientes
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a className="dropdown-item" href="#">Consultar</a></li>
-                                    <li><a className="dropdown-item" href="#">Historia clínica</a></li>
-                                    <li><a className="dropdown-item" href="#">Afiliados</a></li>
-                                </ul>
-                            </li>
+    return <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to="#">Logo</Link>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav">
+                    <li className="nav-item mx-2">
+                        <Link className="nav-link active" aria-current="page" to="#">Inicio</Link>
+                    </li>
+                    <li className="nav-item dropdown mx-1">
+                        <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pacientes
+                        </Link>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><Link className="dropdown-item" to="#">Consultar</Link></li>
+                            <li><Link className="dropdown-item" to="#">Historia clínica</Link></li>
+                            <li><Link className="dropdown-item" to="#">Afiliados</Link></li>
                         </ul>
-                    </div>
-                </div>
-            </nav>
+                    </li>
+                                          
+                </ul>        
+                <ul className="navbar-nav ms-auto">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="#">¿Necesitas Ayuda?</Link>                        
+                    </li>  
+                    <Link className="navbar-brand" to="#">Perfil</Link>   
+                </ul>                         
+            </div>
+            
         </div>
-        <div className="col-6 d-flex justify-content-end">
-        <nav className="navbar navbar-expand-lg">
-                <div className="container-fluid">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" key="navbarNavDropdown">
-                        <ul className="navbar-nav">                    
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">¿Necesitas Ayuda?</a>
-                            </li>
-                            <a className="navbar-brand" href="#">Perfil</a>
-                        </ul>
-                    </div>
-                </div>
-            </nav>            
-        </div>
-    </div>
+    </nav>
 }
 export default Header;
