@@ -2,8 +2,12 @@ import { render } from '@testing-library/react';
 import React, {Component} from 'react';
 import '../../css/LogIn.css';
 
+
+
 const LogInPaciente = () => {
+  
   return (
+    
       <div className='containerPrincipal'>
         <div className='containerSecundario'>
           <div className='form-group'>
