@@ -4,16 +4,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from "./Components/header";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import indexPersonal from "./Paginas/Personal/canalSoporte";
-import ChatArea from "./Components/Personal/ChatArea";
+import Header from './Components/header';
+import Rutas from "./Rutas/Rutas";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
+    <Rutas/>
+    
   </React.StrictMode>
 );
 
