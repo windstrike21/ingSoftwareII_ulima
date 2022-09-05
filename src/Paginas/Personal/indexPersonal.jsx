@@ -1,5 +1,5 @@
-import Carousel from "../../Components/Personal/Carousel"
-import ContenidoInferior from "../../Components/Personal/ContenidoInferior"
+import Carousel from "../../Componentes/Carousel"
+import ContenidoInferior from "../../Componentes/ContenidoInferior"
 
 const indexPersonal = () => {
     return <div className="px-4 py-3">
