@@ -1,4 +1,4 @@
-import img1 from "../../Imagenes/Personal/contenidoinferior_1.jpg"
+import img1 from "../Imagenes/Personal/contenidoinferior_1.jpg"
 
 const ContenidoInferior = () => {
     return <div className="row mt-5">

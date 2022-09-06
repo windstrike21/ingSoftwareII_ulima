@@ -1,6 +1,6 @@
-import img1 from "../../Imagenes/Personal/carousel_1.jpg";
-import img2 from "../../Imagenes/Personal/carousel_2.jpg";
-import img3 from "../../Imagenes/Personal/carousel_3.jpg";
+import img1 from "../Imagenes/Personal/carousel_1.jpg"
+import img2 from "../Imagenes/Personal/carousel_2.jpg";
+import img3 from "../Imagenes/Personal/carousel_3.jpg";
 
 const Carousel = () => {
     return <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">

@@ -1,4 +1,4 @@
-import Inicio_al_perfil_paciente from "../../Components/Inicio al perfil paciente";
+import Inicio_al_perfil_paciente from "../../Componentes/Inicio al perfil paciente";
 const Buscar_pacientes_para_ver_perfil = () => {
     return (
         <div>
