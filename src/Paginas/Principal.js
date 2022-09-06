@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const Principal = () => {
     return (
       <div>
-        <Link to="LogInPaciente">Iniciar Sesion</Link>
+        Personal:
+        {/* <Link to="nombre del componente inciar sesion del personal">Iniciar Sesion</Link> */}
       </div>
     );
   }

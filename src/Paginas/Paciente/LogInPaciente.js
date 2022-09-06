@@ -8,7 +8,7 @@ const LogInPaciente = () => {
         <div className='form-group'>
           <label> Tipo documento</label>
         </div>
-        <Link to="Actualizar_hoja_filiacion">Actualizar hoja filiacion</Link>
+        
         
       </div>
 
