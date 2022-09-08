@@ -17,7 +17,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<ActualizarHojaFiliacion/>} />
+          <Route index element={<Principal/>} />
           {/* Rutas para personal */}
           <Route path="nombre del archivo iniciar sesion del personal"> 
             <Route index element={<mismo nombre de arriba/>} /> 
