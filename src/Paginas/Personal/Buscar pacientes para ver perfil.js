@@ -1,5 +1,6 @@
-import Inicio_al_perfil_paciente from "../../Components/Inicio al perfil paciente";
-const Buscar_pacientes_para_ver_perfil = () => {
+import InicioAlPerfilPaciente from "../../Componentes/Inicio al perfil paciente";
+import React from "react"
+const BuscarPacientesParaVerPerfil = () => {
     return (
         <div>
             <div className="container">
@@ -11,13 +12,13 @@ const Buscar_pacientes_para_ver_perfil = () => {
             </div>
 
             <div className="container mt-4">
-                <Inicio_al_perfil_paciente nombre="Juan Perez" codigo="002001902" />
-                <Inicio_al_perfil_paciente nombre="Juan Perez" codigo="002001902" />
-                <Inicio_al_perfil_paciente nombre="Juan Perez" codigo="002001902" />
-                <Inicio_al_perfil_paciente nombre="Juan Perez" codigo="002001902" />
-                <Inicio_al_perfil_paciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
             </div>
         </div>
     )
 }
-export default Buscar_pacientes_para_ver_perfil;
+export default BuscarPacientesParaVerPerfil;

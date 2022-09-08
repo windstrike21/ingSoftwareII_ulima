@@ -1,6 +1,9 @@
-const Actualizar_hoja_filiacion = () => {
+import React from "react";
+import Header from "../../Componentes/header";
+const ActualizarHojaFiliacion = () => {
     return (
         <div>
+            <Header/>
             <center><h3>DATOS GENERALES</h3></center>
             <div className="container mb-1">
                 <div className="row mb-1">
@@ -27,7 +30,7 @@ const Actualizar_hoja_filiacion = () => {
                     <label className="col-2">DNI:</label>
                     <input className="col-3"></input>
                 </div>
-                <div className="row mb-1"> 
+                <div className="row mb-1">
                     <label className="col-2">Nombre del padre:</label>
                     <input className="col-5"></input>
                     <label className="col-2">Fallecido:</label>
@@ -41,8 +44,8 @@ const Actualizar_hoja_filiacion = () => {
                 </div>
 
 
-                <center><h3>DATOS PERSONALES</h3></center>
-                <div className="row mb-1"> 
+                <center className="mt-4"><h3>DATOS PERSONALES</h3></center>
+                <div className="row mb-1">
                     <label className="col-2">Departamento:</label>
                     <input className="col-5"></input>
                     <label className="col-2">Provincia:</label>
@@ -75,12 +78,20 @@ const Actualizar_hoja_filiacion = () => {
                     <input className="col-3"></input>
                 </div>
             </div>
-            <div className="text-center ">
-                <button >Actualizar</button>
-                <button >Cancelar</button>
+            <div className="text-center mt-3">
+                <div className="row">
+                    <div className="col-6">
+                        <button >Actualizar</button>
+                    </div>
+                    <div className="col-6">
+                        <button >Cancelar</button>
+                    </div>
+                </div>
+                
+                
             </div>
-            
+
         </div>
     )
 }
-export default Actualizar_hoja_filiacion;
+export default ActualizarHojaFiliacion;

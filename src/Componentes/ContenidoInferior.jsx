@@ -1,5 +1,5 @@
-import img1 from "../../Imagenes/Personal/contenidoinferior_1.jpg"
-
+import img1 from "../Imagenes/Personal/contenidoinferior_1.jpg"
+import React from "react";
 const ContenidoInferior = () => {
     return <div className="row mt-5">
         <div className="col-lg-7">
