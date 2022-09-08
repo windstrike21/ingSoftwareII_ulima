@@ -4,13 +4,13 @@ import '../../css/LogIn.css';
 import {Dropdown} from 'bootstrap';
 
 
-const LogInPaciente = () => {
+const SignOut = () => {
 
   const [doc, setCar] =useState("selectDoc");
 
-  const handleOnChange =(event) =>{
-    setCar(event.target);
-  }
+  const handleOnChange =(e) =>{
+    setCar(e.target.value);
+  };
 
   const makeFirstLetterCapital =(str) => {
     return str.charAt(0).toUpperCase() + str.slide(1);
@@ -22,7 +22,7 @@ const LogInPaciente = () => {
     <div className='container rounded-4 '>
       <div class = "row align-items-stretch px-5 ">
         <div class = "col d-lg-block col-md-5"></div>
-          <h2 class ="titulo fw-bold py-4">Bienvenido</h2>
+          <h2 class ="titulo fw-bold py-4">Ingresa tus datos</h2>
           <form action='#'>
 
             <div class="mb-4">
@@ -40,13 +40,21 @@ const LogInPaciente = () => {
             </div>
 
             <div class="mb-4">
-              <input type="password" className='form-control' placeholder='Contraseña'/>
+              <input type="password" className='form-control' placeholder='FEcha de emisión del documento'/>
             </div>
-            
 
             <div>
-              <label> Código Captcha </label>
-              <input type="password" className='form-control' placeholder='Código Captcha'/>
+              <div class="row">
+                <div class ="col-5">
+                  <input type="password" className='form-control' placeholder='Código Captcha'/>
+                </div>
+
+                <div class ="col-5 al-right">
+                  <input type="password" className='form-control' placeholder='Código Captcha'/>
+                </div>
+
+              </div>
+
               <br></br>
             </div>
 
@@ -74,4 +82,4 @@ const LogInPaciente = () => {
   );
 }
 
-export default LogInPaciente
+export default SignOut
