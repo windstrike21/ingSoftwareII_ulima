@@ -4,13 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-<<<<<<< HEAD
-import Header from "./Components/header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ChatArea from "./Components/Personal/ChatArea"
-=======
->>>>>>> 6b04ea1b85a468c4f002acc9cbf3cb98b78c8fcb
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Principal from "./Paginas/Principal";
@@ -21,20 +14,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-<<<<<<< HEAD
-      <Header />
-    </Router>
-    <div className="px-4 py-3">
-      <div className="row py-2 bg-light">
-        <h3 className="text-center mt-2 mb-3"><b>Chatea con soporte técnico</b></h3>
-        <div className="col-2"></div>
-        <div className="col-8 bg-white rounded-4 border border-secondary shadow">
-          <ChatArea />
-        </div>
-        <div className="col-2"></div>
-      </div>
-    </div>
-=======
       <Routes>
         <Route path="/">
           <Route index element={<Principal/>} />
@@ -59,7 +38,6 @@ root.render(
         </Route>
       </Routes>
     </Router>
->>>>>>> 6b04ea1b85a468c4f002acc9cbf3cb98b78c8fcb
   </React.StrictMode>
 );
 
