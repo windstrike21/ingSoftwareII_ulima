@@ -1,9 +1,10 @@
 import logo_perfil_pac from "../Imagenes/Personal/logo_perfil_pac.jpg";
-const Inicio_al_perfil_paciente = (props) => {
+import React from "react"
+const InicioAlPerfilPaciente = (props) => {
     return (
         <div>
             <div className="row mb-2">
-                <img src={logo_perfil_pac} className="col-2"></img>
+                <img src={logo_perfil_pac} className="col-2" alt=""></img>
                 <div className="col-10 card bg-dark text-white">
                     <div className="row mt-2">
                         <div className="col-5">
@@ -20,4 +21,4 @@ const Inicio_al_perfil_paciente = (props) => {
         </div>
     )
 }
-export default Inicio_al_perfil_paciente;
+export default InicioAlPerfilPaciente;
