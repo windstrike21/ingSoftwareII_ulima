@@ -6,10 +6,10 @@ import {Dropdown} from 'bootstrap';
 
 const SignOut = () => {
 
-  const [doc, setCar] =useState("selectDoc");
+  const [doc, setDoc] =useState("selectDoc");
 
   const handleOnChange =(e) =>{
-    setCar(e.target.value);
+    setDoc(e.target.value);
   };
 
   const makeFirstLetterCapital =(str) => {
@@ -26,7 +26,7 @@ const SignOut = () => {
           <form action='#'>
 
             <div class="mb-4">
-              <select className='form-select' value={doc} onChange = {handleOnChange}>
+              <select className='form-select' onChange = {handleOnChange}>
                 <option value = "selectDoc">Tipo de documento</option>
                 <option value = "selectDoc">DNI</option>
                 <option value = "selectDoc">CARNET DE EXTRANJERIA</option>
@@ -40,43 +40,43 @@ const SignOut = () => {
             </div>
 
             <div class="mb-4">
-              <input type="password" className='form-control' placeholder='FEcha de emisión del documento'/>
+              <input type="password" className='form-control' placeholder='Fecha de emisión del documento'/>
             </div>
 
             <div>
               <div class="row">
                 <div class ="col-5">
-                  <input type="password" className='form-control' placeholder='Código Captcha'/>
+                  <select className='form-select' onChange = {handleOnChange}>
+                    <option value = "selectDoc">Mayor de edad</option>
+                    <option value = "selectDoc">Menor de edad</option>
+                  </select>
                 </div>
-
-                <div class ="col-5 al-right">
-                  <input type="password" className='form-control' placeholder='Código Captcha'/>
+                <div class ="col-5">
+                  <select className='form-select' onChange = {handleOnChange}>
+                    <option value = "selectDoc">Genero</option>
+                    <option value = "selectDoc">Masculino</option>
+                    <option value = "selectDoc">Femenino</option>
+                  </select>
                 </div>
-
               </div>
-
               <br></br>
             </div>
 
+            <div class="mb-4">
+              <input type="password" className='form-control' placeholder='Correo electronico'/>
+            </div>
+
+            <div class="mb-4">
+              <input type="password" className='form-control' placeholder='Numero de celular '/>
+            </div>
+
             <div class="d-grid">
-              <botton type="submit" class="btn btn-primary"> INICIAR SESIÓN</botton>
+              <botton type="submit" class="btn btn-primary"> ENVIAR</botton>
             </div>
-
-            <div class="my-3">
-              <span><a href='#'>¿Olvidaste tu Contraseña?</a></span>
-            </div>
-
-            <div class="d-grid">
-              <botton type="submit" class="btn btn-primary"> Registrate ahora</botton>
-            </div>
-
-
+            <br></br>
 
           </form>
-
-
       </div>
-
     </div>
   </body>
   );
