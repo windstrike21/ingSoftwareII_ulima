@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import Modal2 from "./mor2"
 
 class Modal1 extends React.Component{
   state={
@@ -43,8 +44,8 @@ class Modal1 extends React.Component{
         </ModalBody>
 
         <ModalFooter>
-            <Button color="primary">Iniciar Sesión</Button>
-            <Button color="secondary" onClick={this.abrirModal}>Cerrar</Button>
+            <Modal2/>
+            <Button color="secondary" onClick={<Modal2/>}>Cerrar</Button>
         </ModalFooter>
       </Modal>
 

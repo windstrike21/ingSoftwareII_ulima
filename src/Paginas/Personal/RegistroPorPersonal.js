@@ -17,11 +17,6 @@ function Registro_Personal() {
       <div className="row mt-3 mb-3">
         <Modal1/>
       </div>
-
-
-      <div className="row mt-3 mb-3">
-        <Modal2/>
-      </div>
       </div>
 
 

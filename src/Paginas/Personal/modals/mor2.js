@@ -23,7 +23,7 @@ class Modal2 extends React.Component{
       <>
       <div className="principal">
         <div className="secundario">
-        <Button color="success" onClick={this.abrirModal}>Click Aquí</Button>
+        <Button color="success" onClick={this.abrirModal}>Siguiente</Button>
 
       </div></div>
 
