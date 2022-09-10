@@ -10,22 +10,22 @@ const AgregarHistoria = () => {
             
             <div className="form-group">
                 <label className="form-label">Fecha: </label>
-                <input type="text" className="form-control"></input>
+                <input type="date" placeholder='Agregue una fecha' className="form-control"></input>
             </div>
 
             <div className="form-group">
                 <label className="form-label">Doctor: </label>
-                <input type="text" className="form-control"></input>
+                <input type="text" placeholder='Agregue un doctor' className="form-control"></input>
             </div>
 
             <div className="form-group">
                 <label className="form-label">Especialidad: </label>
-                <input type="text" className="form-control"></input>
+                <input type="text" placeholder='Agregue una especialidad' className="form-control"></input>
             </div>
 
             <div className="form-group">
                 <label className="form-label">Modificar descripción: </label>
-                <textarea type="text" className="form-control"></textarea>
+                <textarea type="text" placeholder='Agregue una descripción' className="form-control"></textarea>
             </div>
         </div>
 
