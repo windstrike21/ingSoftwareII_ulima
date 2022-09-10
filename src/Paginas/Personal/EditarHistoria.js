@@ -10,22 +10,22 @@ const EditarHistoria = () => {
                 
                 <div className="form-group">
                     <label className="form-label">Fecha: </label>
-                    <input type="text" placeholder='30/08/22' className="form-control"></input>
+                    <input type="text" readOnly value='30/08/22' className="form-control"></input>
                 </div>
 
                 <div className="form-group">
                     <label className="form-label">Doctor: </label>
-                    <input type="text" placeholder='Juan Perez' className="form-control"></input>
+                    <input type="text" readOnly value='Juan Perez' className="form-control"></input>
                 </div>
 
                 <div className="form-group">
                     <label className="form-label">Especialidad: </label>
-                    <input type="text" placeholder='Traumatología' className="form-control"></input>
+                    <input type="text" readOnly value='Traumatología' className="form-control"></input>
                 </div>
 
                 <div className="form-group">
                     <label className="form-label">Modificar descripción: </label>
-                    <textarea type="text" className="form-control" placeholder='Esguince de segundo grado de dedo índice de la mano derecha'></textarea>
+                    <textarea type="text" className="form-control" readOnly value='Esguince de segundo grado de dedo índice de la mano derecha.'></textarea>
                 </div>
                 
             </div>
