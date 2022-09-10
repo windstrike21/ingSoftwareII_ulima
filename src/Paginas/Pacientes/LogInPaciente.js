@@ -62,13 +62,8 @@ const LogInPaciente = () => {
               <botton type="submit" class="btn btn-primary"> Registrate ahora</botton>
             </div>
 
-
-
           </form>
-
-
       </div>
-
     </div>
   </body>
   );

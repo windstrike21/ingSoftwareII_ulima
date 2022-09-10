@@ -1,6 +1,7 @@
-import {React, Container} from "react";
+import {React, Container, Component, useState, useEffect} from "react";
 import '../../css/App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import {
   Table,
@@ -21,7 +22,7 @@ const data = [
   { id: 6, personaje: "Seto Kaiba", anime: "Yu-Gi-Oh!" },
 ];
 
-class EditarHoja extends React.Component {
+class EditarHoja extends Component {
   state = {
     data: data,
     modalActualizar: false,
@@ -99,7 +100,7 @@ class EditarHoja extends React.Component {
     });
   };
 
-  render() {
+  render = () => {
     
     return (
       <>
