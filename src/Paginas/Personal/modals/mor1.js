@@ -30,7 +30,7 @@ class Modal1 extends React.Component{
 
       <Modal isOpen={this.state.abierto} style={modalStyles}>
         <ModalHeader>
-          ¡Afiliesé aquí!
+          Datos Obligatorios
         </ModalHeader>
         <ModalBody>
           <FormGroup>

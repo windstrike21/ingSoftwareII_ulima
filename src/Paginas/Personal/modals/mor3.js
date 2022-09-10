@@ -25,7 +25,7 @@ class Modal3 extends React.Component{
       <>
       <div className="principal">
         <div className="secundario">
-        <Button color="danger" onClick={this.abrirModal}>Eliminar hoja</Button>
+        <Button color="danger" onClick={this.abrirModal}>Eliminar la hoja</Button>
 
       </div></div>
 

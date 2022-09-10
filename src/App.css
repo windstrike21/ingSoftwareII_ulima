@@ -37,3 +37,16 @@
   }
 }
 
+.principal{
+  align-items: center;
+  display: flex;
+  padding: auto;
+  margin: auto;
+  }
+  
+  .secundario{
+  margin: 0 auto;
+  padding: auto;
+  align-items: center;
+  display: flex;
+  }

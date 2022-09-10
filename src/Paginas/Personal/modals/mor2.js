@@ -30,7 +30,7 @@ class Modal2 extends React.Component{
 
       <Modal isOpen={this.state.abierto} style={modalStyles}>
         <ModalHeader>
-          Iniciar Sesión
+          Datos Opcionales
         </ModalHeader>
         <ModalBody>
 
