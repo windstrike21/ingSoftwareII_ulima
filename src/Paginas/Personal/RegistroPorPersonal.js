@@ -23,7 +23,7 @@ function Registro_Personal() {
       </div>
 
 
-<div className="container 2px mt-3">
+<div className="container border 2px mt-3">
 <table className="table ">
     <thead>
       <tr></tr>
