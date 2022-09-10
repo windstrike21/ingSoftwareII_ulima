@@ -24,7 +24,8 @@ class Modal4 extends React.Component{
       <>
       <div className="principal">
         <div className="secundario">
-      <Button color="success" onClick={this.abrirModal}>Mostrar Modal</Button>
+
+      <Button color="secondary" onClick={this.abrirModal}>Ver Hoja de afiliados</Button>
       <Modal isOpen={this.state.abierto} style={modalStyles}>
         <Hoja/>
         <ModalFooter>

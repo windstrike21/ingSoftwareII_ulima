@@ -35,8 +35,8 @@ function Registro_Personal() {
         <td> 
         <div className="container d-grid gap-2 ">
 
-            <Modal3/>
             <Modal4/>
+            <Modal3/>
              </div> 
         </td>
       </tr>

@@ -24,7 +24,7 @@ class Modal2 extends React.Component{
       <>
       <div className="principal">
         <div className="secundario">
-        <Button color="success" onClick={this.abrirModal}>Siguiente</Button>
+        <Button color="primary" onClick={this.abrirModal}>Siguiente</Button>
 
       </div></div>
 
@@ -33,19 +33,56 @@ class Modal2 extends React.Component{
           Iniciar Sesión
         </ModalHeader>
         <ModalBody>
-          <FormGroup>
-            <Label for="usuario">Usuario</Label>
-            <Input type="text" id="usuario"/> 
+
+        <FormGroup>
+        <div className="row mb-1"> 
+                    <label className="col-2">Departamento:</label>
+                    <input className="col-5"></input>
+                    <label className="col-2">Provincia:</label>
+                    <input className="col-3"></input>
+                </div>
+        </FormGroup>
+
+        <FormGroup>
+                <div className="row mb-1">
+                    <label className="col-2">Distrito:</label>
+                    <input className="col-10"></input>
+                </div>
+                <div className="row mb-1">
+                    <label className="col-2">Dirección:</label>
+                    <input className="col-10"></input>
+                </div>
+        </FormGroup>
+
+        <FormGroup>
+                <div className="row mb-1">
+                    <label className="col-2">Localidad:</label>
+                    <input className="col-10"></input>
+                </div>
+                <div className="row mb-1">
+                    <label className="col-2">Sector:</label>
+                    <input className="col-10"></input>
+                </div>
+        </FormGroup>
+
+        <FormGroup>
+                <div className="row mb-1">
+                    <label className="col-2">Referencia:</label>
+                    <input className="col-10"></input>
+                </div>
+                <div className="row mb-1">
+                    <label className="col-2">N° Teléfono:</label>
+                    <input className="col-5"></input>
+                    <label className="col-2">N° Celular:</label>
+                    <input className="col-3"></input>
+                </div>
           </FormGroup>
-          <FormGroup>
-            <Label for="password">Contraseña</Label>
-            <Input type="text" id="password"/> 
-          </FormGroup>
+
         </ModalBody>
 
         <ModalFooter>
-            <Button href="./registro">Confirmar</Button>
             <Button color="secondary" onClick={this.abrirModal}>Cancelar</Button>
+            <Button href="./registro" color="primary">Confirmar</Button>
         </ModalFooter>
       </Modal>
 

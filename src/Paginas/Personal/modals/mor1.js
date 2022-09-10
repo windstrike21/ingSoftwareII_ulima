@@ -24,28 +24,72 @@ class Modal1 extends React.Component{
       <>
       <div className="principal">
         <div className="secundario">
-      <Button color="success" onClick={this.abrirModal}>Click Aquí</Button>
+      <Button color="primary" onClick={this.abrirModal}>Registro Por Personal</Button>
 
       </div></div>
 
       <Modal isOpen={this.state.abierto} style={modalStyles}>
         <ModalHeader>
-          Iniciar Sesión
+          ¡Afiliesé aquí!
         </ModalHeader>
         <ModalBody>
           <FormGroup>
-            <Label for="usuario">Usuario</Label>
-            <Input type="text" id="usuario"/> 
+          <div className="row mb-1">
+                <label className="col-2">Apellidos:</label>
+                <input className="col-5"></input>
+                <label className="col-2">N° Historia clinica:</label>
+                <input className="col-3"></input>
+            </div>
           </FormGroup>
+
           <FormGroup>
-            <Label for="password">Contraseña</Label>
-            <Input type="text" id="password"/> 
+          <div className="row mb-1">
+                <label className="col-2">Nombres:</label>
+                <input className="col-5"></input>
+                <label className="col-2">Sexo:</label>
+                <input className="col-3"></input>
+            </div>
           </FormGroup>
+
+          <FormGroup>
+          <div className="row mb-1">
+                <label className="col-2">Fecha de nacimiento:</label>
+                <input className="col-5"></input>
+                <label className="col-2">Tipo de seguro:</label>
+                <input className="col-3"></input>
+            </div>
+                 
+          </FormGroup>
+          <div className="row mb-1">
+                <label className="col-2">Estado civil:</label>
+                <input className="col-5"></input>
+                <label className="col-2">DNI:</label>
+                <input className="col-3"></input>
+            </div>
+
+          <FormGroup>
+          <div className="row mb-1"> 
+                <label className="col-2">Nombre del padre:</label>
+                <input className="col-5"></input>
+                <label className="col-2">Fallecido:</label>
+                <input className="col-3"></input>
+            </div>
+          </FormGroup>
+
+          <FormGroup>
+          <div className="row mb-1">
+                <label className="col-2">Nombre de la madre:</label>
+                <input className="col-5"></input>
+                <label className="col-2">Fallecido:</label>
+                <input className="col-3"></input>
+            </div>
+          </FormGroup>
+
         </ModalBody>
 
         <ModalFooter>
-            <Modal2 onClick={this.abrirModal}/>
             <Button color="secondary" onClick={this.abrirModal}>Cerrar</Button>
+            <Modal2 onClick={this.abrirModal}/>
         </ModalFooter>
       </Modal>
 
