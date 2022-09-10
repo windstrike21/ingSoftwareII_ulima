@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import registro from '../RegistroPorPersonal'
 
 class Modal2 extends React.Component{
   state={
@@ -43,8 +44,8 @@ class Modal2 extends React.Component{
         </ModalBody>
 
         <ModalFooter>
-            <Button color="primary">Iniciar Sesión</Button>
-            <Button color="secondary" onClick={this.abrirModal}>Cerrar</Button>
+            <Button href="./registro">Confirmar</Button>
+            <Button color="secondary" onClick={this.abrirModal}>Cancelar</Button>
         </ModalFooter>
       </Modal>
 
