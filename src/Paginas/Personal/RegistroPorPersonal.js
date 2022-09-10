@@ -40,6 +40,50 @@ function Registro_Personal() {
              </div> 
         </td>
       </tr>
+
+      <tr className="Row">
+        <td>
+          <div className="col">
+            Codigo usuario 
+          </div>
+        </td>
+        <td> 
+        <div className="container d-grid gap-2 ">
+
+            <Modal4/>
+            <Modal3/>
+             </div> 
+        </td>
+      </tr>
+
+      <tr className="Row">
+        <td>
+          <div className="col">
+            Codigo usuario 
+          </div>
+        </td>
+        <td> 
+        <div className="container d-grid gap-2 ">
+
+            <Modal4/>
+            <Modal3/>
+             </div> 
+        </td>
+      </tr>
+      <tr className="Row">
+        <td>
+          <div className="col">
+            Codigo usuario 
+          </div>
+        </td>
+        <td> 
+        <div className="container d-grid gap-2 ">
+
+            <Modal4/>
+            <Modal3/>
+             </div> 
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
