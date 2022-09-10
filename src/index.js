@@ -29,11 +29,12 @@ root.render(
                   <Route index element={<mismo nombre de arriba/>}/>
                   <Route path="Actualizar_hoja_filiacion" element={<ActualizarHojaFiliacion/>}/>
                 </Route>
-              </Route>
-              
+              </Route>  
             </Route>
           </Route>
           {/* Rutas para pacientes */}
+
+          {/* Rutas para administrador */}
 
           {/* Rutas para medico */}
         </Route>
