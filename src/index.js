@@ -4,8 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
+=======
+import Header from './Components/header';
+import Registro_Personal from "./Paginas/Personal/RegistroPorPersonal";
+>>>>>>> RM
 
 import Principal from "./Paginas/Principal";
 import ActualizarHojaFiliacion from "./Paginas/Personal/Actualizar hoja filiacion";
@@ -16,6 +21,7 @@ import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <Router>
       <Routes>
         <Route path="/">
@@ -42,6 +48,10 @@ root.render(
         </Route>
       </Routes>
     </Router>
+=======
+    <Header />
+    <Registro_Personal/>
+>>>>>>> RM
   </React.StrictMode>
 );
 

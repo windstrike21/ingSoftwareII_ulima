@@ -37,9 +37,25 @@
   }
 }
 
+<<<<<<< HEAD
 .card{
   border: 1px solid black;
   padding: .5rem;
   margin: 5px 5px;
   text-align: center;
 }
+=======
+.principal{
+  align-items: center;
+  display: flex;
+  padding: auto;
+  margin: auto;
+  }
+  
+  .secundario{
+  margin: 0 auto;
+  padding: auto;
+  align-items: center;
+  display: flex;
+  }
+>>>>>>> RM
