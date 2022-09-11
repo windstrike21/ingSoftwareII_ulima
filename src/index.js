@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import Registro_Personal from "./Paginas/Personal/RegistroPorPersonal";
-
+import Header from "./Componentes/header";
 import Principal from "./Paginas/Principal";
 import ActualizarHojaFiliacion from "./Paginas/Personal/Actualizar hoja filiacion";
 import IndexPersonal from "./Paginas/Personal/IndexPersonal"
@@ -20,7 +20,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Principal/>} />
+          <Route index element={<Header/>} />
           {/* Rutas para personal */}
           <Route path="nombre del archivo iniciar sesion del personal"> 
             <Route index element={<mismo nombre de arriba/>} /> 
