@@ -8,6 +8,7 @@ class Modal1 extends React.Component{
     abierto: false,
   }
 
+  
   abrirModal=()=>{
     this.setState({abierto: !this.state.abierto});
   }

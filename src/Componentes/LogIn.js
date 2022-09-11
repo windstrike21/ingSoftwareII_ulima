@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
-import React, {Component, useState, DropdownItem, DropdownMenu, DropdownToggle} from 'react';
-import '../../css/LogIn.css';
-import {Dropdown} from 'bootstrap';
+
+import React, {useState} from 'react';
+import '../css/LogIn.css';
+import {Link} from 'react-router-dom'
 
 
-const LogInPaciente = () => {
+const LogIn = () => {
 
   const [doc, setCar] =useState("selectDoc");
 
@@ -12,9 +12,7 @@ const LogInPaciente = () => {
     setCar(event.target);
   }
 
-  const makeFirstLetterCapital =(str) => {
-    return str.charAt(0).toUpperCase() + str.slide(1);
-  }
+  
 
   return (
   
@@ -55,7 +53,7 @@ const LogInPaciente = () => {
             </div>
 
             <div class="my-3">
-              <span><a href='#'>¿Olvidaste tu Contraseña?</a></span>
+              <span><Link to="">¿Olvidaste tu Contraseña?</Link></span>
             </div>
 
             <div class="d-grid">
@@ -69,4 +67,4 @@ const LogInPaciente = () => {
   );
 }
 
-export default LogInPaciente
+export default LogIn;

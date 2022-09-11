@@ -6,13 +6,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
-import Registro_Personal from "./Paginas/Personal/RegistroPorPersonal";
+
 
 import Principal from "./Paginas/Principal";
 import ActualizarHojaFiliacion from "./Paginas/Personal/Actualizar hoja filiacion";
 import indexPersonal from "./Paginas/Personal/indexPersonal"
 import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes para ver perfil";
-import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
+
+import LogIn from "./Componentes/LogIn";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,10 +21,10 @@ root.render(
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Registro_Personal/>} />
+          <Route index element={<Principal/>} />
           {/* Rutas para personal */}
-          <Route path="nombre del archivo iniciar sesion del personal"> 
-            <Route index element={<mismo nombre de arriba/>} /> 
+          <Route path="IniciarSesionPersonal"> 
+            <Route index element={<LogIn/>} /> 
             <Route path="indexPersonal" >
               <Route index element={<indexPersonal />}/>
               <Route path="Buscar_pacientes_para_ver_perfil">

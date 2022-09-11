@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
-
+import React from 'react';
 const AgregarHistoria = () => {
     return (
         <div className="container m-4 p-4">
