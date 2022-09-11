@@ -19,8 +19,8 @@ const Principal = () => {
                   Registrar
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><Link className="dropdown-item" to="#">Como personal</Link></li>
-                  
+                  <li><Link className="dropdown-item" to="#">Como paciente</Link></li>
+                  <li><Link className="dropdown-item" to="#">Como medico</Link></li>
                 </ul>
               </li>
               <li className="nav-item dropdown mx-1">
@@ -29,6 +29,9 @@ const Principal = () => {
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como personal</Link></li>
+                  <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como paciente</Link></li>
+                  <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como medico</Link></li>
+                  <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como administrador</Link></li>
                   
                 </ul>
               </li>

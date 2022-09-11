@@ -16,7 +16,10 @@ import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes pa
 import LogIn from "./Componentes/LogIn";
 import HistorialClinico from "./Paginas/Personal/HistorialClinico";
 import EditarHistoria from "./Paginas/Personal/EditarHistoria";
-
+import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
+import EditarHoja from "./Paginas/Personal/EditarHoja";
+import Registro_Personal from "./Paginas/Personal/RegistroPorPersonal";
+import CanalSoporte from "./Paginas/Personal/canalSoporte";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -37,14 +40,19 @@ root.render(
                 </Route>
               </Route>
               <Route path="Afiliados">
-                <Route index element={<}/>
-              </Route>  
+                <Route index element={<Registro_Personal/>}/>
+              </Route>
+              <Route path="CanalSoporte" element={<CanalSoporte/>}/>  
             </Route>
           </Route>
           {/* Rutas para pacientes */}
 
           {/* Rutas para administrador */}
+          <Route path="IniciarSesionAdministrador">
+            <Route index element={<LogIn/>}>
 
+            </Route>
+          </Route>
           {/* Rutas para medico */}
         </Route>
       </Routes>

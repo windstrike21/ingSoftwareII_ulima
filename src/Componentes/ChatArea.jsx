@@ -1,6 +1,6 @@
-import img1 from "../../Imagenes/Personal/logo_canal_ayuda_tecnica.ico";
-import "../../css/personal/ChatArea.css";
-
+import img1 from "../Imagenes/Personal/logo_canal_ayuda_tecnica.ico";
+import "../css/personal/ChatArea.css";
+import React from 'react';
 const ChatArea = () => {
     return <div className="row">
         <div className="col mt-1 ps-1 pe-0">

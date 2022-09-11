@@ -1,6 +1,6 @@
-import ChatArea from "../../Components/Personal/ChatArea";
-
-const canalSoporte = () => {
+import ChatArea from '../../Componentes/ChatArea';
+import React from 'react';
+const CanalSoporte = () => {
     return <div className="px-4 py-3">
         <div className="row py-2 bg-light">
             <h3 className="text-center mt-2 mb-3"><b>Chatea con soporte técnico</b></h3>
@@ -12,4 +12,4 @@ const canalSoporte = () => {
         </div>
     </div>
 }
-export default canalSoporte;
+export default CanalSoporte;
