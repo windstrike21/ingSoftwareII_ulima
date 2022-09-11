@@ -1,10 +1,11 @@
 
 import React, {useState} from 'react';
 import '../css/LogIn.css';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 const LogIn = () => {
+  const navigate=useNavigate();
 
   const [doc, setCar] =useState("selectDoc");
 
@@ -49,7 +50,7 @@ const LogIn = () => {
             </div>
 
             <div class="d-grid">
-              <botton type="submit" class="btn btn-primary"> INICIAR SESIÓN</botton>
+              <botton type="submit" class="btn btn-primary" onClick={()=>navigate("InicioPersonal")}> INICIAR SESIÓN</botton>
             </div>
 
             <div class="my-3">

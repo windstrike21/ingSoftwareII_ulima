@@ -10,10 +10,12 @@ import "./App.css";
 
 import Principal from "./Paginas/Principal";
 import ActualizarHojaFiliacion from "./Paginas/Personal/Actualizar hoja filiacion";
-import indexPersonal from "./Paginas/Personal/indexPersonal"
+import IndexPersonal from "./Paginas/Personal/indexPersonal"
 import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes para ver perfil";
 
 import LogIn from "./Componentes/LogIn";
+import HistorialClinico from "./Paginas/Personal/HistorialClinico";
+import EditarHistoria from "./Paginas/Personal/EditarHistoria";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,14 +27,17 @@ root.render(
           {/* Rutas para personal */}
           <Route path="IniciarSesionPersonal"> 
             <Route index element={<LogIn/>} /> 
-            <Route path="indexPersonal" >
-              <Route index element={<indexPersonal />}/>
+            <Route path="InicioPersonal" >
+              <Route index element={<IndexPersonal />}/>
               <Route path="Buscar_pacientes_para_ver_perfil">
                 <Route index element={<BuscarPacientesParaVerPerfil/>}/>
-                <Route path="nombre del archivo gestionar hoja filiacion">
-                  <Route index element={<mismo nombre de arriba/>}/>
-                  <Route path="Actualizar_hoja_filiacion" element={<ActualizarHojaFiliacion/>}/>
+                <Route path="GestionarHojaClinica">
+                  <Route index element={<HistorialClinico/>}/>
+                  <Route path="ActualizarHistorialClinico" element={<EditarHistoria/>}/>
                 </Route>
+              </Route>
+              <Route path="Afiliados">
+                <Route index element={<}/>
               </Route>  
             </Route>
           </Route>

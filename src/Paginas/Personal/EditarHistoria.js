@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
-
+import React from 'react';
 const EditarHistoria = () => {
     return (
         <div className="container m-4 p-4">
