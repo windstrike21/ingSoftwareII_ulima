@@ -13,6 +13,7 @@ import ActualizarHojaFiliacion from "./Paginas/Personal/Actualizar hoja filiacio
 import IndexPersonal from "./Paginas/Personal/indexPersonal"
 import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes para ver perfil";
 import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
+import EditarHoja from "./Paginas/Personal/EditarHoja";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +21,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Principal/>} />
+          <Route index element={<EditarHoja/>} />
           {/* Rutas para personal */}
           <Route path="nombre del archivo iniciar sesion del personal"> 
             <Route index element={<mismo nombre de arriba/>} /> 
