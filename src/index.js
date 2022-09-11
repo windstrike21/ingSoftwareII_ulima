@@ -10,7 +10,7 @@ import Registro_Personal from "./Paginas/Personal/RegistroPorPersonal";
 
 import Principal from "./Paginas/Principal";
 import ActualizarHojaFiliacion from "./Paginas/Personal/Actualizar hoja filiacion";
-import indexPersonal from "./Paginas/Personal/indexPersonal"
+import IndexPersonal from "./Paginas/Personal/IndexPersonal"
 import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes para ver perfil";
 import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
 
@@ -20,12 +20,12 @@ root.render(
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Registro_Personal/>} />
+          <Route index element={<Principal/>} />
           {/* Rutas para personal */}
           <Route path="nombre del archivo iniciar sesion del personal"> 
             <Route index element={<mismo nombre de arriba/>} /> 
-            <Route path="indexPersonal" >
-              <Route index element={<indexPersonal />}/>
+            <Route path="IndexPersonal" >
+              <Route index element={<IndexPersonal />}/>
               <Route path="Buscar_pacientes_para_ver_perfil">
                 <Route index element={<BuscarPacientesParaVerPerfil/>}/>
                 <Route path="nombre del archivo gestionar hoja filiacion">
