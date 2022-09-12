@@ -1,20 +1,25 @@
+import React from 'react';
+
 const Paginacion = () => {
     return (
         <div className="">
             <nav  >
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
+                        
+                            <button class="page-link" href="#" aria-label="Previous" onClick={<d/>}>
+                                <span aria-hidden="true">&laquo;</span>
+                            </button>
+                        
+
                     </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><button class="page-link" href="#" onClick={<d/>}>1</button></li>
+                    <li class="page-item"><button class="page-link" href="#" onClick={<d/>}>2</button></li>
+                    <li class="page-item"><button class="page-link" href="#" onClick={<d/>}>3</button></li>
                     <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
+                        <button class="page-link" href="#" aria-label="Next" onClick={<d/>}> 
                             <span aria-hidden="true">&raquo;</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </nav>

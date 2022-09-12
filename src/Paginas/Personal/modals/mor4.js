@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
+import {Button, Modal, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Hoja from '../Actualizar hoja filiacion';
 

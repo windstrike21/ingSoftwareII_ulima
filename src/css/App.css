@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+#oval {
+  border-radius: 60px;
+  background-color:gray;
+}
+#logo-perfil-pac{
+     width: 100px;
+     height: 80px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     
+}
+#mov2d{
+  position: relative;
+  left: 20px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import registro from '../RegistroPorPersonal'
+
 
 class Modal3 extends React.Component{
   state={

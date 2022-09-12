@@ -1,54 +1,58 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Axios from "axios"
-import React from "react"
+
+import React, { useState } from "react"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Principal from "./Paginas/Principal";
+
+import IndexPersonal from "./Paginas/Personal/indexPersonal"
+import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes para ver perfil";
+
+import LogIn from "./Componentes/LogIn";
+import HistorialClinico from "./Paginas/Personal/HistorialClinico";
+import EditarHistoria from "./Paginas/Personal/EditarHistoria";
+
+import RegistroPersonal from "./Paginas/Personal/RegistroPorPersonal";
+import CanalSoporte from "./Paginas/Personal/canalSoporte";
+import Citas from "./Paginas/Personal/Citas";
 function App() {
-  const [projectBody, setProjectBody] = React.useState({
-    id:"",
-    name: "",
-    lastname:"",
-    email:"",
-    password: "",
-    especialidad:""      
-  })
-
-  const registrar = (event) =>{
-      
-    
-    event.preventDefault()
-    console.log(projectBody)
-    Axios.post("https://ing-sw2-backend.herokuapp.com/registros_med",{
-        id:projectBody.id,
-        name: projectBody.name,
-        lastname:projectBody.lastname,
-        email:projectBody.email,
-        password: projectBody.password,
-        especialidad:projectBody.especialidad
-        
-    }).then(res=>{
-        console.log("MIRA")
-        console.log(res.data);
-    } ).catch(console.log)
-  }
-
-  const handleChange = (event) =>{
-    const {name,value} = event.target
-    setProjectBody(prevBody => ({   
-            ...prevBody,
-            [name] : value
-                   
-    }))
-  }
+  const [nombrePacCita,setNombrePacCita]=useState(""); 
   return (
-    <div>
-       <span>id </span><input onChange={handleChange} name="id" value={projectBody.id} /><br></br>
-       <span>name </span><input onChange={handleChange} name="name" value={projectBody.name} /><br></br>
-       <span>lastname </span><input onChange={handleChange} name="lastname" value={projectBody.lastname} /><br></br>
-       <span>email </span><input onChange={handleChange} name="email" value={projectBody.email} /><br></br>
-       <span>password </span><input onChange={handleChange} name="password" value={projectBody.password} /><br></br>
-       <span>especialidad </span><input onChange={handleChange} name="especialidad" value={projectBody.especialidad} />
-       <button onClick={registrar}>Registrar</button>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Principal />} />
+          {/* Rutas para personal */}
+          <Route path="IniciarSesionPersonal">
+            <Route index element={<LogIn/>} />
+            <Route path="InicioPersonal" >
+              <Route index element={<IndexPersonal />} />
+              <Route path="Buscar_pacientes_para_ver_perfil">
+                <Route index element={<BuscarPacientesParaVerPerfil NombrePacCita={setNombrePacCita}/>} />
+                <Route path="GestionarHojaClinica">
+                  <Route index element={<HistorialClinico />} />
+                  <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
+                </Route>
+                <Route path="Citas" element={<Citas nombre={nombrePacCita}/>} />
+              </Route>
+              <Route path="Afiliados">
+                <Route index element={<RegistroPersonal />} />
+              </Route>
+              <Route path="CanalSoporte" element={<CanalSoporte />} />
+            </Route>
+          </Route>
+          {/* Rutas para pacientes */}
+
+          {/* Rutas para administrador */}
+          <Route path="IniciarSesionAdministrador">
+            <Route index element={<LogIn />}>
+
+            </Route>
+          </Route>
+          {/* Rutas para medico */}
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

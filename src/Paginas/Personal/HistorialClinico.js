@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import InicioAlEditarHistorialClinico from '../../Componentes/Inicio al editar historial clinico';
 
 const HistorialClinico = () => {

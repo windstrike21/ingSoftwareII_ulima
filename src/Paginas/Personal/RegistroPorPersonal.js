@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import InicioHojaFiliacion from "../../Componentes/Inicio a hoja filiacion";
 import Modal1 from "../Personal/modals/mor1";
-import Modal2 from "../Personal/modals/mor2";
-import Modal3 from "../Personal/modals/mor3";
-import Modal4 from "../Personal/modals/mor4";
+
+
 
 function Registro_Personal() {
 
@@ -29,64 +29,10 @@ function Registro_Personal() {
             <tr></tr>
           </thead>
           <tbody>
-            <tr className="Row">
-              <td>
-                <div className="col">
-                  Codigo usuario
-                </div>
-              </td>
-              <td>
-                <div className="container justify-content-end d-grid gap-2  ">
-
-                  <Modal4 />
-                  <Modal3 />
-                </div>
-              </td>
-            </tr>
-
-            <tr className="Row">
-              <td>
-                <div className="col">
-                  Codigo usuario
-                </div>
-              </td>
-              <td>
-                <div className="container justify-content-end d-grid gap-2  ">
-
-                  <Modal4 />
-                  <Modal3 />
-                </div>
-              </td>
-            </tr>
-
-            <tr className="Row">
-              <td>
-                <div className="col">
-                  Codigo usuario
-                </div>
-              </td>
-              <td>
-                <div className="container justify-content-end d-grid gap-2  ">
-
-                  <Modal4 />
-                  <Modal3 />
-                </div>
-              </td>
-            </tr>
-            <tr className="Row">
-              <td>
-                <div className="col">
-                  Codigo usuario
-                </div>
-              </td>
-              <td>
-                <div className="container justify-content-end d-grid gap-2  ">
-
-                  <Modal4 />
-                  <Modal3 />
-                </div>
-              </td>
-            </tr>
+            <InicioHojaFiliacion/>
+            <InicioHojaFiliacion/>
+            <InicioHojaFiliacion/>
+            <InicioHojaFiliacion/>
           </tbody>
         </table>
       </div>
