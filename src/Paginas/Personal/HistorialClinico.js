@@ -1,41 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import FilaEditarHistorialClinico from '../../Componentes/FilaEditarHistorialClinico';
 
-import InicioAlEditarHistorialClinico from '../../Componentes/Inicio al editar historial clinico';
+
 
 const HistorialClinico = () => {
-    
+    const location = useLocation();
     return (
         <main>
             <div className="container m-4 p-4">
 
-                <h2>Historial Clinico: Juan Perez</h2>
+                <h2>Historial Clinico: {location.state.nombre}</h2>
                 <br></br>
                 <button type="button" className="btn btn-light">
                     Agregar historia
                 </button>
 
                 <div className="secciones">
+                    <FilaEditarHistorialClinico nombre={location.state.nombre}/>
+                    
+                    <FilaEditarHistorialClinico nombre={location.state.nombre}/>
 
-                    <div className="row mt-3">
-                        <InicioAlEditarHistorialClinico/>
-                        <InicioAlEditarHistorialClinico/>
-                        <InicioAlEditarHistorialClinico/>
-                    </div>
+                    <FilaEditarHistorialClinico nombre={location.state.nombre}/>
 
-                    <div className="row mt-3">
-                        <InicioAlEditarHistorialClinico/>
-                        <InicioAlEditarHistorialClinico/>
-                        <InicioAlEditarHistorialClinico/>
-                    </div>
-
-                    <div className="row mt-3">
-                        <InicioAlEditarHistorialClinico/>
-                        <InicioAlEditarHistorialClinico/>
-                        <InicioAlEditarHistorialClinico/>
-                    </div>
-
-
+                    <FilaEditarHistorialClinico nombre={location.state.nombre}/>
                 </div>
             </div>
 

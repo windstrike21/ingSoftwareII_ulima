@@ -28,10 +28,10 @@ const Principal = () => {
                   Iniciar Sesión
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como personal</Link></li>
+                  <li><Link className="dropdown-item" to="IniciarSesionPersonal" state={{registrar:false}}>Como personal</Link></li>
                   <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como paciente</Link></li>
                   <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como medico</Link></li>
-                  <li><Link className="dropdown-item" to="IniciarSesionPersonal">Como administrador</Link></li>
+                  <li><Link className="dropdown-item" to="IniciarSesionAdministrador" state={{registrar:false}}>Como administrador</Link></li>
                   
                 </ul>
               </li>

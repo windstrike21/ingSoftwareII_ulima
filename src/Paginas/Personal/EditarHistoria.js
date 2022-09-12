@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 const EditarHistoria = () => {
+    const location=useLocation();
     return (
         <div className="container m-4 p-4">
             
-            <h3>Editar Historia: Juan Perez</h3>
+            <h3>Editar Historia: {location.state.nombre}</h3>
             <br></br>
             <div className="container mb-1">
                 

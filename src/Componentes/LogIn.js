@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
 import '../css/LogIn.css';
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
 const LogIn = (props) => {
+  const location = useLocation();
   const navigate = useNavigate();
 
   const [doc, setCar] = useState("selectDoc");
@@ -12,8 +13,7 @@ const LogIn = (props) => {
   const handleOnChange = (event) => {
     setCar(event.target);
   }
-
-
+  
   return (
 
     <body className='logpaciente'>
@@ -55,11 +55,19 @@ const LogIn = (props) => {
             <div class="my-3">
               <span><Link to="">¿Olvidaste tu Contraseña?</Link></span>
             </div>
+            
+            {location.state.registrar &&
+              <div class="d-grid">
+                <botton type="submit" class="btn btn-primary"> Registrate ahora </botton>
+              </div>
+            }
 
 
-            <div class="d-grid">
-              <botton type="submit" class="btn btn-primary"> Registrate ahora</botton>
-            </div>
+
+
+
+
+
 
 
 

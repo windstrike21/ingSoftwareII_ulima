@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-const InicioAlEditarHistorialClinico = () => {
+const InicioAlEditarHistorialClinico = (props) => {
     const navigate = useNavigate()
     return (
         
@@ -15,7 +15,7 @@ const InicioAlEditarHistorialClinico = () => {
                 </div>
                 <div className="row mt-3">
                     <div className="form-group col">
-                        <button type="button" className="btn btn-light" onClick={()=>navigate("ActualizarHistorialClinico")}>
+                        <button type="button" className="btn btn-light" onClick={()=>navigate("ActualizarHistorialClinico",{state:{nombre:props.nombre}})}>
                             Editar
                         </button>
                     </div>

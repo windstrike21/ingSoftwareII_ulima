@@ -12,11 +12,11 @@ const BuscarPacientesParaVerPerfil = (props) => {
             </div>
 
             <div className="container mt-4">{}
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" NombrePacCita={props.NombrePacCita}/>
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" NombrePacCita={props.NombrePacCita}/>
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" NombrePacCita={props.NombrePacCita}/>
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" NombrePacCita={props.NombrePacCita}/>
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" NombrePacCita={props.NombrePacCita}/>
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
             </div>
         </div>
     )
