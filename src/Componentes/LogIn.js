@@ -4,10 +4,9 @@ import '../css/LogIn.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
-const LogIn = (props) => {
+const LogIn = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const [doc, setCar] = useState("selectDoc");
 
   const handleOnChange = (event) => {
@@ -49,7 +48,7 @@ const LogIn = (props) => {
             </div>
 
             <div class="d-grid">
-              <botton type="submit" class="btn btn-primary" onClick={() => navigate("InicioPersonal")}> INICIAR SESIÓN</botton>
+              <botton type="submit" class="btn btn-primary" onClick={() => navigate("Inicio"+location.pathname.slice(14))}> INICIAR SESIÓN</botton>
             </div>
 
             <div class="my-3">
