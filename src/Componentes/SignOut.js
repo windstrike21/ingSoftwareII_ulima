@@ -1,20 +1,21 @@
-import { render } from '@testing-library/react';
-import React, {Component, useState, DropdownItem, DropdownMenu, DropdownToggle} from 'react';
-import '../../css/LogIn.css';
-import {Dropdown} from 'bootstrap';
+
+import React, {useState} from 'react';
+import '../css/LogIn.css';
+
+import { useNavigate } from 'react-router-dom';
 
 
-const SignOut = () => {
-
+const SignOut = (props) => {
+  const navigate = useNavigate();
   const [doc, setDoc] =useState("selectDoc");
 
   const handleOnChange =(e) =>{
     setDoc(e.target.value);
   };
 
-  const makeFirstLetterCapital =(str) => {
-    return str.charAt(0).toUpperCase() + str.slide(1);
-  }
+  // const makeFirstLetterCapital =(str) => {
+  //   return str.charAt(0).toUpperCase() + str.slide(1);
+  // }
 
   return (
   
@@ -71,7 +72,7 @@ const SignOut = () => {
             </div>
 
             <div class="d-grid">
-              <botton type="submit" class="btn btn-primary"> ENVIAR</botton>
+              <botton type="submit" class="btn btn-primary" onClick={()=>navigate(props.toIniciar,{state:{registrar:true}})}> ENVIAR</botton>
             </div>
             <br></br>
 

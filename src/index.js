@@ -20,6 +20,7 @@ import EditarHistoria from "./Paginas/Personal/EditarHistoria";
 import RegistroPersonal from "./Paginas/Personal/RegistroPorPersonal";
 import CanalSoporte from "./Paginas/Personal/canalSoporte";
 import Citas from "./Paginas/Personal/Citas";
+import SignOut from "./Componentes/SignOut";
 
 
 
@@ -53,7 +54,20 @@ root.render(
             </Route>
           </Route>
           {/* Rutas para pacientes */}
+          <Route path="RegistrarPaciente">
+            <Route index element={<SignOut toIniciar="IniciarSesionPaciente"/>} />
+            <Route path="IniciarSesionPaciente">
+              <Route index element={<LogIn toRegistrar="/RegistrarPaciente"/>}>
+              
+              </Route>
+            </Route>
+          </Route>
 
+          <Route path="IniciarSesionPaciente">
+              <Route index element={<LogIn toRegistrar="RegistrarPaciente"/>}/>
+              <Route path="RegistrarPaciente" element={<SignOut toIniciar="/IniciarSesionPaciente"/>} />
+              
+          </Route>
           {/* Rutas para administrador */}
           <Route path="IniciarSesionAdministrador">
             <Route index element={<LogIn />}>
@@ -61,6 +75,21 @@ root.render(
             </Route>
           </Route>
           {/* Rutas para medico */}
+          <Route path="RegistrarMedico">
+            <Route index element={<SignOut toIniciar="IniciarSesionMedico"/>} />
+            <Route path="IniciarSesionMedico">
+              <Route index element={<LogIn toRegistrar="/RegistrarMedico"/>}>
+              
+              </Route>
+            </Route>
+          </Route>
+
+          <Route path="IniciarSesionMedico">
+              <Route index element={<LogIn toRegistrar="RegistrarMedico"/>}/>
+              <Route path="RegistrarMedico" element={<SignOut toIniciar="/IniciarSesionMedico"/>} />
+              
+          </Route>
+
         </Route>
       </Routes>
     </Router>

@@ -4,7 +4,7 @@ import '../css/LogIn.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
-const LogIn = () => {
+const LogIn = (props) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [doc, setCar] = useState("selectDoc");
@@ -57,7 +57,7 @@ const LogIn = () => {
             
             {location.state.registrar &&
               <div class="d-grid">
-                <botton type="submit" class="btn btn-primary"> Registrate ahora </botton>
+                <botton type="submit" class="btn btn-primary" onClick={()=>navigate(props.toRegistrar)}> Registrate ahora </botton>
               </div>
             }
 
