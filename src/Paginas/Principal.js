@@ -3,7 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown } from 'bootstrap'
 
-const Principal = () => {
+const Principal = (props) => {
+  
+  
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-info">
@@ -28,7 +30,7 @@ const Principal = () => {
                   Iniciar Sesión
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><Link className="dropdown-item" to="IniciarSesionPersonal" state={{registrar:false}}>Como personal</Link></li>
+                  <li><Link className="dropdown-item" to="IniciarSesionPersonal" state={{registrar:false}} >Como personal</Link></li>
                   <li><Link className="dropdown-item" to="IniciarSesionPaciente" state={{registrar:true}}>Como paciente</Link></li>
                   <li><Link className="dropdown-item" to="IniciarSesionMedico" state={{registrar:true}}>Como medico</Link></li>
                   <li><Link className="dropdown-item" to="IniciarSesionAdministrador" state={{registrar:false}}>Como administrador</Link></li>
@@ -41,6 +43,8 @@ const Principal = () => {
 
         </div>
       </nav>
+      
+      
       <img src={medicos} alt="" width="100%"></img>
       {/* Personal:<br></br> */}
       {/* <Link to="nombre del componente inciar sesion del personal">Iniciar Sesion</Link> */}

@@ -1,17 +1,24 @@
 
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import '../css/LogIn.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
 const LogIn = (props) => {
+  
   const location = useLocation();
   const navigate = useNavigate();
   const [doc, setCar] = useState("selectDoc");
+  
+  const rutasIniciales=location.pathname.split("/")
+  const indiceFinal=rutasIniciales.length-1
+  const rutarequerida=rutasIniciales[indiceFinal]
+  const usuario=rutarequerida.slice(13)
 
   const handleOnChange = (event) => {
     setCar(event.target);
   }
+  
   
   return (
 
@@ -39,7 +46,7 @@ const LogIn = (props) => {
             <div class="mb-4">
               <input type="password" className='form-control' placeholder='Contraseña' />
             </div>
-
+ 
 
             <div>
               <label> Código Captcha </label>
@@ -48,9 +55,10 @@ const LogIn = (props) => {
             </div>
 
             <div class="d-grid">
-              <botton type="submit" class="btn btn-primary" onClick={() => navigate("Inicio"+location.pathname.slice(14))}> INICIAR SESIÓN</botton>
+              <botton type="submit" class="btn btn-primary" onClick={() => navigate("Inicio"+usuario)}> INICIAR SESIÓN</botton>
             </div>
-
+            
+            
             <div class="my-3">
               <span><Link to="">¿Olvidaste tu Contraseña?</Link></span>
             </div>

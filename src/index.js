@@ -7,9 +7,9 @@ import reportWebVitals from './reportWebVitals';
 
 import "./App.css";
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Principal from "./Paginas/Principal";
-
 import IndexPersonal from "./Paginas/Personal/indexPersonal"
 import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes para ver perfil";
 
@@ -21,8 +21,6 @@ import RegistroPersonal from "./Paginas/Personal/RegistroPorPersonal";
 import CanalSoporte from "./Paginas/Personal/canalSoporte";
 import Citas from "./Paginas/Personal/Citas";
 import SignOut from "./Componentes/SignOut";
-
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,18 +53,18 @@ root.render(
           </Route>
           {/* Rutas para pacientes */}
           <Route path="RegistrarPaciente">
-            <Route index element={<SignOut toIniciar="IniciarSesionPaciente"/>} />
+            <Route index element={<SignOut toIniciar="IniciarSesionPaciente" />} />
             <Route path="IniciarSesionPaciente">
-              <Route index element={<LogIn toRegistrar="/RegistrarPaciente"/>}>
-              
+              <Route index element={<LogIn toRegistrar="/RegistrarPaciente" />}>
+
               </Route>
             </Route>
           </Route>
 
           <Route path="IniciarSesionPaciente">
-              <Route index element={<LogIn toRegistrar="RegistrarPaciente"/>}/>
-              <Route path="RegistrarPaciente" element={<SignOut toIniciar="/IniciarSesionPaciente"/>} />
-              
+            <Route index element={<LogIn toRegistrar="RegistrarPaciente" />} />
+            <Route path="RegistrarPaciente" element={<SignOut toIniciar="/IniciarSesionPaciente" />} />
+
           </Route>
           {/* Rutas para administrador */}
           <Route path="IniciarSesionAdministrador">
@@ -76,18 +74,18 @@ root.render(
           </Route>
           {/* Rutas para medico */}
           <Route path="RegistrarMedico">
-            <Route index element={<SignOut toIniciar="IniciarSesionMedico"/>} />
+            <Route index element={<SignOut toIniciar="IniciarSesionMedico" />} />
             <Route path="IniciarSesionMedico">
-              <Route index element={<LogIn toRegistrar="/RegistrarMedico"/>}>
-              
+              <Route index element={<LogIn toRegistrar="/RegistrarMedico" />}>
+
               </Route>
             </Route>
           </Route>
 
           <Route path="IniciarSesionMedico">
-              <Route index element={<LogIn toRegistrar="RegistrarMedico"/>}/>
-              <Route path="RegistrarMedico" element={<SignOut toIniciar="/IniciarSesionMedico"/>} />
-              
+            <Route index element={<LogIn toRegistrar="RegistrarMedico" />} />
+            <Route path="RegistrarMedico" element={<SignOut toIniciar="/IniciarSesionMedico" />} />
+
           </Route>
 
         </Route>
