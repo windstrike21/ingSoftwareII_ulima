@@ -1,11 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const AgregarHistoria = () => {
+    const location=useLocation()
     return (
         <div className="container m-4 p-4">
             
-        <h3>Agregar Historia: Juan Perez</h3>
+        <h3>Agregar Historia: {location.state.nombre}</h3>
         <br></br>
         <div className="container mb-1">
             
