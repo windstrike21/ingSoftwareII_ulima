@@ -22,66 +22,66 @@ class Modal1 extends React.Component{
     }
     return(
       <>
-      <div className="principal">
-        <div className="secundario">
+      <div className="principal ">
+        <div className="secundario ">
       <Button color="primary" onClick={this.abrirModal}>Registro Por Personal</Button>
 
       </div></div>
 
-      <Modal isOpen={this.state.abierto} style={modalStyles}>
+      <Modal isOpen={this.state.abierto} style={modalStyles} >
         <ModalHeader>
           Datos Obligatorios
         </ModalHeader>
         <ModalBody>
           <FormGroup>
-          <div className="row mb-1">
-                <label className="col-2">Apellidos:</label>
-                <input className="col-5"></input>
+          <div className="row mb-2 pb-2">
+                <label className="col-2 col-md-3">Apellidos:</label>
+                <input className="col-5 col-md-3"></input>
                 <label className="col-2">N° Historia clinica:</label>
-                <input className="col-3"></input>
+                <input className="col-3 col-md-3"></input>
             </div>
           </FormGroup>
 
           <FormGroup>
-          <div className="row mb-1">
-                <label className="col-2">Nombres:</label>
-                <input className="col-5"></input>
+          <div className="row mb-2 pb-2">
+                <label className="col-2 col-md-3">Nombres:</label>
+                <input className="col-5 col-md-3"></input>
                 <label className="col-2">Sexo:</label>
-                <input className="col-3"></input>
+                <input className="col-3 col-md-3"></input>
             </div>
           </FormGroup>
 
           <FormGroup>
-          <div className="row mb-1">
-                <label className="col-2">Fecha de nacimiento:</label>
-                <input className="col-5"></input>
+          <div className="row mb-3 pb-2">
+                <label className="col-2 col-md-3">Fecha de nacimiento:</label>
+                <input className="col-5 col-md-3"></input>
                 <label className="col-2">Tipo de seguro:</label>
-                <input className="col-3"></input>
+                <input className="col-3 col-md-3"></input>
             </div>
                  
           </FormGroup>
-          <div className="row mb-1">
-                <label className="col-2">Estado civil:</label>
-                <input className="col-5"></input>
+          <div className="row mb-2">
+                <label className="col-2 col-md-3">Estado civil:</label>
+                <input className="col-5 col-md-3"></input>
                 <label className="col-2">DNI:</label>
-                <input className="col-3"></input>
+                <input className="col-3 col-md-3"></input>
             </div>
 
           <FormGroup>
-          <div className="row mb-1"> 
-                <label className="col-2">Nombre del padre:</label>
-                <input className="col-5"></input>
+          <div className="row mb-2"> 
+                <label className="col-2 col-md-3">Nombre del padre:</label>
+                <input className="col-5 col-md-3"></input>
                 <label className="col-2">Fallecido:</label>
-                <input className="col-3"></input>
+                <input className="col-3 col-md-3"></input>
             </div>
           </FormGroup>
 
           <FormGroup>
-          <div className="row mb-1">
-                <label className="col-2">Nombre de la madre:</label>
-                <input className="col-5"></input>
+          <div className="row mb-2">
+                <label className="col-2 col-md-3">Nombre de la madre:</label>
+                <input className="col-5 col-md-3"></input>
                 <label className="col-2">Fallecido:</label>
-                <input className="col-3"></input>
+                <input className="col-3 col-md-3"></input>
             </div>
           </FormGroup>
 

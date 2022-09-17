@@ -28,53 +28,55 @@ class Modal2 extends React.Component{
 
       </div></div>
 
-      <Modal isOpen={this.state.abierto} style={modalStyles}>
+      <Modal isOpen={this.state.abierto} style={modalStyles} >
         <ModalHeader>
           Datos Opcionales
         </ModalHeader>
         <ModalBody>
 
         <FormGroup>
-        <div className="row mb-1"> 
-                    <label className="col-2">Departamento:</label>
-                    <input className="col-5"></input>
+        <div className="row mb-2 pt-2"> 
+                    <label className="col-2 col-md-3">Departamento:</label>
+                    <input className="col-5 col-md-3"></input>
                     <label className="col-2">Provincia:</label>
-                    <input className="col-3"></input>
+                    <input className="col-3 col-md-3"></input>
                 </div>
         </FormGroup>
 
         <FormGroup>
-                <div className="row mb-1">
-                    <label className="col-2">Distrito:</label>
-                    <input className="col-10"></input>
+        
+                <div className="row mb-2">
+                    <label className="col-2 col-md-3">Distrito:</label>
+                    <input className="col-md-8"></input>
                 </div>
-                <div className="row mb-1">
-                    <label className="col-2">Dirección:</label>
-                    <input className="col-10"></input>
+        </FormGroup>
+               
+        <FormGroup>
+                <div className="row mb-2">
+                    <label className="col-2 col-md-3">Dirección:</label>
+                    <input className="col-md-8"></input>
                 </div>
         </FormGroup>
 
         <FormGroup>
-                <div className="row mb-1">
-                    <label className="col-2">Localidad:</label>
-                    <input className="col-10"></input>
-                </div>
-                <div className="row mb-1">
+                <div className="row mb-2 p-2">
+                    <label className="col-2 col-md-3">Localidad:</label>
+                    <input className="col-5 col-md-3"></input>
                     <label className="col-2">Sector:</label>
-                    <input className="col-10"></input>
+                    <input className="col-3 col-md-3"></input>
                 </div>
         </FormGroup>
 
         <FormGroup>
-                <div className="row mb-1">
-                    <label className="col-2">Referencia:</label>
-                    <input className="col-10"></input>
+                <div className="row mb-2 p-2">
+                    <label className="col-2 col-md-3">Referencia:</label>
+                    <input className="col-md-8"></input>
                 </div>
-                <div className="row mb-1">
-                    <label className="col-2">N° Teléfono:</label>
-                    <input className="col-5"></input>
-                    <label className="col-2">N° Celular:</label>
-                    <input className="col-3"></input>
+                <div className="row mb-2 p-2">
+                    <label className="col-auto col-md-3">N°Teléfono:</label>
+                    <input className="col-5 col-md-3"></input>
+                    <label className="col-auto">N°Celular:</label>
+                    <input className="col-3 col-md-3"></input>
                 </div>
           </FormGroup>
 
