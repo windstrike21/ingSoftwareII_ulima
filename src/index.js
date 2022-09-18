@@ -21,6 +21,8 @@ import RegistroPersonal from "./Paginas/Personal/RegistroPorPersonal";
 import CanalSoporte from "./Paginas/Personal/canalSoporte";
 import Citas from "./Paginas/Personal/Citas";
 import SignOut from "./Componentes/SignOut";
+import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
+import OldPassword from "./Componentes/OldContraseña";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -42,6 +44,7 @@ root.render(
                 <Route path="GestionarHojaClinica">
                   <Route index element={<HistorialClinico />} />
                   <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
+                  <Route path="AgregarHistoria" element={<AgregarHistoria/>}/>
                 </Route>
                 <Route path="Citas" element={<Citas />} />
               </Route>
@@ -50,41 +53,40 @@ root.render(
               </Route>
               <Route path="CanalSoporte" element={<CanalSoporte />} />
             </Route>
+            <Route path="OldPassword" element={<OldPassword/>}/>
           </Route>
           {/* Rutas para pacientes */}
           <Route path="RegistrarPaciente">
             <Route index element={<SignOut toIniciar="IniciarSesionPaciente" />} />
             <Route path="IniciarSesionPaciente">
-              <Route index element={<LogIn toRegistrar="/RegistrarPaciente" />}>
-
-              </Route>
+              <Route index element={<LogIn toRegistrar="/RegistrarPaciente" />}/>
+              <Route path="OldPassword" element={<OldPassword/>}/>
             </Route>
           </Route>
 
           <Route path="IniciarSesionPaciente">
             <Route index element={<LogIn toRegistrar="RegistrarPaciente" />} />
             <Route path="RegistrarPaciente" element={<SignOut toIniciar="/IniciarSesionPaciente" />} />
-
+            <Route path="OldPassword" element={<OldPassword/>}/>
           </Route>
           {/* Rutas para administrador */}
           <Route path="IniciarSesionAdministrador">
-            <Route index element={<LogIn />}>
-
-            </Route>
+            <Route index element={<LogIn />}/>
+            <Route path="OldPassword" element={<OldPassword/>}/>
           </Route>
           {/* Rutas para medico */}
           <Route path="RegistrarMedico">
             <Route index element={<SignOut toIniciar="IniciarSesionMedico" />} />
             <Route path="IniciarSesionMedico">
-              <Route index element={<LogIn toRegistrar="/RegistrarMedico" />}>
-
-              </Route>
+              <Route index element={<LogIn toRegistrar="/RegistrarMedico" />}/>
+              <Route path="OldPassword" element={<OldPassword/>}/>
             </Route>
           </Route>
 
           <Route path="IniciarSesionMedico">
             <Route index element={<LogIn toRegistrar="RegistrarMedico" />} />
             <Route path="RegistrarMedico" element={<SignOut toIniciar="/IniciarSesionMedico" />} />
+            <Route path="OldPassword" element={<OldPassword/>}/>
 
           </Route>
 

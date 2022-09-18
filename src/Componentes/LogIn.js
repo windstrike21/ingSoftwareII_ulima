@@ -60,7 +60,7 @@ const LogIn = (props) => {
             
             
             <div class="my-3">
-              <span><Link to="">¿Olvidaste tu Contraseña?</Link></span>
+              <span><Link to="OldPassword">¿Olvidaste tu Contraseña?</Link></span>
             </div>
             
             {location.state.registrar &&

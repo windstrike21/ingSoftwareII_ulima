@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react';
-import React, {Component, useState, DropdownItem, DropdownMenu, DropdownToggle} from 'react';
-import '../../css/LogIn.css';
-import {Dropdown} from 'bootstrap';
 
-const OldContraseña = () =>{
+import React from 'react';
+import '../css/LogIn.css';
+
+
+const OldPassword = () =>{
   return (
   
     <body className='logpaciente'>
@@ -43,4 +43,4 @@ const OldContraseña = () =>{
     );
   }
 
-export default OldContraseña
+export default OldPassword
