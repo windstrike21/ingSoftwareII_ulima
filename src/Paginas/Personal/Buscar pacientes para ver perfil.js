@@ -1,6 +1,18 @@
 import InicioAlPerfilPaciente from "../../Componentes/Inicio al perfil paciente";
-import React from "react"
+import React, { useEffect, useState } from "react"
+import Axios from "axios";
 const BuscarPacientesParaVerPerfil = (props) => {
+    const [datosPac, setDatosPac] = useState([])
+    useEffect(() => {
+        Axios.get("http://localhost:5000/usuarios/Paciente")
+            .then(res => {
+                console.log("MIRA")
+                console.log(res.data);
+                setDatosPac(res.data)
+            }).catch(console.log)
+    }, [])
+
+    console.log(datosPac[1])
     return (
         <div>
             <div className="container mt-3">
@@ -11,12 +23,11 @@ const BuscarPacientesParaVerPerfil = (props) => {
 
             </div>
 
-            <div className="container mt-4">{}
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
-                <InicioAlPerfilPaciente nombre="Juan Perez" codigo="002001902" />
+            <div className="container mt-4">
+                {datosPac.map((datos)=>(
+                    <InicioAlPerfilPaciente nombre={datos.nombres} codigo="002001902" />
+                ))}
+                
             </div>
         </div>
     )

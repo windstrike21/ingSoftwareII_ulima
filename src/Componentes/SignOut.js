@@ -2,10 +2,16 @@
 import React, {useState} from 'react';
 import '../css/LogIn.css';
 
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const SignOut = (props) => {
+  const location = useLocation();
+  const rutasIniciales=location.pathname.split("/")
+  const indiceFinal=rutasIniciales.length-1
+  const rutarequerida=rutasIniciales[indiceFinal]
+  const usuario=rutarequerida.slice(9)
+  console.log(usuario)
   const navigate = useNavigate();
   const [doc, setDoc] =useState("selectDoc");
 

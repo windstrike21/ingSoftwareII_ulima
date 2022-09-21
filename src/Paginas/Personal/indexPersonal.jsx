@@ -2,13 +2,14 @@ import Carousel from "../../Componentes/Carousel"
 import ContenidoInferior from "../../Componentes/ContenidoInferior"
 import React from "react"
 import Header from "../../Componentes/header"
+import { useLocation } from "react-router-dom"
 
 
 const IndexPersonal = () => {
     
     return (
         <div>
-            <Header/>
+            <Header />
             <div className="px-4 py-3">
                 
                 <div className="row py-2 bg-light">

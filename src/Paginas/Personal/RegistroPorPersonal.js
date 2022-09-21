@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import InicioHojaFiliacion from "../../Componentes/Inicio a hoja filiacion";
 import Modal1 from "../Personal/modals/mor1";
 
 
 
 function Registro_Personal() {
-
+  
+  
   return (
 
 
@@ -29,10 +31,10 @@ function Registro_Personal() {
             <tr></tr>
           </thead>
           <tbody>
-            <InicioHojaFiliacion/>
-            <InicioHojaFiliacion/>
-            <InicioHojaFiliacion/>
-            <InicioHojaFiliacion/>
+            <InicioHojaFiliacion />
+            <InicioHojaFiliacion />
+            <InicioHojaFiliacion />
+            <InicioHojaFiliacion />
           </tbody>
         </table>
       </div>
