@@ -2,7 +2,7 @@ import Carousel from "../../Componentes/Carousel"
 import ContenidoInferior from "../../Componentes/ContenidoInferior"
 import React from "react"
 import Header from "../../Componentes/header"
-import { useLocation } from "react-router-dom"
+
 
 
 const IndexPersonal = () => {

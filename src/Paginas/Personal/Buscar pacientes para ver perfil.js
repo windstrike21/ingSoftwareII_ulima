@@ -11,14 +11,21 @@ const BuscarPacientesParaVerPerfil = (props) => {
                 setDatosPac(res.data)
             }).catch(console.log)
     }, [])
-
+    const obtenerPaciente=(event)=>{
+        Axios.get(`http://localhost:5000/usuarios/Paciente/${event.target.value}`)
+        .then(res => {
+            console.log("MIRA")
+            console.log(res.data);
+            setDatosPac(res.data)
+        }).catch(console.log)
+    }
     console.log(datosPac[1])
     return (
         <div>
             <div className="container mt-3">
                 <div className="row">
                     <h3 className="col-md-4">Pacientes</h3>
-                    <input placeholder="Buscar Paciente..." className="col-8"></input>
+                    <input onChange={obtenerPaciente} placeholder="Buscar Paciente..." className="col-8"></input>
                 </div>
 
             </div>
