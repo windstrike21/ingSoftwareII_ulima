@@ -6,20 +6,21 @@ const BuscarPacientesParaVerPerfil = (props) => {
     useEffect(() => {
         Axios.get("http://localhost:5000/usuarios/Paciente")
             .then(res => {
-                console.log("MIRA")
-                console.log(res.data);
+                
                 setDatosPac(res.data)
             }).catch(console.log)
     }, [])
     const obtenerPaciente=(event)=>{
         Axios.get(`http://localhost:5000/usuarios/Paciente/${event.target.value}`)
         .then(res => {
-            console.log("MIRA")
-            console.log(res.data);
+            
             setDatosPac(res.data)
         }).catch(console.log)
     }
-    console.log(datosPac[1])
+    console.log(datosPac)
+    const DatosPac =()=>{
+        return(datosPac)
+    }
     return (
         <div>
             <div className="container mt-3">
@@ -32,7 +33,7 @@ const BuscarPacientesParaVerPerfil = (props) => {
 
             <div className="container mt-4">
                 {datosPac.map((datos)=>(
-                    <InicioAlPerfilPaciente nombre={datos.nombres} codigo="002001902" />
+                    <InicioAlPerfilPaciente nombre={datos.nombres} datosPac={DatosPac} setDatosPac={setDatosPac} codigo="002001902" />
                 ))}
                 
             </div>

@@ -1,9 +1,15 @@
 import logo_perfil_pac from "../Imagenes/Personal/logo_perfil_pac.jpg";
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import '../css/App.css';
+import Axios from "axios";
 const InicioAlPerfilPaciente = (props) => {
     const navigate = useNavigate();
+    const IrCitas =async()=>{
+        const res=await Axios.get(`http://localhost:5000/usuarios/Paciente/${props.nombre}`)
+        navigate("Citas",{state:{nombre:props.nombre,paciente_id:res.data[0].id}})
+    }
+  
     
     return (
         <div className="row mb-2">
@@ -18,7 +24,7 @@ const InicioAlPerfilPaciente = (props) => {
                         </div>
                         <div className="col-5 mt-2 ">
                             <button onClick={() => navigate("GestionarHojaClinica",{state:{nombre:props.nombre}})}>Historial clínico</button>
-                            <button onClick={()=>navigate("Citas",{state:{nombre:props.nombre}})} id="mov2d">Citas</button>
+                            <button onClick={IrCitas} id="mov2d">Citas</button>
                         </div>
                     </div>
                 </center>

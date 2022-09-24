@@ -1,17 +1,28 @@
 import DatosDeCita from "../../Componentes/Datos de cita"
 import Paginacion from "../../Componentes/Paginacion";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
-const Citas =(props)=>{
+import  Axios  from "axios";
+const Citas =()=>{
     const location=useLocation()
+    const [citasPac,setCitasPac]=useState([]);
+    console.log(location.state.paciente_id)
+    useEffect(()=>{
+        Axios.get(`http://localhost:5000/citas/Paciente/${location.state.paciente_id}`)
+        .then(res => {
+            console.log("MIRA")
+            console.log(res.data);
+            setCitasPac(res.data)
+        }).catch(console.log)
+    },[])
     return(
         <div>
             <div className="container"><h3>Citas: {location.state.nombre}</h3></div>
             
             <div className="container mt-4">
-               <DatosDeCita fecha="30/09/2022" especialidad="Traumatología" hora="10:00" doctor="Juan Perez" />
-               <DatosDeCita fecha="30/09/2022" especialidad="Traumatología" hora="10:00" doctor="Juan Perez" /> 
-
+                {citasPac.map((cita)=>(
+                    <DatosDeCita fecha={cita.fecha} especialidad={cita.especialidad} hora={cita.hora} doctor={cita.doctor} />
+                ))}
             </div>
             <Paginacion/>
         </div>
