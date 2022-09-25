@@ -1,7 +1,8 @@
 import InicioAlPerfilPaciente from "../../Componentes/Inicio al perfil paciente";
 import React, { useEffect, useState } from "react"
 import Axios from "axios";
-const BuscarPacientesParaVerPerfil = (props) => {
+
+const BuscarPacientesParaVerPerfilM = (props) => {
     const [datosPac, setDatosPac] = useState([])
     useEffect(() => {
         Axios.get("https://ulimasoftwareiibackend-production.up.railway.app/usuarios/Paciente")
@@ -40,4 +41,4 @@ const BuscarPacientesParaVerPerfil = (props) => {
         </div>
     )
 }
-export default BuscarPacientesParaVerPerfil;
+export default BuscarPacientesParaVerPerfilM;

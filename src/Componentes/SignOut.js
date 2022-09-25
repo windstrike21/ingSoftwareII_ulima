@@ -1,17 +1,21 @@
 
-import React, {useState} from 'react';
+import React from 'react';
 import '../css/LogIn.css';
 
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const SignOut = (props) => {
+  const location = useLocation();
+  const rutasIniciales=location.pathname.split("/")
+  const indiceFinal=rutasIniciales.length-1
+  const rutarequerida=rutasIniciales[indiceFinal]
+  const usuario=rutarequerida.slice(9)
+  console.log(usuario)
   const navigate = useNavigate();
-  const [doc, setDoc] =useState("selectDoc");
+  
 
-  const handleOnChange =(e) =>{
-    setDoc(e.target.value);
-  };
+  
 
   // const makeFirstLetterCapital =(str) => {
   //   return str.charAt(0).toUpperCase() + str.slide(1);
@@ -27,7 +31,7 @@ const SignOut = (props) => {
           <form action='#'>
 
             <div class="mb-4">
-              <select className='form-select' onChange = {handleOnChange}>
+              <select className='form-select'>
                 <option value = "selectDoc">Tipo de documento</option>
                 <option value = "selectDoc">DNI</option>
                 <option value = "selectDoc">CARNET DE EXTRANJERIA</option>
@@ -47,13 +51,13 @@ const SignOut = (props) => {
             <div>
               <div class="row">
                 <div class ="col-5">
-                  <select className='form-select' onChange = {handleOnChange}>
+                  <select className='form-select' >
                     <option value = "selectDoc">Mayor de edad</option>
                     <option value = "selectDoc">Menor de edad</option>
                   </select>
                 </div>
                 <div class ="col-5">
-                  <select className='form-select' onChange = {handleOnChange}>
+                  <select className='form-select' >
                     <option value = "selectDoc">Genero</option>
                     <option value = "selectDoc">Masculino</option>
                     <option value = "selectDoc">Femenino</option>

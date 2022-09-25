@@ -4,11 +4,12 @@ import React from "react"
 import Header from "../../Componentes/header"
 
 
+
 const IndexPersonal = () => {
     
     return (
         <div>
-            <Header/>
+            <Header />
             <div className="px-4 py-3">
                 
                 <div className="row py-2 bg-light">
