@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
+
 import InicioHojaFiliacion from "../../Componentes/Inicio a hoja filiacion";
 import Modal1 from "../Personal/modals/mor1";
 

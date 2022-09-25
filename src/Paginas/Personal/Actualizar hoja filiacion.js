@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Header from "../../Componentes/header";
+import React from "react";
+
 const ActualizarHojaFiliacion = (props) => {
     
     const handleChange = (event) => {

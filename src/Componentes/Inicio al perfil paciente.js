@@ -1,12 +1,12 @@
 import logo_perfil_pac from "../Imagenes/Personal/logo_perfil_pac.jpg";
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useNavigate } from "react-router-dom";
 import '../css/App.css';
 import Axios from "axios";
 const InicioAlPerfilPaciente = (props) => {
     const navigate = useNavigate();
     const IrCitas =async()=>{
-        const res=await Axios.get(`http://localhost:5000/usuarios/Paciente/${props.nombre}`)
+        const res=await Axios.get(`https://ulimasoftwareiibackend-production.up.railway.app/usuarios/Paciente/${props.nombre}`)
         navigate("Citas",{state:{nombre:props.nombre,paciente_id:res.data[0].id}})
     }
   

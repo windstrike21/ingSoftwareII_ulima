@@ -8,7 +8,7 @@ const Citas =()=>{
     const [citasPac,setCitasPac]=useState([]);
     console.log(location.state.paciente_id)
     useEffect(()=>{
-        Axios.get(`http://localhost:5000/citas/Paciente/${location.state.paciente_id}`)
+        Axios.get(`https://ulimasoftwareiibackend-production.up.railway.app/citas/Paciente/${location.state.paciente_id}`)
         .then(res => {
             console.log("MIRA")
             console.log(res.data);

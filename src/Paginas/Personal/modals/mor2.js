@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import Axios  from 'axios';
+
 
 
 const Modal2 = (props) => {
