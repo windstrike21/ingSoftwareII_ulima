@@ -24,6 +24,7 @@ import SignOut from "./Componentes/SignOut";
 import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
 import OldPassword from "./Componentes/OldContraseña";
 
+import EditarHoja from "./Paginas/Personal/EditarHoja";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -42,7 +43,7 @@ root.render(
               <Route path="Buscar_pacientes_para_ver_perfil">
                 <Route index element={<BuscarPacientesParaVerPerfil />} />
                 <Route path="GestionarHojaClinica">
-                  <Route index element={<HistorialClinico />} />
+                  <Route index element={<EditarHoja />} />
                   <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
                   <Route path="AgregarHistoria" element={<AgregarHistoria/>}/>
                 </Route>
