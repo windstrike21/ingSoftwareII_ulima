@@ -49,7 +49,7 @@ const ChatArea = () => {
                         </tr>
                         {
                             mensajes.map((mensaje) => (
-                                <tr key={mensaje.id}>
+                                <tr>
                                     <td>
                                         <p className="mb-0 p-2 w-75 rounded-2 bg-secondary ms-auto text-white">
                                             {mensaje}
