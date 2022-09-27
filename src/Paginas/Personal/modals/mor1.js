@@ -1,32 +1,37 @@
-import React from 'react';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Modal2 from "./mor2";
 
-class Modal1 extends React.Component{
-  state={
-    abierto: false,
+const Modal1 = () => {
+
+  const [abierto, setAbierto] = useState(false)
+
+  const abrirModal = () => {
+    setAbierto(true);
+  }
+  const cerrarModal = () => {
+    setAbierto(false);
   }
 
-  abrirModal=()=>{
-    this.setState({abierto: !this.state.abierto});
+
+  const modalStyles = {
+    position: "absolute",
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
   }
 
-  render(){
+  
+  
+  return (
 
-    const modalStyles={
-      position: "absolute",
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
-    }
-    return(
-      <>
-      <div className="principal ">
-        <div className="secundario ">
-      <Button color="primary" onClick={this.abrirModal}>Registro Por Personal</Button>
+    <>
+      <div className="principal">
+        <div className="secundario">
+          <Button color="primary" onClick={abrirModal}>Registro Por Personal</Button>
 
-      </div></div>
+        </div></div>
 
       <Modal isOpen={this.state.abierto} style={modalStyles} >
         <ModalHeader>
@@ -60,12 +65,22 @@ class Modal1 extends React.Component{
             </div>
                  
           </FormGroup>
+          
+          <FormGroup>
           <div className="row mb-2">
                 <label className="col-2 col-md-3">Estado civil:</label>
                 <input className="col-5 col-md-3"></input>
                 <label className="col-2">DNI:</label>
                 <input className="col-3 col-md-3"></input>
             </div>
+
+          </FormGroup>
+          <div className="row mb-1">
+            <label className="col-2">Estado civil:</label>
+            <input className="col-5" ></input>
+            <label className="col-2">DNI:</label>
+            <input className="col-3" ></input>
+          </div>
 
           <FormGroup>
           <div className="row mb-2"> 
@@ -88,16 +103,16 @@ class Modal1 extends React.Component{
         </ModalBody>
 
         <ModalFooter>
-            <Button color="secondary" onClick={this.abrirModal}>Cerrar</Button>
-            <Modal2 onClick={this.abrirModal}/>
+          <Button color="secondary" onClick={cerrarModal}>Cerrar</Button>
+          <Modal2 onClick={abrirModal}  />
         </ModalFooter>
       </Modal>
 
-      </>
+    </>
 
-      
-    )
-  }
+
+  )
+
 }
 
 export default Modal1;

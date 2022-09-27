@@ -1,3 +1,4 @@
+import React from 'react';
 const Datos_de_cita = (props) => {
     return (
         <div>
