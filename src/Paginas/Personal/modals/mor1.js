@@ -14,7 +14,6 @@ const Modal1 = () => {
     setAbierto(false);
   }
 
-
   const modalStyles = {
     position: "absolute",
     top: '50%',
@@ -22,8 +21,6 @@ const Modal1 = () => {
     transform: 'translate(-50%, -50%)'
   }
 
-  
-  
   return (
 
     <>
@@ -33,7 +30,7 @@ const Modal1 = () => {
 
         </div></div>
 
-      <Modal isOpen={abierto} style={modalStyles}>
+      <Modal isOpen={abierto} style={modalStyles} >
         <ModalHeader>
           Datos Obligatorios
         </ModalHeader>
@@ -73,15 +70,13 @@ const Modal1 = () => {
 
         <ModalFooter>
           <Button color="secondary" onClick={cerrarModal}>Cerrar</Button>
-          <Modal2 onClick={abrirModal}  />
+          <Modal2 onClick={abrirModal} type = 'submit'  />
         </ModalFooter>
       </Modal>
 
+      <script src='DatosRegistro.js'></script>
     </>
-
-
   )
-
 }
 
 export default Modal1;
