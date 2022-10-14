@@ -23,7 +23,7 @@ const InicioAlPerfilPaciente = (props) => {
                             <label className="mt-2">Codigo: {props.codigo}</label>
                         </div>
                         <div className="col-5 mt-2 ">
-                            <button onClick={() => navigate("GestionarHojaClinica",{state:{nombre:props.nombre}})}>Historial clínico</button>
+                            <button onClick={() => navigate("HistorialClinicoPaciente",{state:{nombre:props.nombre}})}>Historial clínico</button>
                             <button onClick={IrCitas} id="mov2d">Citas</button>
                         </div>
                     </div>

@@ -44,7 +44,7 @@ const Modal4 = () => {
     
     console.log(pacienteBody)
     
-    Axios.put(`https://ulimasoftwareiibackend-production.up.railway.app/usuarios/Paciente/${pacienteBody.dni}`, {
+    Axios.put(`https:/localhost:5000/usuarios/Paciente/${pacienteBody.dni}`, {
       id: pacienteBody.dni,
       apellidos: pacienteBody.apellidos,
       nombres: pacienteBody.nombres,
