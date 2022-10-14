@@ -30,7 +30,7 @@ const Modal1 = () => {
 
         </div></div>
 
-      <Modal isOpen={this.state.abierto} style={modalStyles} >
+      <Modal isOpen={abierto} style={modalStyles} >
         <ModalHeader>
           Datos Obligatorios
         </ModalHeader>
