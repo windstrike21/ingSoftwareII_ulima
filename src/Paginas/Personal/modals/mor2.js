@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup } from 'reactstrap';
+import {Button, Modal, ModalHeader,Form, ModalBody, Input, Label,ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -36,51 +36,24 @@ const Modal2 = (props) => {
         </ModalHeader>
         <ModalBody>
 
-        <FormGroup>
-        <div className="row mb-2 pt-2"> 
-                    <label className="col-2 col-md-3">Departamento:</label>
-                    <input className="col-5 col-md-3"></input>
-                    <label className="col-2">Provincia:</label>
-                    <input className="col-3 col-md-3"></input>
-                </div>
-        </FormGroup>
-
-        <FormGroup>
-        
-                <div className="row mb-2">
-                    <label className="col-2 col-md-3">Distrito:</label>
-                    <input className="col-md-8"></input>
-                </div>
-        </FormGroup>
-               
-        <FormGroup>
-                <div className="row mb-2">
-                    <label className="col-2 col-md-3">Dirección:</label>
-                    <input className="col-md-8"></input>
-                </div>
-        </FormGroup>
-
-        <FormGroup>
-                <div className="row mb-2 p-2">
-                    <label className="col-2 col-md-3">Localidad:</label>
-                    <input className="col-5 col-md-3"></input>
-                    <label className="col-2">Sector:</label>
-                    <input className="col-3 col-md-3"></input>
-                </div>
-        </FormGroup>
-
-        <FormGroup>
-                <div className="row mb-2 p-2">
-                    <label className="col-2 col-md-3">Referencia:</label>
-                    <input className="col-md-8"></input>
-                </div>
-                <div className="row mb-2 p-2">
-                    <label className="col-auto col-md-3">N°Teléfono:</label>
-                    <input className="col-5 col-md-3"></input>
-                    <label className="col-auto">N°Celular:</label>
-                    <input className="col-3 col-md-3"></input>
-                </div>
-          </FormGroup>
+        <Form id ="Formulario" className ="row align-center">
+            <div className='col-5 mx-3'>
+              <Label for="depart">Departamento</Label>
+              <Input type="text" id="depart"/> 
+              <Label for="prov">Provincia</Label>
+              <Input type="text" id="prov"/> 
+              <Label for="dist">Distrito</Label>
+              <Input type="text" id="dist"/> 
+              <Label for="dirr">Dirección</Label>
+              <Input type="text" id="dirr"/> 
+              <Label for="local">Localidad</Label>
+              <Input type="text" id="local"/> 
+              <Label for="sector">Sector</Label>
+              <Input type="text" id="sector"/> 
+              <Label for="refer">Referencia</Label>
+              <Input type="text" id="refer"/> 
+            </div>
+        </Form>
 
         </ModalBody>
 
