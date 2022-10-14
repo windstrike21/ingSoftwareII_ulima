@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import {Button, Modal, ModalHeader,Form, ModalBody, Input, Label, ModalFooter} from 'reactstrap';
-=======
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, Input, Label} from 'reactstrap';
->>>>>>> master
 import 'bootstrap/dist/css/bootstrap.css';
 import Modal2 from "./mor2";
 
@@ -70,10 +66,6 @@ const Modal1 = () => {
               <Input type="text" id="nomMadre"/>
             </div>
             </Form>
-<<<<<<< HEAD
-
-=======
->>>>>>> master
         </ModalBody>
 
         <ModalFooter>
@@ -81,6 +73,8 @@ const Modal1 = () => {
           <Modal2 onClick={abrirModal} type = 'submit'  />
         </ModalFooter>
       </Modal>
+
+      <script src='DatosRegistro.js'></script>
     </>
   )
 }

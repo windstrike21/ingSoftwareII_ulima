@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import {Button, Modal, ModalHeader,Form, ModalBody, Input, Label,ModalFooter} from 'reactstrap';
-=======
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, Label, Input } from 'reactstrap';
->>>>>>> master
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -57,12 +53,7 @@ const Modal2 = (props) => {
               <Label for="refer">Referencia</Label>
               <Input type="text" id="refer"/> 
             </div>
-<<<<<<< HEAD
-        </Form>
-
-=======
             </Form>
->>>>>>> master
         </ModalBody>
 
         <ModalFooter>
