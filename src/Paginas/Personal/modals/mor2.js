@@ -58,7 +58,7 @@ const Modal2 = (props) => {
 
         <ModalFooter>
           <Button color="secondary" onClick={cerrarModal}>Cancelar</Button>
-          <Button href="./registro" color="primary" >Confirmar</Button>
+          <Button href="./Afiliados" color="primary" >Confirmar</Button>
         </ModalFooter>
       </Modal>
 
