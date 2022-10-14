@@ -1,5 +1,6 @@
+import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css'
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import FilaEditarHistorialClinico from '../../Componentes/FilaEditarHistorialClinico';
 
@@ -7,7 +8,17 @@ import FilaEditarHistorialClinico from '../../Componentes/FilaEditarHistorialCli
 
 const HistorialClinico = () => {
     const location = useLocation();
-    const navigate=useNavigate()
+    const navigate=useNavigate();
+    const [citas, setcitas] = useState([])
+    
+
+    Axios.get(`https://localhost:5000/citas/Paciente/${location.state.paciente_id}`)
+        .then(res => {
+                
+                setcitas(res.data)
+        }).catch(console.log)
+
+
     return (
         <main>
             <div className="container m-4 p-4">
@@ -19,6 +30,8 @@ const HistorialClinico = () => {
                 </button>
 
                 <div className="secciones">
+                  
+
                     <FilaEditarHistorialClinico nombre={location.state.nombre}/>
                     
                     <FilaEditarHistorialClinico nombre={location.state.nombre}/>
