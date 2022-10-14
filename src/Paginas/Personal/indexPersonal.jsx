@@ -10,7 +10,7 @@ const IndexPersonal = (props) => {
     const location=useLocation()
     return (
         <div>
-            <Header tochat={props.tochat} id={location.state.id} tipo={location.state.tipo}/>
+            <Header tochat={props.tochat} id={location.state.id} tipo={location.state.tipo}  />
             <div className="px-4 py-3">
                 
                 <div className="row py-2 bg-light">

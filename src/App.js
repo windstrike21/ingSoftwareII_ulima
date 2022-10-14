@@ -26,7 +26,6 @@ import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
 function App() {
   
-
   return (
     <Router>
       <Routes>

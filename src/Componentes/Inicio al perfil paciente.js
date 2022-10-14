@@ -6,10 +6,13 @@ import Axios from "axios";
 const InicioAlPerfilPaciente = (props) => {
     const navigate = useNavigate();
     const IrCitas =async()=>{
-        const res=await Axios.get(`https://localhost:5000/usuarios/Paciente/${props.nombre}`)
+        const res=await Axios.get(`http://localhost:5000/usuarios/Paciente/${props.nombre}`)
         navigate("Citas",{state:{nombre:props.nombre,paciente_id:res.data[0].id}})
     }
-    
+    const IrHistorialClinico =async()=>{
+        const res=await Axios.get(`http://localhost:5000/usuarios/Paciente/${props.nombre}`)
+        navigate("HistorialClinicoPaciente",{state:{nombre:props.nombre,paciente_id:res.data[0].id}})
+    }
   
     
     return (
@@ -24,7 +27,7 @@ const InicioAlPerfilPaciente = (props) => {
                             <label className="mt-2">Codigo: {props.codigo}</label>
                         </div>
                         <div className="col-5 mt-2 ">
-                            <button >Historial clínico</button>
+                            <button onClick={IrHistorialClinico}>Historial clínico</button>
                             <button onClick={IrCitas} id="mov2d">Citas</button>
                         </div>
                     </div>
