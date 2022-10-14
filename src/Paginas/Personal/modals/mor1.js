@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Modal2 from "./mor2";
 
@@ -38,58 +38,37 @@ const Modal1 = () => {
           Datos Obligatorios
         </ModalHeader>
         <ModalBody>
-          <FormGroup>
-            <div className="row mb-1">
-              <label className="col-2">Apellidos:</label>
-              <input className="col-5" ></input>
-              <label className="col-2">N° Historia clinica:</label>
-              <input className="col-3" ></input>
-            </div>
-          </FormGroup>
-
-          <FormGroup>
-            <div className="row mb-1">
-              <label className="col-2">Nombres:</label>
-              <input className="col-5" ></input>
-              <label className="col-2">Sexo:</label>
-              <input className="col-3" ></input>
-            </div>
-          </FormGroup>
-
-          <FormGroup>
-            <div className="row mb-1">
-              <label className="col-2">Fecha de nacimiento:</label>
-              <input className="col-5" ></input>
-              <label className="col-2">Tipo de seguro:</label>
-              <input className="col-3" ></input>
+        <Form id ="Formulario" className ="row align-center">
+            <div className='col-5 mx-3'>
+              <Label for="NHistoria">N°Historia clínica</Label>
+              <Input type="text" id="NHistoria"/> 
+              <Label for="apellido">Apellidos</Label>
+              <Input type="text" id="apellido"/> 
+              <Label for="nombre">Nombres</Label>
+              <Input type="text" id="nombre"/> 
+              <Label for="correo">Correo</Label>
+              <Input type="text" id="correo"/> 
+              <Label for="dni">DNI</Label>
+              <Input type="text" id="dni"/> 
+              <Label for="nomPadre">Nombre del Padre</Label>
+              <Input type="text" id="nomPadre"/> 
             </div>
 
-          </FormGroup>
-          <div className="row mb-1">
-            <label className="col-2">Estado civil:</label>
-            <input className="col-5" ></input>
-            <label className="col-2">DNI:</label>
-            <input className="col-3" ></input>
-          </div>
-
-          <FormGroup>
-            <div className="row mb-1">
-              <label className="col-2">Nombre del padre:</label>
-              <input className="col-5" ></input>
-              <label className="col-2">Fallecido:</label>
-              <input className="col-3" ></input>
+            <div className='col-5'>
+              <Label for="sexo">Sexo</Label>
+              <Input type="text" id="sexo"/> 
+              <Label for="nacer">Fecha de Nacimiento</Label>
+              <Input type="text" id="nacer"/> 
+              <Label for="estado">Estado Civil</Label>
+              <Input type="text" id="estado"/> 
+              <Label for="seguro">Seguro</Label>
+              <Input type="text" id="seguro"/> 
+              <Label for="telefono">Telefono</Label>
+              <Input type="text" id="telefono"/> 
+              <Label for="nomMadre">Nombre de la Madre</Label>
+              <Input type="text" id="nomMadre"/>
             </div>
-          </FormGroup>
-
-          <FormGroup>
-            <div className="row mb-1">
-              <label className="col-2">Nombre de la madre:</label>
-              <input className="col-5" ></input>
-              <label className="col-2">Fallecido:</label>
-              <input className="col-3" ></input>
-            </div>
-          </FormGroup>
-
+            </Form>
         </ModalBody>
 
         <ModalFooter>
