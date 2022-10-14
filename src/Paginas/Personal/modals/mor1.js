@@ -71,7 +71,7 @@ const Modal1 = () => {
 
         <ModalFooter>
           <Button color="secondary" onClick={cerrarModal}>Cerrar</Button>
-          <Modal2 onClick={abrirModal}  />
+          <Modal2 onClick={abrirModal} type = 'submit'  />
         </ModalFooter>
       </Modal>
     </>
