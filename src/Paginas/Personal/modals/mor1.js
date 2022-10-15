@@ -74,7 +74,7 @@ const Modal1 = () => {
         </ModalFooter>
       </Modal>
 
-      <script src='DatosRegistro.js'></script>
+      
     </>
   )
 }
