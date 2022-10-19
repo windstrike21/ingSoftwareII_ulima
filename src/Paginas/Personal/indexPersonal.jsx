@@ -2,14 +2,15 @@ import Carousel from "../../Componentes/Carousel"
 import ContenidoInferior from "../../Componentes/ContenidoInferior"
 import React from "react"
 import Header from "../../Componentes/header"
+import { useLocation } from "react-router-dom"
 
 
 
-const IndexPersonal = () => {
-    
+const IndexPersonal = (props) => {
+    const location=useLocation()
     return (
         <div>
-            <Header />
+            <Header tochat={props.tochat} id={location.state.id} tipo={location.state.tipo}  />
             <div className="px-4 py-3">
                 
                 <div className="row py-2 bg-light">

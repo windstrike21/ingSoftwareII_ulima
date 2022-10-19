@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Dropdown } from 'bootstrap'
 
-const Header = () => {
+const Header = (props) => {
     return( 
     
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +23,7 @@ const Header = () => {
                         </Link>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><Link className="dropdown-item" to="Buscar_pacientes_para_ver_perfil">Consultar</Link></li>
-                            <li><Link className="dropdown-item" to="#">Historia clínica</Link></li>
+                            <li><Link className="dropdown-item" to="HistorialClinico" >Historia clínica</Link></li>
                             <li><Link className="dropdown-item" to="Afiliados" >Afiliados </Link></li>
                         </ul>
                     </li>
@@ -31,7 +31,7 @@ const Header = () => {
                 </ul>        
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
-                        <Link className="nav-link" to="CanalSoporte">¿Necesitas Ayuda?</Link>                        
+                        <Link className="nav-link" to={props.tochat} state={{id:props.id,tipo:props.tipo}} >¿Necesitas Ayuda?</Link>                        
                     </li>  
                     <Link className="navbar-brand" to="#">Perfil</Link>   
                 </ul>                         

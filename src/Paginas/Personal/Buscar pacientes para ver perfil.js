@@ -4,14 +4,14 @@ import Axios from "axios";
 const BuscarPacientesParaVerPerfil = (props) => {
     const [datosPac, setDatosPac] = useState([])
     useEffect(() => {
-        Axios.get("https://ulimasoftwareiibackend-production.up.railway.app/usuarios/Paciente")
+        Axios.get("http://localhost:5000/usuarios/Paciente")
             .then(res => {
                 
                 setDatosPac(res.data)
             }).catch(console.log)
     }, [])
     const obtenerPaciente=(event)=>{
-        Axios.get(`https://ulimasoftwareiibackend-production.up.railway.app/usuarios/Paciente/${event.target.value}`)
+        Axios.get(`http://localhost:5000/usuarios/Paciente/${event.target.value}`)
         .then(res => {
             
             setDatosPac(res.data)

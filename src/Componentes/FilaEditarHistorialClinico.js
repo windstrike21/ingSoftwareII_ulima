@@ -3,9 +3,12 @@ import React from 'react';
 const FilaEditarHistorialClinico = (props) => {
     return (
         <div className="row mt-3">
-            <InicioAlEditarHistorialClinico nombre={props.nombre}/>
-            <InicioAlEditarHistorialClinico nombre={props.nombre}/>
-            <InicioAlEditarHistorialClinico nombre={props.nombre}/>
+            {
+                props.tresCitas.map((cita)=>(
+                    <InicioAlEditarHistorialClinico nombre={props.nombre} fecha={cita.fecha} especialidad={cita.especialidad} doctor={cita.doctor} cita_id={cita.id}/>
+                ))
+            }
+            
         </div>
     )
 }

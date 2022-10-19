@@ -55,7 +55,7 @@ const LogIn = (props) => {
             </div>
 
             <div class="d-grid">
-              <botton type="submit" class="btn btn-primary" onClick={() => navigate("Inicio"+usuario)}> INICIAR SESIÓN</botton>
+              <botton type="submit" class="btn btn-primary" onClick={() => navigate("Inicio"+usuario,{state:{id:1,tipo:usuario}})}> INICIAR SESIÓN</botton>
             </div>
             
             
