@@ -13,7 +13,9 @@ const Rutas = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path = "/" element = {<menuDesplegable/>}/>
+        <Route path = "/">
+          <Route index element ={<menuD/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   )
