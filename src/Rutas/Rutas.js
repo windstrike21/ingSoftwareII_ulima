@@ -4,9 +4,7 @@ import LogInPaciente from "../Paginas/Pacientes/LogInPaciente";
 import SignOut from '../Paginas/Pacientes/SignOut';
 import OldContraseña from '../Paginas/Pacientes/OldContraseña';
 import EditarHoja from '../Paginas/Personal/EditarHoja';
-import menuD from '../Paginas/Pacientes/menuD';
-import menuDesplegable from '../Paginas/Pacientes/menuDesplegable';
-import ayudas1 from '../Paginas/Pacientes/ayudas';
+import MenuDesp from '../Paginas/Pacientes/menuDesp';
 
 
 const Rutas = () => {
@@ -14,7 +12,7 @@ const Rutas = () => {
     <BrowserRouter>
       <Routes>
         <Route path = "/">
-          <Route index element ={<menuD/>}/>
+          <Route index element ={<MenuDesp/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
