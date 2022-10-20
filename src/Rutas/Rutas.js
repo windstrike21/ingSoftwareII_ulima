@@ -4,8 +4,8 @@ import LogInPaciente from "../Paginas/Pacientes/LogInPaciente";
 import SignOut from '../Paginas/Pacientes/SignOut';
 import OldContraseña from '../Paginas/Pacientes/OldContraseña';
 import EditarHoja from '../Paginas/Personal/EditarHoja';
-import MenuDesp from '../Paginas/Pacientes/menuDesp';
 import EditarDatosPaciente from '../Paginas/Pacientes/EditarDatosPaciente';
+import MenuDesp from '../Components/menuDesp';
 
 
 const Rutas = () => {

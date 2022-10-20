@@ -5,7 +5,7 @@ import '../../css/editDatos.css'
 
 
 
-const EditarDatosPaciente = () => {
+const PerfilClinico = () => {
     return(
         <body>
             <div>
@@ -13,7 +13,7 @@ const EditarDatosPaciente = () => {
                 <div class = "container rounded-4">
                     <div class = "col d-lg-block col-md-5">
                         <p class=" text-center">
-                                editar datos paciente
+                                perfil clinico
                         </p>
                     </div>
                 </div>
@@ -21,4 +21,4 @@ const EditarDatosPaciente = () => {
         </body>
     );
 }
-export default EditarDatosPaciente
+export default PerfilClinico
