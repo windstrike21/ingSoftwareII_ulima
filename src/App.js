@@ -24,6 +24,7 @@ import OldPassword from "./Componentes/OldContraseña";
 import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
+
 function App() {
   
   return (
