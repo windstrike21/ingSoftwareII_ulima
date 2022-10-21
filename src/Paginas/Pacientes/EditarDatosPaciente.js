@@ -10,9 +10,9 @@ const EditarDatosPaciente = () => {
         <body>
             <div>
                 <MenuDesp></MenuDesp>
-                <div class = "container rounded-4">
+                <div class = "cajita rounded-4" id="cajita">
                     <div class = "col d-lg-block col-md-5">
-                        <p class=" text-center">
+                        <p class=" text-center"> 
                                 editar datos paciente
                         </p>
                     </div>

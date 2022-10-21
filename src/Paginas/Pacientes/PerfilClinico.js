@@ -10,7 +10,7 @@ const PerfilClinico = () => {
         <body>
             <div>
                 <MenuDesp></MenuDesp>
-                <div class = "container rounded-4">
+                <div class = "container rounded-4" id ="container1">
                     <div class = "col d-lg-block col-md-5">
                         <p class=" text-center">
                                 perfil clinico
