@@ -8,8 +8,16 @@ import '../../css/editDatos.css'
 const EditarDatosPaciente = () => {
     return(
         <body>
-            <div>
+
                 <MenuDesp></MenuDesp>
+                <div class = "cajita rounded-4" id="cajita">
+                    
+                    <div class = "col d-lg-block col-md-5">
+                        <p class=" text-center"> 
+                                editar datos paciente
+                        </p>
+                    </div>
+                </div>
                 <div class = "cajita rounded-4" id="cajita">
                     <div class = "col d-lg-block col-md-5">
                         <p class=" text-center"> 
@@ -17,7 +25,6 @@ const EditarDatosPaciente = () => {
                         </p>
                     </div>
                 </div>
-            </div>
         </body>
     );
 }
