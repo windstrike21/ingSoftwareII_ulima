@@ -1,20 +1,19 @@
 import React from 'react';
 import {Button, Modal, ModalHeader, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import { useState } from 'react';
 import Axios from 'axios';
 
 
-class Modal3 extends React.Component{
-  state={
-    abierto: false,
+const Modal3 =() =>{ 
+  const [abierto, setAbierto] = useState(false)
+
+  const abrirModal = () => {
+    setAbierto(true);
   }
-
-  abrirModal=()=>{
-    this.setState({abierto: !this.state.abierto});
+  const cerrarModal = () => {
+    setAbierto(false);
   }
-
-  render(){
-
     const modalStyles={
       position: "absolute",
       top: '50%',
@@ -53,27 +52,25 @@ class Modal3 extends React.Component{
       <>
       <div className="principal">
         <div className="secundario">
-        <Button color="danger" onClick={this.abrirModal}>Eliminar la hoja</Button>
+        <Button color="danger" onClick={abrirModal}>Eliminar la hoja</Button>
 
       </div></div>
 
-      <Modal isOpen={this.state.abierto} style={modalStyles}>
+      <Modal isOpen={abierto} style={modalStyles}>
         <ModalHeader>
          ¿ Deseas eliminar la hoja del afiliación ?
         </ModalHeader>
        
         <ModalFooter>
-            <Button href="./registro" color="danger" onclick={deleteHA}>Eliminar</Button>
-            <Button color="secondary" onClick={this.abrirModal}>Cancelar</Button>
+            <Button href="./Afiliados" color="danger" onClick={deleteHA} >Eliminar</Button>
+            <Button color="secondary" onClick={cerrarModal}>Cancelar</Button>
         </ModalFooter>
       </Modal>
 
       </>
-
-      
     )
   }
-}
+
 
 export default Modal3;
 
