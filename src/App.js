@@ -26,6 +26,8 @@ import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
 
 import Pagar from './Componentes/HacerPago'
+import ConfirmarP from './Componentes/ConfirmarPago'
+
 function App() {
   
   return (
@@ -48,8 +50,14 @@ function App() {
                 <Route path="Citas" element={<Citas />} />
               </Route>
               <Route path="Afiliados">
-                <Route index element={<Pagar />} />
+                <Route index element={<RegistroPersonal />} />
               </Route>
+
+              <Route path="Pago">
+                <Route index element ={<Pagar />}/>
+              </Route>
+          
+
               <Route path="HistorialClinico">
                 <Route index element={<EditarHoja />} />
                 <Route path="HistorialClinicoPaciente">

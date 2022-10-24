@@ -1,17 +1,18 @@
 import React from 'react';
 import {Button, Modal, ModalBody, ModalFooter, FormGroup, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import { useState } from 'react';
 
 export const ConfirmarPago = () =>{
 
-const [abierto, setAbierto] = useState(false)
+    const [abierto, setAbierto] = useState(false)
 
-const abrirModal = () => {
-    setAbierto(true);
-  }
-  const cerrarModal = () => {
-    setAbierto(false);
-  }
+    const abrirModal = () => {
+      setAbierto(true);
+    }
+    const cerrarModal = () => {
+      setAbierto(false);
+    }
 
 
     const modalStyles={
@@ -41,7 +42,7 @@ const abrirModal = () => {
         </ModalBody>
 
         <ModalFooter>
-            <Button color="secondary" onClick={abrirModal}>Confirmar pago</Button>
+            <Button color="secondary" onClick={cerrarModal}>Confirmar pago</Button>
         </ModalFooter>
       </Modal>
       </>
