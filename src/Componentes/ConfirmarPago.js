@@ -1,8 +1,8 @@
 import React from 'react';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label} from 'reactstrap';
+import {Button, Modal, ModalBody, ModalFooter, FormGroup, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
-export const ConfirmarPagoTarjeta = () =>{
+export const ConfirmarPago = () =>{
 
 const [abierto, setAbierto] = useState(false)
 
@@ -29,9 +29,6 @@ const abrirModal = () => {
       </div>
 
       <Modal isOpen={abierto=true} style={modalStyles}>
-        <ModalHeader>
-          Iniciar Sesión
-        </ModalHeader>
         <ModalBody>
           <FormGroup>
           <Label>Resumen de Pago</Label>
@@ -50,4 +47,4 @@ const abrirModal = () => {
       </>
     )
 }
-export default ConfirmarPagoTarjeta;
+export default ConfirmarPago;

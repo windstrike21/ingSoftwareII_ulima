@@ -24,6 +24,8 @@ import OldPassword from "./Componentes/OldContraseña";
 import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
+
+import Pagar from './Componentes/HacerPago'
 function App() {
   
   return (
@@ -46,7 +48,7 @@ function App() {
                 <Route path="Citas" element={<Citas />} />
               </Route>
               <Route path="Afiliados">
-                <Route index element={<RegistroPersonal />} />
+                <Route index element={<Pagar />} />
               </Route>
               <Route path="HistorialClinico">
                 <Route index element={<EditarHoja />} />

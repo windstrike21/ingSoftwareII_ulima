@@ -1,7 +1,7 @@
 import React from 'react';
 import {FormGroup, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import Confirmation from '../pago/ConfirmarPago'
+import Confirmation from './ConfirmarPago'
 
 export const MetodoPagoTarjeta = () => {
 
