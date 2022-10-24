@@ -1,41 +1,51 @@
 import logo_perfil_pac from "../Imagenes/Personal/logo_perfil_pac.jpg";
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import '../css/App.css';
 import Axios from "axios";
+import HorarioAtencion from "./HorarioAtencion";
 const InicioAlPerfilPaciente = (props) => {
     const navigate = useNavigate();
-    const IrCitas =async()=>{
-        const res=await Axios.get(`http://localhost:5000/usuarios/Paciente/${props.nombre}`)
-        navigate("Citas",{state:{nombre:props.nombre,paciente_id:res.data[0].id}})
+    const [mostrarHA,setMostrarHA]=useState(false)
+
+    const IrCitas = async () => {
+        navigate("Citas", { state: { nombre: props.datos.nombres, id_usuario: props.datos.id, usuario: props.usuario, tipo: props.tipo } })
     }
-    const IrHistorialClinico =async()=>{
-        const res=await Axios.get(`http://localhost:5000/usuarios/Paciente/${props.nombre}`)
-        navigate("HistorialClinicoPaciente",{state:{nombre:props.nombre,paciente_id:res.data[0].id}})
+    const IrHistorialClinico = async () => {
+        navigate("HistorialClinicoPaciente", { state: { nombre: props.datos.nombres, id_usuario: props.datos.id, usuario: props.usuario, tipo: props.tipo } })
     }
-  
-    
+    const VerHorarioAtencion = () => {
+        setMostrarHA(!mostrarHA)
+    }
+
+
     return (
-        <div className="row mb-2">
-            <img src={logo_perfil_pac} className="col-2" alt="" id="logo-perfil-pac"></img>
-
-            <div className="col-10 " id="oval">
-                <center className="container">
-                    <div className="row mt-2">
-                        <div className="col-5">
-                            <label>Nombre: {props.nombre}</label><br></br>
-                            <label className="mt-2">Codigo: {props.codigo}</label>
+        <div>
+            <div className="row mb-2">
+                <img src={logo_perfil_pac} className="col-2" alt="" id="logo-perfil-pac"></img>
+                <div className="col-10 " id="oval">
+                    <center className="container">
+                        <div className="row mt-2">
+                            <div className="col-5">
+                                <label>Nombre: {props.datos.nombres}</label><br></br>
+                                <label className="mt-2">Codigo: {props.codigo}</label>
+                            </div>
+                            <div className="col-5 mt-2 ">
+                                {(props.usuario == "Paciente" ?
+                                    <button onClick={IrHistorialClinico}>Historial Clinico</button> :
+                                    <button onClick={VerHorarioAtencion}>Horario de Atención</button>
+                                )}
+                                <button onClick={IrCitas} id="mov2d">Citas</button>
+                            </div>
                         </div>
-                        <div className="col-5 mt-2 ">
-                            <button onClick={IrHistorialClinico}>Historial clínico</button>
-                            <button onClick={IrCitas} id="mov2d">Citas</button>
-                        </div>
-                    </div>
-                </center>
+                    </center>
 
 
+
+                </div>
 
             </div>
+            {mostrarHA && <HorarioAtencion/>}
         </div>
     )
 }

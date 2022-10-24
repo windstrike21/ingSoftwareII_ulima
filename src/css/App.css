@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,21 +40,50 @@
 
 #oval {
   border-radius: 60px;
-  background-color:gray;
+  background-color: gray;
 }
-#logo-perfil-pac{
-     width: 100px;
-     height: 80px;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     
+
+#logo-perfil-pac {
+  width: 100px;
+  height: 80px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+
 }
-#mov2d{
+
+#mov2d {
   position: relative;
   left: 20px;
 }
-#izq{
+
+#izq {
   position: relative;
   right: 210px;
+}
+
+#rojo {
+  background-color: lightcoral;
+}
+
+#verde {
+  background-color: lightgreen;
+}
+
+.circulo_verde {
+  width: 28px;
+  height: 28px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: lightgreen;
+}
+
+.circulo_rojo {
+  width: 28px;
+  height: 28px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: lightcoral;
 }

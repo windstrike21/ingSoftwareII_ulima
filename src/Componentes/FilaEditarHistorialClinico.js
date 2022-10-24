@@ -5,7 +5,7 @@ const FilaEditarHistorialClinico = (props) => {
         <div className="row mt-3">
             {
                 props.tresCitas.map((cita)=>(
-                    <InicioAlEditarHistorialClinico nombre={props.nombre} fecha={cita.fecha} especialidad={cita.especialidad} doctor={cita.doctor} cita_id={cita.id}/>
+                    <InicioAlEditarHistorialClinico nombre={props.nombre} fecha={cita.fecha} especialidad={cita.especialidad} doctor={cita.doctor} diagnostico={cita.diagnostico} cita_id={cita.id} tipo={props.tipo}/>
                 ))
             }
             

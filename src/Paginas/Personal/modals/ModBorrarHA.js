@@ -23,7 +23,7 @@ class Modal3 extends React.Component{
     }
 
     const deleteHA=()=>{
-      Axios.put(`https:/localhost:5000/usuarios/Paciente/1`, 
+      Axios.put(`http://localhost:5000/usuarios/Paciente/1`, 
       { 
         apellidos: null,
         nombres: null,
