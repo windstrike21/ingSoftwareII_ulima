@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, Input, Label} from 'reactstrap';
+import { Button, Modal, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import HojaAF from "../CrearHojaPersonal"
 import Axios from 'axios';
@@ -43,7 +43,7 @@ const Modal1 = () => {
     
     console.log(pacienteBody)
     
-    Axios.push(`https://ulimasoftwareiibackend-production.up.railway.app/usuarios/Paciente/${pacienteBody.dni}`, {
+    Axios.put(`https://localhost:5000/usuarios/Paciente/${pacienteBody.dni}`, {
       id: pacienteBody.dni,
       apellidos: pacienteBody.apellidos,
       nombres: pacienteBody.nombres,
@@ -89,7 +89,7 @@ const Modal1 = () => {
           <Modal isOpen={abierto} style={modalStyles} >
             <ModalFooter>
               <HojaAF pacBody={pacienteBody} setPacBody={setPacienteBody}/>
-              <Button href="" color="primary" onClick={cerrarModal}>Crear Paciente</Button>
+              <Button href="" color="primary" onClick={cerrarModal}>Crear Hoja de Afiliados</Button>
             </ModalFooter>
           </Modal>
         </div>

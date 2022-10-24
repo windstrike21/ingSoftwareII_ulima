@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Modal, ModalHeader, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import Axios from 'axios';
 
 
 class Modal3 extends React.Component{
@@ -19,8 +20,35 @@ class Modal3 extends React.Component{
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
-
     }
+
+    const deleteHA=()=>{
+      Axios.put(`https:/localhost:5000/usuarios/Paciente/1`, 
+      { 
+        apellidos: null,
+        nombres: null,
+        fecha_nacimiento: null,
+        estado_civil: null,
+        nombre_padre: null,
+        nombre_madre: null,
+        num_hist_cli:  null,
+        sexo:  null,
+        tipo_seguro:  null,
+        fallecido_padre:  null,
+        fallecido_madre: null,
+        departamento: null,
+        provincia:  null,
+        distrito: null,
+        direccion: null,
+        localidad:  null,
+        sector:  null,
+        referencia:  null,
+        num_telefono:  null,
+        num_celular: null,
+        tipo: "Paciente"
+      })
+    }
+
     return(
       <>
       <div className="principal">
@@ -35,7 +63,7 @@ class Modal3 extends React.Component{
         </ModalHeader>
        
         <ModalFooter>
-            <Button href="./registro" color="danger">Eliminar</Button>
+            <Button href="./registro" color="danger" onclick={deleteHA}>Eliminar</Button>
             <Button color="secondary" onClick={this.abrirModal}>Cancelar</Button>
         </ModalFooter>
       </Modal>
