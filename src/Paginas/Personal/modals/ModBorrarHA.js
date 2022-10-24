@@ -63,7 +63,7 @@ class Modal3 extends React.Component{
         </ModalHeader>
        
         <ModalFooter>
-            <Button href="./registro" color="danger" onclick={deleteHA}>Eliminar</Button>
+            <Button href="./Afiliados" color="danger" onclick={deleteHA}>Eliminar</Button>
             <Button color="secondary" onClick={this.abrirModal}>Cancelar</Button>
         </ModalFooter>
       </Modal>
