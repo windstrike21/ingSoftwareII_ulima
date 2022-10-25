@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Modal, ModalHeader, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 
 const Modal3 =() =>{ 

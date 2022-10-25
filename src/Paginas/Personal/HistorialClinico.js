@@ -48,11 +48,7 @@ const HistorialClinico = () => {
 
                 <h2>Historial Clinico{location.state.tipo == "Personal" && `: ${location.state.nombre}`}</h2>
                 <br></br>
-                {location.state.tipo == "Personal" &&
-                    <button type="button" className="btn btn-light" onClick={() => navigate("AgregarHistoria", { state: { nombre: location.state.nombre } })}>
-                        Agregar historia
-                    </button>
-                }
+                
                 
 
 

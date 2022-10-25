@@ -18,7 +18,7 @@ import RegistroPersonal from "./Paginas/Personal/RegistroPorPersonal";
 import CanalSoporte from "./Paginas/Personal/canalSoporte";
 import Citas from "./Paginas/Personal/Citas";
 import SignOut from "./Componentes/SignOut";
-import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
+
 import OldPassword from "./Componentes/OldContraseña";
 
 import EditarHoja from "./Paginas/Personal/EditarHoja";
@@ -42,7 +42,7 @@ function App() {
                 <Route path="HistorialClinicoPaciente">
                   <Route index element={<HistorialClinico />} />
                   <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
-                  <Route path="AgregarHistoria" element={<AgregarHistoria />} />
+                  
                 </Route>
                 <Route path="Citas" element={<Citas />} />
               </Route>
@@ -54,7 +54,7 @@ function App() {
                 <Route path="HistorialClinicoPaciente">
                   <Route index element={<HistorialClinico />} />
                   <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
-                  <Route path="AgregarHistoria" element={<AgregarHistoria />} />
+                  
                 </Route>
               </Route>
               <Route path="CanalSoporte" element={<CanalSoporte />} />
