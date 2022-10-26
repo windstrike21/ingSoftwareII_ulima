@@ -18,7 +18,7 @@ const LogIn = (props) => {
   const handleOnChange = (event) => {
     setCar(event.target);
   }
-  
+  console.log(usuario)
   
   return (
 

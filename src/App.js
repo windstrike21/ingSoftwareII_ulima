@@ -8,7 +8,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Principal from "./Paginas/Principal";
 import IndexPersonal from "./Paginas/Personal/indexPersonal"
-import BuscarPacientesParaVerPerfil from "./Paginas/Personal/Buscar pacientes para ver perfil";
+import BuscarUsuariosParaVerPerfil from "./Componentes/Buscar usuarios para ver perfil";
 
 import LogIn from "./Componentes/LogIn";
 import HistorialClinico from "./Paginas/Personal/HistorialClinico";
@@ -18,15 +18,15 @@ import RegistroPersonal from "./Paginas/Personal/RegistroPorPersonal";
 import CanalSoporte from "./Paginas/Personal/canalSoporte";
 import Citas from "./Paginas/Personal/Citas";
 import SignOut from "./Componentes/SignOut";
-import AgregarHistoria from "./Paginas/Personal/AgregarHistoria";
+
 import OldPassword from "./Componentes/OldContraseña";
 
 import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
-
+import RecetaMedica from './Paginas/Pacientes/Receta Medica';
 function App() {
-  
+
   return (
     <Router>
       <Routes>
@@ -36,13 +36,13 @@ function App() {
           <Route path="IniciarSesionPersonal">
             <Route index element={<LogIn />} />
             <Route path="InicioPersonal" >
-              <Route index element={<IndexPersonal tochat="CanalSoporte" />} />
-              <Route path="Buscar_pacientes_para_ver_perfil">
-                <Route index element={<BuscarPacientesParaVerPerfil />} />
+              <Route index element={<IndexPersonal tochat="CanalSoporte" usuario="Paciente" />} />
+              <Route path="Buscar_Pacientes_Para_Ver_Perfil">
+                <Route index element={<BuscarUsuariosParaVerPerfil />} />
                 <Route path="HistorialClinicoPaciente">
                   <Route index element={<HistorialClinico />} />
                   <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
-                  <Route path="AgregarHistoria" element={<AgregarHistoria />} />
+                  
                 </Route>
                 <Route path="Citas" element={<Citas />} />
               </Route>
@@ -54,7 +54,7 @@ function App() {
                 <Route path="HistorialClinicoPaciente">
                   <Route index element={<HistorialClinico />} />
                   <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
-                  <Route path="AgregarHistoria" element={<AgregarHistoria />} />
+                  
                 </Route>
               </Route>
               <Route path="CanalSoporte" element={<CanalSoporte />} />
@@ -67,6 +67,22 @@ function App() {
             <Route path="IniciarSesionPaciente">
               <Route index element={<LogIn toRegistrar="/RegistrarPaciente" />} />
               <Route path="OldPassword" element={<OldPassword />} />
+              <Route path="InicioPaciente">
+                <Route index element={<IndexPersonal tochat="CanalSoporte" usuario="Medico" />} />
+                <Route path="Buscar_Medicos_Para_Ver_Perfil">
+                  <Route index element={<BuscarUsuariosParaVerPerfil />} />
+                  <Route path="Citas" element={<Citas />} />
+                </Route>
+                <Route path="HistorialClinico">
+                  <Route index element={<HistorialClinico />} />
+                  <Route path="Citas" >
+                    <Route index element={<Citas />} />
+                    <Route path="RecetaMedica" element={<RecetaMedica />} />
+                  </Route>
+                </Route>
+              </Route>
+
+
             </Route>
           </Route>
 
@@ -74,6 +90,23 @@ function App() {
             <Route index element={<LogIn toRegistrar="RegistrarPaciente" />} />
             <Route path="RegistrarPaciente" element={<SignOut toIniciar="/IniciarSesionPaciente" />} />
             <Route path="OldPassword" element={<OldPassword />} />
+            <Route path="InicioPaciente">
+              <Route index element={<IndexPersonal tochat="CanalSoporte" usuario="Medico" />} />
+              <Route path="Buscar_Medicos_Para_Ver_Perfil">
+                <Route index element={<BuscarUsuariosParaVerPerfil />} />
+                <Route path="Citas" element={<Citas />} />
+              </Route>
+              <Route path="HistorialClinico">
+                <Route index element={<HistorialClinico />} />
+                <Route path="Citas" >
+                  <Route index element={<Citas />} />
+                  <Route path="RecetaMedica" element={<RecetaMedica />} />
+                </Route>
+              </Route>
+
+            </Route>
+
+
           </Route>
           {/* Rutas para administrador */}
           <Route path="IniciarSesionAdministrador">

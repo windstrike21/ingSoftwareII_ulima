@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Modal, ModalHeader, ModalFooter} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 
 const Modal3 =() =>{ 
@@ -22,7 +22,8 @@ const Modal3 =() =>{
     }
 
     const deleteHA=()=>{
-      Axios.put(`https:/localhost:5000/usuarios/Paciente/1`, 
+      console.log("hola")
+      axios.put("http://localhost:5000/usuarios/Paciente/1", 
       { 
         apellidos: null,
         nombres: null,
@@ -62,7 +63,7 @@ const Modal3 =() =>{
         </ModalHeader>
        
         <ModalFooter>
-            <Button href="./Afiliados" color="danger" onClick={deleteHA} >Eliminar</Button>
+            <Button color="danger" onClick={deleteHA} >Eliminar</Button>
             <Button color="secondary" onClick={cerrarModal}>Cancelar</Button>
         </ModalFooter>
       </Modal>
