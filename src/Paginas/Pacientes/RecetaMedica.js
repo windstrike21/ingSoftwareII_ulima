@@ -10,13 +10,26 @@ const RecetaMedica = () => {
         <body>
             <div>
                 <MenuDesp></MenuDesp>
-                <div class = "container rounded-4">
-                    <div class = "col d-lg-block col-md-5">
-                        <p class=" text-center">
-                                receta medica
-                        </p>
+                <div class = "cajita rounded-4">
+                    <div class = "cajita3 rounded-4">
+                        <div class="row">
+                            <h2 class ="texto">Fecha:</h2>
+                            <h2 class ="texto">Diagnostico</h2>
+
+                            <div class ="datosdiag col-5 rounded-3">
+                                <a>Nombres</a>
+                            </div>
+                            <br></br>
+
+                            <h2 class ="texto">Receta medica</h2>
+
+                            <div class ="datosdiag col-5 rounded-3">
+                                <a>Nombres</a>
+                            </div>
+                                <button class="botoncito rounded-1">COMPRAR </button>
+                        </div>
                     </div>
-                </div>
+                </div>      
             </div>
         </body>
     );
