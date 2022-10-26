@@ -25,8 +25,9 @@ import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
 
-import Pagar from './Componentes/HacerPago'
-import ConfirmarP from './Componentes/ConfirmarPago'
+import Pagar from './Paginas/Pacientes/HacerPago'
+import ConfirmarP from './Paginas/Pacientes/ConfirmarPago'
+
 
 function App() {
   
@@ -53,9 +54,7 @@ function App() {
                 <Route index element={<RegistroPersonal />} />
               </Route>
 
-              <Route path="Pago">
-                <Route index element ={<Pagar />}/>
-              </Route>
+              
           
 
               <Route path="HistorialClinico">
