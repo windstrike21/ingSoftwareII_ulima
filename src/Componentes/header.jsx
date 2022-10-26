@@ -19,11 +19,11 @@ const Header = (props) => {
                     </li>
                     <li className="nav-item dropdown mx-1">
                         <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Pacientes
+                            {`${props.usuario}s`}
                         </Link>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><Link className="dropdown-item" to="Buscar_pacientes_para_ver_perfil">Consultar</Link></li>
-                            <li><Link className="dropdown-item" to="HistorialClinico" >Historia clínica</Link></li>
+                            <li><Link className="dropdown-item" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{usuario:props.usuario,tipo:props.tipo}}>Consultar</Link></li>
+                            <li><Link className="dropdown-item" to="HistorialClinico" state={{id_usuario:1,tipo:props.tipo,usuario:props.usuario}}>Historia clínica</Link></li>
                             <li><Link className="dropdown-item" to="Afiliados" >Afiliados </Link></li>
                         </ul>
                     </li>
