@@ -2,7 +2,7 @@ import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css'
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import FilaEditarHistorialClinico from '../../Componentes/FilaEditarHistorialClinico';
+import FilaEditarHistorialClinico from '../Componentes/FilaEditarHistorialClinico';
 
 
 

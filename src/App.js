@@ -11,8 +11,7 @@ import IndexPersonal from "./Paginas/Personal/indexPersonal"
 import BuscarUsuariosParaVerPerfil from "./Componentes/Buscar usuarios para ver perfil";
 
 import LogIn from "./Componentes/LogIn";
-import HistorialClinico from "./Paginas/Personal/HistorialClinico";
-import EditarHistoria from "./Paginas/Personal/EditarHistoria";
+
 
 import RegistroPersonal from "./Paginas/Personal/RegistroPorPersonal";
 import CanalSoporte from "./Paginas/Personal/canalSoporte";
@@ -25,6 +24,9 @@ import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
 import RecetaMedica from './Paginas/Pacientes/Receta Medica';
+import EditarHistoria from './Componentes/EditarHistoria';
+import HistorialClinico from './Componentes/HistorialClinico';
+
 function App() {
 
   return (
