@@ -6,7 +6,7 @@ import OldContraseña from '../Paginas/Pacientes/OldContraseña';
 import EditarHoja from '../Paginas/Personal/EditarHoja';
 import EditarDatosPaciente from '../Paginas/Pacientes/EditarDatosPaciente';
 import MenuDesp from '../Components/menuDesp';
-import PerfilClinico from '../Paginas/Pacientes/PerfilClinico';
+import AgendarCita from '../Paginas/Pacientes/AgendarCita';
 import RecetaMedica from '../Paginas/Pacientes/RecetaMedica';
 
 
@@ -15,7 +15,7 @@ const Rutas = () => {
     <BrowserRouter>
       <Routes>
         <Route path = "/" index element ={<MenuDesp/>}/>
-        <Route path = "PerfilClinico" index element ={<PerfilClinico/>}/>
+        <Route path = "AgendarCita" index element ={<AgendarCita/>}/>
         <Route path = "EditarDatosPaciente" index element ={<EditarDatosPaciente/>}/>
         <Route path = "RecetaMedica" index element ={<RecetaMedica/>}/>
       </Routes>

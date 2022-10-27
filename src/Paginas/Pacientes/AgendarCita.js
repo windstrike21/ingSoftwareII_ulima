@@ -5,7 +5,7 @@ import '../../css/editDatos.css'
 
 
 
-const PerfilClinico = () => {
+const AgendarCita = () => {
     return(
         <body>
             <div>
@@ -21,4 +21,4 @@ const PerfilClinico = () => {
         </body>
     );
 }
-export default PerfilClinico
+export default AgendarCita
