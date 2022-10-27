@@ -23,6 +23,11 @@ import OldPassword from "./Componentes/OldContraseña";
 import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
+
+import Pagar from './Paginas/Pacientes/HacerPago'
+import ConfirmarP from './Paginas/Pacientes/ConfirmarPago'
+
+
 import RecetaMedica from './Paginas/Pacientes/Receta Medica';
 import EditarHistoria from './Componentes/EditarHistoria';
 import HistorialClinico from './Componentes/HistorialClinico';
@@ -51,6 +56,10 @@ function App() {
               <Route path="Afiliados">
                 <Route index element={<RegistroPersonal />} />
               </Route>
+
+              
+          
+
               <Route path="HistorialClinico">
                 <Route index element={<EditarHoja />} />
                 <Route path="HistorialClinicoPaciente">
