@@ -32,6 +32,7 @@ import RecetaMedica from './Paginas/Pacientes/Receta Medica';
 import EditarHistoria from './Componentes/EditarHistoria';
 import HistorialClinico from './Componentes/HistorialClinico';
 import ComprarMedicamento from './Paginas/Pacientes/comprarMedicamento';
+import EditarDatosPaciente from './Paginas/Pacientes/EditarDatosPaciente';
 function App() {
 
   return (
@@ -94,6 +95,7 @@ function App() {
                     </Route>
                   </Route>
                 </Route>
+                <Route path="EditarDatosPaciente" element={<EditarDatosPaciente/>}/>
               </Route>
 
 
@@ -120,6 +122,7 @@ function App() {
                     </Route>
                 </Route>
               </Route>
+              <Route path="EditarDatosPaciente" element={<EditarDatosPaciente/>}/>
 
             </Route>
 
