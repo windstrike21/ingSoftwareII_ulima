@@ -51,17 +51,21 @@ const Header = (props) => {
                         }
 
                     </ul>
-                    <ul className="navbar-nav ms-auto">
-                        {props.tipo == "Personal" || props.tipo == "Administrador" &&
+                    {(props.tipo == "Personal" || props.tipo == "Administrador") &&
+                        <ul className="navbar-nav ms-auto">
+
 
                             <li className="nav-item">
                                 <Link className="nav-link" to={props.tochat} state={{ id: props.id, tipo: props.tipo }} >¿Necesitas Ayuda?</Link>
                             </li>
-                        }
 
 
-                        <Link className="navbar-brand" to="#">Perfil</Link>
-                    </ul>
+
+                            <Link className="navbar-brand" to="#">Perfil</Link>
+                        </ul>
+
+                    }
+
                 </div>
 
             </div>

@@ -97,7 +97,10 @@ function App() {
                   </Route>
                 </Route>
                 <Route path="EditarDatosPaciente" element={<EditarDatosPaciente />} />
-                <Route path="AgendarCita" element={<AgendarCita />} />
+                <Route path="AgendarCita" >
+                  <Route index element={<AgendarCita />} />
+                  <Route path="Pagar" element={<Pagar />} />
+                </Route>
               </Route>
 
 
@@ -125,7 +128,10 @@ function App() {
                 </Route>
               </Route>
               <Route path="EditarDatosPaciente" element={<EditarDatosPaciente />} />
-              <Route path="AgendarCita" element={<AgendarCita />} />
+              <Route path="AgendarCita" >
+                <Route index element={<AgendarCita />} />
+                <Route path="Pagar" element={<Pagar />} />
+              </Route>
 
             </Route>
 
