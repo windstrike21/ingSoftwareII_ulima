@@ -24,15 +24,12 @@ import OldPassword from "./Componentes/OldContraseña";
 import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ChatArea from "./Componentes/ChatArea";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
-<<<<<<< HEAD
 
 import Pagar from './Paginas/Pacientes/HacerPago'
 import ConfirmarP from './Paginas/Pacientes/ConfirmarPago'
 
 
-=======
 import RecetaMedica from './Paginas/Pacientes/Receta Medica';
->>>>>>> master
 function App() {
 
   return (
