@@ -24,10 +24,11 @@ const Header = (props) => {
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><Link className="dropdown-item" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{usuario:props.usuario,tipo:props.tipo}}>Consultar</Link></li>
                             <li><Link className="dropdown-item" to="HistorialClinico" state={{id_usuario:1,tipo:props.tipo,usuario:props.usuario}}>Historia clínica</Link></li>
-                            <li><Link className="dropdown-item" to="Afiliados" >Afiliados </Link></li>
                         </ul>
                     </li>
-                                          
+                    <li className="nav-item mx-1">
+                        <Link className="dropdown-item" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{usuario:props.usuario,tipo:props.tipo}}>{`Consultar ${props.usuario}s`}</Link>
+                    </li>
                 </ul>        
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
