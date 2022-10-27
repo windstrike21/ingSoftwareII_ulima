@@ -4,13 +4,20 @@ import LogInPaciente from "../Paginas/Pacientes/LogInPaciente";
 import SignOut from '../Paginas/Pacientes/SignOut';
 import OldContraseña from '../Paginas/Pacientes/OldContraseña';
 import EditarHoja from '../Paginas/Personal/EditarHoja';
+import EditarDatosPaciente from '../Paginas/Pacientes/EditarDatosPaciente';
+import MenuDesp from '../Components/menuDesp';
+import AgendarCita from '../Paginas/Pacientes/AgendarCita';
+import RecetaMedica from '../Paginas/Pacientes/RecetaMedica';
 
 
 const Rutas = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path = "/" element={ <EditarHoja/>}/>
+        <Route path = "/" index element ={<MenuDesp/>}/>
+        <Route path = "AgendarCita" index element ={<AgendarCita/>}/>
+        <Route path = "EditarDatosPaciente" index element ={<EditarDatosPaciente/>}/>
+        <Route path = "RecetaMedica" index element ={<RecetaMedica/>}/>
       </Routes>
     </BrowserRouter>
   )
