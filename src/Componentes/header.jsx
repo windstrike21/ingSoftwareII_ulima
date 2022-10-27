@@ -16,7 +16,7 @@ const Header = (props) => {
                 <ul className="navbar-nav">
                     <li className="nav-item mx-2">
                         <Link className="nav-link active" aria-current="page" to="#">Inicio</Link>
-                    </li>
+                    </li>                    
                     <li className="nav-item dropdown mx-1">
                         <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {`${props.usuario}s`}
@@ -27,7 +27,16 @@ const Header = (props) => {
                         </ul>
                     </li>
                     <li>
-                        <Link className="nav-link active" aria-current="page" to="#">{`Consultar${props.usuario}s`}</Link>
+                        <Link className="nav-link active" aria-current="page" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{usuario:props.usuario,tipo:props.tipo}}>{`Consultar${props.usuario}s`}</Link>
+                    </li>
+                    <li>
+                        <Link className="nav-link active" to="HistorialClinico" state={{id_usuario:1,tipo:props.tipo,usuario:props.usuario}}>Mi Historial Clínico</Link>
+                    </li>
+                    <li>
+                        <Link className="nav-link active" to="#">Editar Perfil</Link>
+                    </li>
+                    <li>
+                        <Link className="nav-link active" to="#">Agendar Cita</Link>
                     </li>
                 </ul>        
                 <ul className="navbar-nav ms-auto">
