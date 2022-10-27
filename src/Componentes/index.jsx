@@ -1,11 +1,12 @@
-import Carousel from "../../Componentes/Carousel"
-import ContenidoInferior from "../../Componentes/ContenidoInferior"
+import Carousel from "./Carousel"
+import ContenidoInferior from "./ContenidoInferior"
 import React from "react"
-import Header from "../../Componentes/header"
+import Header from "./header"
 import { useLocation } from "react-router-dom"
 
 
-const IndexPersonal = (props) => {
+
+const Index = (props) => {
     const location=useLocation()
     return (
         <div>
@@ -28,4 +29,4 @@ const IndexPersonal = (props) => {
 
     )
 }
-export default IndexPersonal;
+export default Index;
