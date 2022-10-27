@@ -1,5 +1,4 @@
 import React from "react";
-import MenuDesp from '../../Components/menuDesp';
 import { CardBody } from "reactstrap";
 import '../../css/editDatos.css'
 
@@ -15,7 +14,7 @@ const AgendarCita = () => {
                             <h2 class ="texto">Agendar una cita</h2>
                             <div class ="datosdiag col-5 rounded-3">
                             </div>
-                                <button class="botoncito rounded-1">COMPRAR </button>
+                                <button class="botoncito rounded-1">PAGAR </button>
                         </div>
                     </div>
                 </div>      

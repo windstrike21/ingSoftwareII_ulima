@@ -33,6 +33,7 @@ import EditarHistoria from './Componentes/EditarHistoria';
 import HistorialClinico from './Componentes/HistorialClinico';
 import ComprarMedicamento from './Paginas/Pacientes/comprarMedicamento';
 import EditarDatosPaciente from './Paginas/Pacientes/EditarDatosPaciente';
+import AgendarCita from './Paginas/Pacientes/AgendarCita';
 function App() {
 
   return (
@@ -80,7 +81,7 @@ function App() {
               <Route index element={<LogIn toRegistrar="/RegistrarPaciente" />} />
               <Route path="OldPassword" element={<OldPassword />} />
               <Route path="InicioPaciente">
-                <Route index element={<Index usuario="Medico" />} />
+                <Route index element={<Index tochat="CanalSoporte" usuario="Medico" />} />
                 <Route path="Buscar_Medicos_Para_Ver_Perfil">
                   <Route index element={<BuscarUsuariosParaVerPerfil />} />
                   <Route path="Citas" element={<Citas />} />
@@ -90,12 +91,13 @@ function App() {
                   <Route path="Citas" >
                     <Route index element={<Citas />} />
                     <Route path="RecetaMedica">
-                      <Route index element={<RecetaMedica />}/>
-                      <Route path="comprarMedicamento" element={<ComprarMedicamento/>}/>
+                      <Route index element={<RecetaMedica />} />
+                      <Route path="comprarMedicamento" element={<ComprarMedicamento />} />
                     </Route>
                   </Route>
                 </Route>
-                <Route path="EditarDatosPaciente" element={<EditarDatosPaciente/>}/>
+                <Route path="EditarDatosPaciente" element={<EditarDatosPaciente />} />
+                <Route path="AgendarCita" element={<AgendarCita />} />
               </Route>
 
 
@@ -117,12 +119,13 @@ function App() {
                 <Route path="Citas" >
                   <Route index element={<Citas />} />
                   <Route path="RecetaMedica">
-                      <Route index element={<RecetaMedica />}/>
-                      <Route path="comprarMedicamento" element={<ComprarMedicamento/>}/>
-                    </Route>
+                    <Route index element={<RecetaMedica />} />
+                    <Route path="comprarMedicamento" element={<ComprarMedicamento />} />
+                  </Route>
                 </Route>
               </Route>
-              <Route path="EditarDatosPaciente" element={<EditarDatosPaciente/>}/>
+              <Route path="EditarDatosPaciente" element={<EditarDatosPaciente />} />
+              <Route path="AgendarCita" element={<AgendarCita />} />
 
             </Route>
 
