@@ -1,7 +1,14 @@
 import React from "react";
 import "./comprarMedicamento.css"
+import { useNavigate } from "react-router-dom";
 
 const comprarMedicamento = () => {
+    const navigate = useNavigate();    
+    
+    const RegresarARecetaMedica = async () => {
+        navigate("./RecetaMedica")
+    }  
+
     return <>
         <div className="row pt-2">
             <div className="col-1"></div>
@@ -57,7 +64,7 @@ const comprarMedicamento = () => {
                         <button type="button" className="btn btn-success">Comprar</button>
                     </div>
                     <div className="col text-end">
-                        <button type="button" className="btn btn-danger">Cancelar</button>
+                        <button type="button" className="btn btn-danger" onClick={RegresarARecetaMedica} >Cancelar</button>
                     </div>
                 </div>
             </div>
