@@ -68,16 +68,6 @@ const LogIn = (props) => {
                 <botton type="submit" class="btn btn-primary" onClick={()=>navigate(props.toRegistrar)}> Registrate ahora </botton>
               </div>
             }
-
-
-
-
-
-
-
-
-
-
           </form>
         </div>
       </div>
