@@ -5,7 +5,6 @@ import Header from "../../Componentes/header"
 import { useLocation } from "react-router-dom"
 
 
-
 const IndexPersonal = (props) => {
     const location=useLocation()
     return (
