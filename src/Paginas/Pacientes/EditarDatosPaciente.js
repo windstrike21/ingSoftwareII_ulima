@@ -1,5 +1,5 @@
 import React from "react";
-import MenuDesp from '../../Components/menuDesp';
+
 import { CardBody } from "reactstrap";
 import '../../css/editDatos.css'
 
@@ -8,7 +8,7 @@ import '../../css/editDatos.css'
 const EditarDatosPaciente = () => {
     return(
         <body>
-                <MenuDesp></MenuDesp>
+                
                 
                 <div class = "cajita rounded-4">
                     <div class = "cajita2 rounded-4">

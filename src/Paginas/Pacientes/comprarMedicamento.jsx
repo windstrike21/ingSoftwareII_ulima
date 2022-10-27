@@ -1,13 +1,15 @@
-import React from "react";
-import "./comprarMedicamento.css"
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import "../../css/Paciente/comprarMedicamento.css"
+import { useLocation, useNavigate } from "react-router-dom";
 
 const comprarMedicamento = () => {
-    const navigate = useNavigate();    
-    
+    const navigate = useNavigate();
+    const location = useLocation()
+    let precioTotal=0
+
     const RegresarARecetaMedica = async () => {
-        navigate("./RecetaMedica")
-    }  
+        navigate("/RecetaMedica")
+    }
 
     return <>
         <div className="row pt-2">
@@ -36,23 +38,34 @@ const comprarMedicamento = () => {
                                     <th>Precio Unitario</th>
                                     <th>Total</th>
                                 </thead>
+
                                 <tbody>
-                                    <tr>
-                                        <td>Levocetirizina</td>
-                                        <td>10</td>
-                                        <td>2</td>
-                                        <td>20</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Paracetamol</td>
-                                        <td>10</td>
-                                        <td>1.5</td>
-                                        <td>15</td>
-                                    </tr>                                    
+                                    {
+                                        location.state.medicamentos.map((medicina) => {
+                                            if (medicina.disponibilidad) {
+                                                precioTotal=precioTotal+medicina.unidades*medicina.precio_unitario
+                                                return (
+                                                    <tr>
+                                                        <td>{medicina.medicamento}</td>
+                                                        <td>{medicina.unidades}</td>
+                                                        <td>{medicina.precio_unitario}</td>
+                                                        <td>{medicina.unidades*medicina.precio_unitario}</td>
+                                                    </tr>
+                                                    
+                                                )
+                                                
+
+                                            }
+                                            
+                                            
+
+                                        })
+                                    }
+
                                     <tr className="border-dark border-top border-2">
                                         <th>Total</th>
-                                        <td colspan="2"></td>                                        
-                                        <th>35</th>
+                                        <td colspan="2"></td>
+                                        <th>{precioTotal}</th>
                                     </tr>
                                 </tbody>
                             </table>

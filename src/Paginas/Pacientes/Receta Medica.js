@@ -1,12 +1,13 @@
 import Medicamento from "../../Componentes/Medicamento";
 import React, { useEffect, useState } from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import '../../css/App.css'
 const RecetaMedica = () => {
     const location = useLocation()
     const [medicamentos, setMedicamentos] = useState([])
     const colores = { true: "verde", false: "rojo" }
+    const navigate=useNavigate()
 
     useEffect(() => {
         axios.get(`http://localhost:5000/medicamentos/Cita/${location.state.CitaId}`)
@@ -55,7 +56,7 @@ const RecetaMedica = () => {
 
                     <div className="row">
                         <div className="col-3"></div>
-                        <button className="col-2">Comprar Selección</button>
+                        <button className="col-2" onClick={()=>navigate("comprarMedicamento",{state:{medicamentos:medicamentos}})}>Comprar</button>
                         <div className="col-1"></div>
                         <button className="col-2">Imprimir</button>
                         <div className="col-3"></div>
