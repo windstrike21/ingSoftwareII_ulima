@@ -7,7 +7,8 @@ const CitaAgendada = () => {
     const navigate = useNavigate()
     return <>
         <Header></Header>
-        <div className="bg-light bg-opacity-75 componente">
+        <div className="bg-light bg-opacity-75 componente position-relative">
+            <button type="button" className="position-absolute top-0 end-0 btn btn-outline-secondary btn-sm m-3" onClick={() => navigate("/IniciarSesionPaciente/InicioPaciente/AgendarCita")}>Volver</button>
             <h1 className="text-center pt-4 pb-5">¡Cita agendada con éxito!</h1>
             <h4 className="px-3 mt-5 mb-3">Detalles de la cita</h4>
             <div className="px-3 table-responsive">

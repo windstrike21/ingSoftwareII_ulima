@@ -2,8 +2,10 @@ import React from "react";
 import Header from "../../Componentes/header";
 import doctor from '../../Imagenes/Médico/doctor.jpg'
 import '../../css/screenSize.css'
+import { useNavigate } from "react-router-dom";
 
 const AgendarCita = () => {
+    const navigate = useNavigate();
     return <>
     <Header></Header>
         <div className="row border border-top text-center componente">
@@ -37,7 +39,7 @@ const AgendarCita = () => {
                     </div>
                     <div className="col-2"></div>
                 </div>
-                <button type="button" className="mt-3 btn btn-outline-warning">Agendar</button>
+                <button type="button" className="mt-3 btn btn-outline-warning" onClick={()=>navigate('CitaAgendada')}>Agendar</button>
             </div>
         </div>
     </>
