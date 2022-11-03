@@ -34,6 +34,7 @@ import HistorialClinico from './Componentes/HistorialClinico';
 import ComprarMedicamento from './Paginas/Pacientes/comprarMedicamento';
 import EditarDatosPaciente from './Paginas/Pacientes/EditarDatosPaciente';
 import AgendarCita from './Paginas/Pacientes/AgendarCita';
+
 function App() {
 
   return (
