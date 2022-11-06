@@ -5,7 +5,7 @@ import '../../css/editDatos.css'
 
 
 
-const AgendarCita = () => {
+const AgendarCitaOld = () => {
     const navigate=useNavigate()
     return(
         <body>
@@ -24,4 +24,4 @@ const AgendarCita = () => {
         </body>
     );
 }
-export default AgendarCita
+export default AgendarCitaOld
