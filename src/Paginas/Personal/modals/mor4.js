@@ -44,7 +44,7 @@ const Modal4 = () => {
     
     console.log(pacienteBody)
     
-    Axios.put(`http:/localhost:5000/usuarios/Paciente/${pacienteBody.dni}`, {
+    Axios.put(`/usuarios/Paciente/${pacienteBody.dni}`, {
       id: pacienteBody.dni,
       apellidos: pacienteBody.apellidos,
       nombres: pacienteBody.nombres,

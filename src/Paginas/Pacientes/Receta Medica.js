@@ -10,7 +10,7 @@ const RecetaMedica = () => {
     const navigate=useNavigate()
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/medicamentos/Cita/${location.state.CitaId}`)
+        axios.get(`/medicamentos/Cita/${location.state.CitaId}`)
             .then(res => {
                 setMedicamentos(res.data)
             }).catch(console.log)

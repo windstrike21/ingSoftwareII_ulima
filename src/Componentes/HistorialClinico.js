@@ -18,7 +18,7 @@ const HistorialClinico = () => {
 
 
     useEffect(() => {
-        Axios.get(`http://localhost:5000/citas/Paciente/${location.state.id_usuario}`)
+        Axios.get(`/citas/Paciente/${location.state.id_usuario}`)
             .then(res => {
                 setCitas(res.data)
             }).catch(console.log)

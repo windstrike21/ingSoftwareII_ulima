@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import React, { useState } from "react"
+import React from "react"
 
 import './App.css';
 
@@ -21,11 +21,11 @@ import SignOut from "./Componentes/SignOut";
 import OldPassword from "./Componentes/OldContraseña";
 
 import EditarHoja from "./Paginas/Personal/EditarHoja";
-import ChatArea from "./Componentes/ChatArea";
+
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
 
 import Pagar from './Paginas/Pacientes/HacerPago'
-import ConfirmarP from './Paginas/Pacientes/ConfirmarPago'
+
 
 
 import RecetaMedica from './Paginas/Pacientes/Receta Medica';

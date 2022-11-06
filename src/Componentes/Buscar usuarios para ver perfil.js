@@ -10,7 +10,7 @@ const BuscarUsuariosParaVerPerfil = (props) => {
     
     useEffect(() => {
         if (mostraTodos) {
-            Axios.get(`http://localhost:5000/usuarios/${location.state.usuario}`)
+            Axios.get(`/usuarios/${location.state.usuario}`)
                 .then(res => {
 
                     setDatosPac(res.data)
@@ -23,7 +23,7 @@ const BuscarUsuariosParaVerPerfil = (props) => {
         if (event.target.value == "") {
             setMostrarTodos(true)
         } else {
-            Axios.get(`http://localhost:5000/usuariosNombre/${location.state.usuario}/${event.target.value}`)
+            Axios.get(`/usuariosNombre/${location.state.usuario}/${event.target.value}`)
                 .then(res => {
 
                     setDatosPac(res.data)

@@ -23,7 +23,7 @@ const Modal3 =() =>{
 
     const deleteHA=()=>{
       console.log("hola")
-      axios.put("http://localhost:5000/usuarios/Paciente/1", 
+      axios.put("/usuarios/Paciente/1", 
       { 
         apellidos: null,
         nombres: null,
