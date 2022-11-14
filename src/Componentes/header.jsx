@@ -26,6 +26,9 @@ const Header = (props) => {
                         {props.tipo == "Personal" &&
                             <>
                                 <li>
+                                    <Link className="nav-link active" aria-current="page" to={`Buscar_${props.usuario2}s_Para_Ver_Perfil`} state={{ usuario: props.usuario2, tipo: props.tipo }}>{`Consultar ${props.usuario2}s`}</Link>
+                                </li>
+                                <li>
                                     <Link className="nav-link active" aria-current="page" to="HistorialClinicoPaciente">Historial Clinico</Link>
                                 </li>
                                 <li>

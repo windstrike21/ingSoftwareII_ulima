@@ -7,7 +7,7 @@ import Axios from 'axios';
 const Modal4 = () => {
   const [abierto, setAbierto] = useState(false)
   const [pacienteBody, setPacienteBody] = useState({
-    dni: null,
+    num_documento: null,
     apellidos: null,
     nombres: null,
     fecha_nacimiento: null,
@@ -26,8 +26,8 @@ const Modal4 = () => {
     localidad: null,
     sector: null,
     referencia: null,
-    num_telefono: null,
-    num_celular: null
+    telefono: null,
+    celular: null
     
   })
 
@@ -44,8 +44,8 @@ const Modal4 = () => {
     
     console.log(pacienteBody)
     
-    Axios.put(`/usuarios/Paciente/${pacienteBody.dni}`, {
-      id: pacienteBody.dni,
+    Axios.put("/hojasFiliacion/1", {
+      num_documento: pacienteBody.num_documento,
       apellidos: pacienteBody.apellidos,
       nombres: pacienteBody.nombres,
       fecha_nacimiento: pacienteBody.fecha_nacimiento,
@@ -64,16 +64,17 @@ const Modal4 = () => {
       localidad: pacienteBody.localidad,
       sector: pacienteBody.localidad,
       referencia: pacienteBody.referencia,
-      num_telefono: pacienteBody.num_telefono,
-      num_celular: pacienteBody.num_celular,
-      tipo: "Paciente"
+      telefono: pacienteBody.telefono,
+      celular: pacienteBody.celular
     })
   }
   const modalStyles = {
     position: "absolute",
-    top: '50%',
+    top: '10%',
     left: '50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    width: '400 px',
+    height: '10%'
   }
   return (
     <>

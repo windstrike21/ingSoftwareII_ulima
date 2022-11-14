@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "reactstrap";
 
 const ActualizarHojaFiliacion = (props) => {
     
@@ -13,7 +14,7 @@ const ActualizarHojaFiliacion = (props) => {
     
     return (
         <div>
-
+            <Form id ="Formulario" className ="row align-center">
             <center><h3>DATOS GENERALES</h3></center>
             <div className="container mb-1">
                 <div className="row mb-1">
@@ -37,8 +38,8 @@ const ActualizarHojaFiliacion = (props) => {
                 <div className="row mb-1">
                     <label className="col-2">Estado civil:</label>
                     <input className="col-5" onChange={handleChange} name="estado_civil" value={props.pacBody.estado_civil}></input>
-                    <label className="col-2">DNI:</label>
-                    <input className="col-3" onChange={handleChange} name="dni" value={props.pacBody.dni}></input>
+                    <label className="col-2">Numero de documento:</label>
+                    <input className="col-3" onChange={handleChange} name="num_documento" value={props.pacBody.num_documento}></input>
                 </div>
                 <div className="row mb-1">
                     <label className="col-2">Nombre del padre:</label>
@@ -83,12 +84,12 @@ const ActualizarHojaFiliacion = (props) => {
                 </div>
                 <div className="row mb-1">
                     <label className="col-2">N° Teléfono:</label>
-                    <input className="col-5" onChange={handleChange} name="num_telefono" value={props.pacBody.num_telefono}></input>
+                    <input className="col-5" onChange={handleChange} name="telefono" value={props.pacBody.telefono}></input>
                     <label className="col-2">N° Celular:</label>
-                    <input className="col-3" onChange={handleChange} name="num_celular" value={props.pacBody.num_celular}></input>
+                    <input className="col-3" onChange={handleChange} name="celular" value={props.pacBody.celular}></input>
                 </div>
             </div>
-            
+            </Form>
 
         </div>
     )

@@ -1,7 +1,7 @@
 import React from "react";
 
 import InicioHojaFiliacion from "../../Componentes/Inicio a hoja filiacion";
-import Modal1 from "../Personal/modals/ModCrearPac";
+import Modal1 from "./modals/ModCrearHA";
 
 
 

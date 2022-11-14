@@ -48,13 +48,17 @@ function App() {
           <Route path="IniciarSesionPersonal">
             <Route index element={<LogIn />} />
             <Route path="InicioPersonal" >
-              <Route index element={<Index tochat="CanalSoporte" usuario="Paciente" />} />
+              <Route index element={<Index tochat="CanalSoporte" usuario="Paciente" usuario2="Medico" />} />
               <Route path="Buscar_Pacientes_Para_Ver_Perfil">
                 <Route index element={<BuscarUsuariosParaVerPerfil />} />
                 <Route path="HistorialClinicoPaciente">
                   <Route index element={<HistorialClinico />} />
                   <Route path="ActualizarHistorialClinico" element={<EditarHistoria />} />
                 </Route>
+                <Route path="Citas" element={<Citas />} />
+              </Route>
+              <Route path="Buscar_Medicos_Para_Ver_Perfil">
+                <Route index element={<BuscarUsuariosParaVerPerfil />} />
                 <Route path="Citas" element={<Citas />} />
               </Route>
               <Route path="Afiliados">
