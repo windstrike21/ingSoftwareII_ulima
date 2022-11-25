@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalFooter} from 'reactstrap';
+import { Button, Modal, ModalFooter } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import HojaAF from "../CrearHojaPersonal"
-import Axios from 'axios';
+
+import axios from 'axios';
 
 const Modal1 = () => {
 
   const [abierto, setAbierto] = useState(false)
   const [pacienteBody, setPacienteBody] = useState({
-    dni: null,
+    num_documento: null,
     apellidos: null,
     nombres: null,
     fecha_nacimiento: null,
@@ -27,8 +28,8 @@ const Modal1 = () => {
     localidad: null,
     sector: null,
     referencia: null,
-    num_telefono: null,
-    num_celular: null
+    telefono: null,
+    celular: null
   })
 
   const abrirModal = () => {
@@ -40,11 +41,11 @@ const Modal1 = () => {
   }
 
   const datos = () => {
-    
+
     console.log(pacienteBody)
-    
-    Axios.put(`http://localhost:5000/usuarios/Paciente/${pacienteBody.dni}`, {
-      id: pacienteBody.dni,
+
+    axios.post(`/hojasFiliacion`, {
+      num_documento: pacienteBody.num_documento,
       apellidos: pacienteBody.apellidos,
       nombres: pacienteBody.nombres,
       fecha_nacimiento: pacienteBody.fecha_nacimiento,
@@ -63,10 +64,13 @@ const Modal1 = () => {
       localidad: pacienteBody.localidad,
       sector: pacienteBody.localidad,
       referencia: pacienteBody.referencia,
-      num_telefono: pacienteBody.num_telefono,
-      num_celular: pacienteBody.num_celular,
-      tipo: "Paciente"
-    })
+      telefono: pacienteBody.telefono,
+      celular: pacienteBody.celular,
+    }).then(res => {
+      console.log("MIRA")
+      console.log(res.data);
+
+    }).catch(console.log)
   }
 
 
@@ -77,7 +81,7 @@ const Modal1 = () => {
     transform: 'translate(-50%, -50%)',
     width: '400 px',
     height: '10%'
-    
+
   }
 
   return (
@@ -88,7 +92,7 @@ const Modal1 = () => {
           <Button color="primary" onClick={abrirModal}>Registro Por Personal</Button>
           <Modal isOpen={abierto} style={modalStyles} >
             <ModalFooter>
-              <HojaAF pacBody={pacienteBody} setPacBody={setPacienteBody}/>
+              <HojaAF pacBody={pacienteBody} setPacBody={setPacienteBody} />
               <Button href="" color="primary" onClick={cerrarModal}>Crear Hoja de Afiliados</Button>
             </ModalFooter>
           </Modal>

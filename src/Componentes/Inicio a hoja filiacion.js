@@ -1,5 +1,5 @@
 import Modal3 from "../Paginas/Personal/modals/ModBorrarHA"
-import Modal4 from "../Paginas/Personal/modals/mor4"
+import Modal4 from "../Paginas/Personal/modals/ModActualizarHA"
 import React from "react";
 const InicioHojaFiliacion = () => {
     return (

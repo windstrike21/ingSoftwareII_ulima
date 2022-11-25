@@ -46,13 +46,7 @@ const Principal = (props) => {
       
       
       <img src={medicos} alt="" width="100%"></img>
-      {/* Personal:<br></br> */}
-      {/* <Link to="nombre del componente inciar sesion del personal">Iniciar Sesion</Link> */}
-      {/* Paciente:<br></br>
-        
-        Medico:<br></br>
-
-        Administrador */}
+      
     </div>
   );
 }

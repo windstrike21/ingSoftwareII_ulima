@@ -12,7 +12,7 @@ const Citas = () => {
     console.log("usuario:")
     console.log(location.state.usuario)
     useEffect(() => {
-        Axios.get(`http://localhost:5000/citas/${location.state.usuario}/${location.state.id_usuario}`)
+        Axios.get(`/citas/${location.state.usuario}/${location.state.id_usuario}`)
             .then(res => {
                 console.log("MIRA")
                 console.log(res.data);

@@ -41,15 +41,15 @@ const comprarMedicamento = () => {
 
                                 <tbody>
                                     {
-                                        location.state.medicamentos.map((medicina) => {
-                                            if (medicina.disponibilidad) {
-                                                precioTotal=precioTotal+medicina.unidades*medicina.precio_unitario
+                                        location.state.medicamentos.map((medicamento) => {
+                                            if (medicamento.disponibilidad) {
+                                                precioTotal=precioTotal+medicamento.cita_medicamento.unidades*medicamento.precio_unitario
                                                 return (
                                                     <tr>
-                                                        <td>{medicina.medicamento}</td>
-                                                        <td>{medicina.unidades}</td>
-                                                        <td>{medicina.precio_unitario}</td>
-                                                        <td>{medicina.unidades*medicina.precio_unitario}</td>
+                                                        <td>{medicamento.cita_medicamento.nombre}</td>
+                                                        <td>{medicamento.cita_medicamento.unidades}</td>
+                                                        <td>{medicamento.precio_unitario}</td>
+                                                        <td>{medicamento.cita_medicamento.unidades*medicamento.precio_unitario}</td>
                                                     </tr>
                                                     
                                                 )

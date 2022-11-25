@@ -32,8 +32,8 @@ const CrearHojaAFiliacionPersonal =(props)=>{
         <div className='col-6'>
           <Label className="">Estado Civil:</Label>
           <Input className="col-6" onChange={handleChange} name="estado_civil" value={props.pacBody.estado_civil}/> 
-          <Label className="">DNI:</Label>
-          <Input className="col-5" onChange={handleChange} name="dni" value={props.pacBody.dni}/>       
+          <Label className="">Numero de documento:</Label>
+          <Input className="col-5" onChange={handleChange} name="num_documento" value={props.pacBody.num_documento}/>       
           <Label className="">Nombre del Padre:</Label>
           <Input className="col-5" onChange={handleChange} name="nombre_padre" value={props.pacBody.nombre_padre}/> 
           <Label className="">Fallecido: </Label>
@@ -62,9 +62,9 @@ const CrearHojaAFiliacionPersonal =(props)=>{
           <Label className="">Sector: </Label>
           <Input className="col-5" onChange={handleChange} name="sector" value={props.pacBody.sector}/>
           <Label className="">N°Teléfono: </Label>
-          <Input className="col-5" onChange={handleChange} name="num_telefono" value={props.pacBody.num_telefono}/>
+          <Input className="col-5" onChange={handleChange} name="telefono" value={props.pacBody.telefono}/>
           <Label className="">N°Celular: </Label>
-          <Input className="col-5" onChange={handleChange} name="num_celular" value={props.pacBody.num_celular}/>
+          <Input className="col-5" onChange={handleChange} name="celular" value={props.pacBody.celular}/>
         </div>
 
         <Label className="col-3">Referencia:</Label>

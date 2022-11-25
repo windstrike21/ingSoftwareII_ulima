@@ -21,7 +21,7 @@ const EditarHistoria = () => {
     }
     
     const modificar = () => {
-        Axios.put(`http://localhost:5000/citas/${location.state.cita_id}`, {
+        Axios.put(`/citas/${location.state.cita_id}`, {
            fecha:datos.fecha,
            especialidad:datos.especialidad,
            doctor:datos.doctor,

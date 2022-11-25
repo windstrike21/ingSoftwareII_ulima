@@ -10,10 +10,10 @@ const Datos_de_cita = (props) => {
 
         } else if (props.usuario == "Medico") {
             setUser("Paciente")
-            Axios.get(`http://localhost:5000/usuariosId/Paciente/${props.id_Paciente}`)
+            Axios.get(`/usuariosId/Paciente/${props.id_Paciente}`)
                 .then(res => {
 
-                    setNombre(res.data[0].nombres)
+                    setNombre(res.data[0].nombre)
                 }).catch(console.log)
         }
 

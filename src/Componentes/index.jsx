@@ -10,7 +10,7 @@ const Index = (props) => {
     const location=useLocation()
     return (
         <div>
-            <Header tochat={props.tochat} id={location.state.id} tipo={location.state.tipo}  usuario={props.usuario}/>
+            <Header tochat={props.tochat} id={location.state.id} tipo={location.state.tipo}  usuario={props.usuario} usuario2={props.usuario2}/>
             <div className="px-4 py-3">
                 
                 <div className="row py-2 bg-light">

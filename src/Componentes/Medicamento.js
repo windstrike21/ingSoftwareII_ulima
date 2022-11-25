@@ -8,7 +8,7 @@ const Medicamento = (props) => {
 
             <div className="row justify-content-center ">
               <div className="col-3">
-                 {props.medicamento}
+                 {props.nombre}
               </div>
               <div className="col-3">
                  {props.frecuencia}

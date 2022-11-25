@@ -7,10 +7,10 @@ const BuscarUsuariosParaVerPerfil = (props) => {
     const location = useLocation();
     const [datosPac, setDatosPac] = useState([])
     const [mostraTodos, setMostrarTodos] = useState(true)
-    
+
     useEffect(() => {
         if (mostraTodos) {
-            Axios.get(`http://localhost:5000/usuarios/${location.state.usuario}`)
+            Axios.get(`/usuarios/${location.state.usuario}`)
                 .then(res => {
 
                     setDatosPac(res.data)
@@ -23,11 +23,24 @@ const BuscarUsuariosParaVerPerfil = (props) => {
         if (event.target.value == "") {
             setMostrarTodos(true)
         } else {
-            Axios.get(`http://localhost:5000/usuariosNombre/${location.state.usuario}/${event.target.value}`)
-                .then(res => {
+            const valor = Number(event.target.value)
+            console.log(valor)
+            if (Number.isNaN(valor)) {
+                
+                Axios.get(`/usuariosNombre/${location.state.usuario}/${event.target.value}`)
+                    .then(res => {
 
-                    setDatosPac(res.data)
-                }).catch(console.log)
+                        setDatosPac(res.data)
+                    }).catch(console.log)
+            } else {
+                
+                Axios.get(`/usuariosId/${location.state.usuario}/${event.target.value}`)
+                    .then(res => {
+
+                        setDatosPac(res.data)
+                    }).catch(console.log)
+            }
+
         }
 
     }
@@ -47,7 +60,7 @@ const BuscarUsuariosParaVerPerfil = (props) => {
                 {datosPac.map((datos) => (
                     <div>
                         <InicioAlPerfilPaciente datos={datos} codigo="002001902" usuario={location.state.usuario} tipo={location.state.tipo} />
-                        
+
                     </div>
 
                 ))}

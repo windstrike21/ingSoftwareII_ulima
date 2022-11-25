@@ -9,10 +9,10 @@ const InicioAlPerfilPaciente = (props) => {
     const [mostrarHA,setMostrarHA]=useState(false)
 
     const IrCitas = async () => {
-        navigate("Citas", { state: { nombre: props.datos.nombres, id_usuario: props.datos.id, usuario: props.usuario, tipo: props.tipo } })
+        navigate("Citas", { state: { nombre: props.datos.nombre, id_usuario: props.datos.id, usuario: props.usuario, tipo: props.tipo } })
     }
     const IrHistorialClinico = async () => {
-        navigate("HistorialClinicoPaciente", { state: { nombre: props.datos.nombres, id_usuario: props.datos.id, usuario: props.usuario, tipo: props.tipo } })
+        navigate("HistorialClinicoPaciente", { state: { nombre: props.datos.nombre, id_usuario: props.datos.id, usuario: props.usuario, tipo: props.tipo } })
     }
     const VerHorarioAtencion = () => {
         setMostrarHA(!mostrarHA)
@@ -27,7 +27,7 @@ const InicioAlPerfilPaciente = (props) => {
                     <center className="container">
                         <div className="row mt-2">
                             <div className="col-5">
-                                <label>Nombre: {props.datos.nombres}</label><br></br>
+                                <label>Nombre: {props.datos.nombre}</label><br></br>
                                 <label className="mt-2">Codigo: {props.codigo}</label>
                             </div>
                             <div className="col-5 mt-2 ">
