@@ -29,7 +29,7 @@ export const ConfirmarPago = () =>{
       </div>
       </div>
 
-      <Modal isOpen={abierto=true} style={modalStyles}>
+      <Modal isOpen={abierto} style={modalStyles}>
         <ModalBody>
           <FormGroup>
           <Label>Resumen de Pago</Label>

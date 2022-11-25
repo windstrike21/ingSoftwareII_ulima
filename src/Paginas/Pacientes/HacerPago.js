@@ -9,12 +9,14 @@ export const MetodoPagoTarjeta = (props) => {
 
     const handleChange = (event) => {
       const { name, value } = event.target
-      props.setTarBody(prevBody => ({
+      props.setTarjetaBody(prevBody => ({
           ...prevBody,
           [name]: value
 
       }))
   }
+
+
 
   const [TarjetaBody, setTarjetaBody] = useState({
     numcard:null,
@@ -25,8 +27,6 @@ export const MetodoPagoTarjeta = (props) => {
     Tipo:"Tarjeta"
   })
 
-
-    
     return(
         <div className='container border mt-3 col-4'>
             <FormGroup>
