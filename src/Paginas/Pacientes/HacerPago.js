@@ -1,9 +1,9 @@
 import React from 'react';
 import { FormGroup, Input, Label } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import Confirmation from './ConfirmarPago'
+import Confirmation from './ConfirmarPago';
 import { useState } from 'react';
-
+import QR from './QRPago.jsx';
 
 export const MetodoPagoTarjeta = (props) => {
 
@@ -44,7 +44,13 @@ export const MetodoPagoTarjeta = (props) => {
             <div className="my-3 d-flex justify-content-center">
                 <Confirmation TarBody={TarjetaBody} setTarjetaBody={setTarjetaBody} />
             </div>
+
+            <div>
+                <QR/>
+            </div>
         </div>
+
+        
     )
 }
 

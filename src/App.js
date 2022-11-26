@@ -24,7 +24,7 @@ import EditarHoja from "./Paginas/Personal/EditarHoja";
 
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
 
-import Pagar from './Paginas/Pacientes/HacerPago'
+import Pagar from './Paginas/Pacientes/HacerPago';
 
 
 
