@@ -91,7 +91,7 @@ const AgregarMedicamento = () => {
                     ))
 
                     }
-                    {/* <InicioAlEditarMedicamentos unidades={5} duracion={'3 meses'} frecuencia={'cada día'} medicamento={'Paracetamol'} />
+                     <InicioAlEditarMedicamentos unidades={5} duracion={'3 meses'} frecuencia={'cada día'} medicamento={'Paracetamol'} />
                     <InicioAlEditarMedicamentos unidades={5} duracion={'3 meses'} frecuencia={'cada día'} medicamento={'Paracetamol'} />
                     <InicioAlEditarMedicamentos unidades={5} duracion={'3 meses'} frecuencia={'cada día'} medicamento={'Paracetamol'} /> */}
 
