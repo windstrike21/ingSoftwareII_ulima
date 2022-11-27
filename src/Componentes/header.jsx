@@ -26,7 +26,7 @@ const Header = (props) => {
                         }
                         {props.tipo != "Administrador" &&
                             <li>
-                                <Link className="nav-link active" aria-current="page" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{ usuario: props.usuario, tipo: props.tipo }}>{`Consultar ${props.usuario}s`}</Link>
+                                <Link className="nav-link active" aria-current="page" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{ usuario: props.usuario, tipo: props.tipo,id:props.id }}>{`Consultar ${props.usuario}s`}</Link>
                             </li>
                         }
                         {props.tipo == "Medico" &&

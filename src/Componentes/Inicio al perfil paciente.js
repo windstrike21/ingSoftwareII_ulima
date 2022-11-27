@@ -40,7 +40,7 @@ const InicioAlPerfilPaciente = (props) => {
                             </div>
                             <div className="col-4 mt-2">
                                 {props.usuario == "Paciente" &&
-                                    <button  onClick={()=>navigate("AgregarMedicamento")}>AgregarMedicamento</button>
+                                    <button  onClick={()=>navigate("AgregarMedicamento",{state:{idPaciente:props.datos.id,id:props.id}})}>AgregarMedicamento</button>
                                 }
                             </div>
 

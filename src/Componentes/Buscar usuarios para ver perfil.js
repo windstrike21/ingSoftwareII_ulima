@@ -59,7 +59,7 @@ const BuscarUsuariosParaVerPerfil = (props) => {
             <div className="container mt-4">
                 {datosPac.map((datos) => (
                     <div>
-                        <InicioAlPerfilPaciente datos={datos} codigo="002001902" usuario={location.state.usuario} tipo={location.state.tipo} />
+                        <InicioAlPerfilPaciente datos={datos} codigo="002001902" usuario={location.state.usuario} tipo={location.state.tipo} id={location.state.id}/>
 
                     </div>
 

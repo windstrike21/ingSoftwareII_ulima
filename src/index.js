@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 import "./App.css";
 import App from "./App";
-
+import Comprobante from "./Paginas/Pacientes/Comprobante";
 
 
 
