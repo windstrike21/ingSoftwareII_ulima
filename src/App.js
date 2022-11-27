@@ -33,7 +33,7 @@ import EditarHistoria from './Componentes/EditarHistoria';
 import HistorialClinico from './Componentes/HistorialClinico';
 import ComprarMedicamento from './Paginas/Pacientes/comprarMedicamento';
 import EditarDatosPaciente from './Paginas/Pacientes/EditarDatosPaciente';
-import AgendarCita from './Paginas/Pacientes/AgendarCita';
+import AgendarCita from './Paginas/Pacientes/AgendarCita.jsx';
 import CitaAgendada from './Paginas/Pacientes/CitaAgendada';
 import AgregarMedicamento from './Paginas/Medico/AgregarMedicamento';
 import Calendario from './Paginas/Medico/Calendario';

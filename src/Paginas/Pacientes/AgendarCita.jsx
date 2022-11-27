@@ -10,7 +10,7 @@ const AgendarCita = () => {
     <Header></Header>
         <div className="row border border-top text-center componente">
             <div className="col-4 border-end border-info ps-4 bg-info bg-opacity-10">
-                <h2 className="my-4">Dr. Johnny Sins</h2>
+                <h2 className="my-4">Dr. Francisco</h2>
                 <h4 className="mb-4">Ginecólogo</h4>
                 <img className="mb-4 img-fluid rounded-circle border-info border" src={doctor} />
                 <h3 className="mb-3">Acerca de</h3>
