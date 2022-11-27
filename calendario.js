@@ -48,7 +48,7 @@ const dateTimeForCalander = () => {
 
     let startDate = event;
     // Delay in end time is 1
-    let endDate = new Date(new Date(startDate).setHours(startDate.getHours()+1));
+    let endDate = new Date(new Date(startDate).setHours(startDate.getHours()+5));
 
     return {
         'start': startDate,
@@ -81,7 +81,7 @@ const insertEvent = async (event) => {
 
     // Event for Google Calendar
  let event = {
-    'summary': `This is the summary.`,
+    'summary': `Horario de trabajo libre.`,
      'description': `This is the description.`,
      'start': {
          'dateTime': dateTime['start'],
@@ -121,17 +121,19 @@ const getEvents = async (dateTimeStart, dateTimeEnd) => {
     }
 };
 
-// let start = '2020-10-03T00:00:00.000Z';
-// let end = '2020-10-04T00:00:00.000Z';
 
-// getEvents(start, end)
-//     .then((res) => {
-//         console.log(res);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     });
+ let start = '2020-10-03T00:00:00.000Z';
+ let end = '2022-10-04T00:00:00.000Z';
 
+ getEvents(start, end)
+     .then((res) => {
+         console.log(res);
+     })
+    .catch((err) => {
+         console.log(err);
+     });
+
+     /*
 // Delete an event from eventID
 const deleteEvent = async (eventId) => {
 
@@ -162,3 +164,6 @@ deleteEvent(eventId)
     .catch((err) => {
         console.log(err);
     });
+
+    
+*/

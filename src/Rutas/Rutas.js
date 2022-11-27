@@ -8,7 +8,7 @@ import EditarDatosPaciente from '../Paginas/Pacientes/EditarDatosPaciente';
 import MenuDesp from '../Components/menuDesp';
 import AgendarCita from '../Paginas/Pacientes/AgendarCita';
 import RecetaMedica from '../Paginas/Pacientes/RecetaMedica';
-import Calendario from '../Components/calendario';
+import Calendario from '../../calendario';
 
 
 const Rutas = () => {
