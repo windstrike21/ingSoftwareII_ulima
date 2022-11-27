@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const AgregarMedicamento2 = () => {
     const [med, setMed]=useState({
-        medicamento: null,
+        nombre: null,
         frecuencia: null,
         duracion: null,
         unidades: null
@@ -21,7 +21,7 @@ const AgregarMedicamento2 = () => {
 
     const agregar = () => {
         Axios.post(`http://localhost:5000/citaMedicamentos`, {
-           medicamento:med.medicamento,
+           nombre:med.nombre,
            frecuencia:med.frecuencia,
            duracion:med.duracion,
            unidades:med.unidades
@@ -37,7 +37,7 @@ const AgregarMedicamento2 = () => {
             
             <div className="form-group">
                 <label className="form-label">Medicamento: </label>
-                <input type="text" placeholder='Agregue un medicamento' className="form-control" name="medicamento" value={med.medicamento} onChange={actualizarDatos}></input>
+                <input type="text" placeholder='Agregue un medicamento' className="form-control" name="medicamento" value={med.nombre} onChange={actualizarDatos}></input>
             </div>
 
             <div className="form-group">
