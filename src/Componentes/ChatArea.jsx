@@ -2,8 +2,13 @@ import { useEffect, useState } from "react";
 import img1 from "../Imagenes/Personal/logo_canal_ayuda_tecnica.ico";
 import "../css/personal/ChatArea.css";
 import React from 'react';
+import Axios from "axios";
 import axios from "axios";
+
+
 const ChatArea = (props) => {
+    
+
     const [mensaje, setMensaje] = useState("");
     const [consultasChat, setConsultasChat] = useState([]);
     const [mensajeEnviado, setMensajeEnviado] = useState(null)
@@ -19,7 +24,7 @@ const ChatArea = (props) => {
           
             
             if (props.idPersonal != undefined ) {
-                axios.post('http://localhost:5000/Consultas/Chat', {
+                axios.post('/Consultas/Chat', {
                     id_usuario: props.id,
                     id_usuario2: props.idPersonal
                 }).then(res => {
@@ -28,7 +33,7 @@ const ChatArea = (props) => {
                 }).catch(console.log)
             }
             else {
-                axios.post('http://localhost:5000/Consultas/Chat', {
+                axios.post('/Consultas/Chat', {
                     id_usuario: props.id,
                     id_usuario2: null
                 }).then(res => {
@@ -86,6 +91,9 @@ const ChatArea = (props) => {
 
         console.log(`mensaje:${mensaje}`)
     }
+    
+
+
     return <div className="row">
         <div className="col mt-1 ps-1 pe-0">
             <div className="overflow-auto componente mb-2 me-4">
@@ -114,7 +122,9 @@ const ChatArea = (props) => {
                                 </p>
                             </td>
                         </tr>
-                        {
+
+                        
+                         {
                             consultasChat.map((consulta) => {
                                 if (consulta.id_usuario === props.id) {
                                     return (
@@ -144,22 +154,22 @@ const ChatArea = (props) => {
                                 }
 
                             })
-                        }
+                        } 
                     </tbody>
                 </table>
             </div>
         </div>
-        <div className="row pe-5">
+        <form className="row pe-5">
             <div className="col-md-11 mb-2 ps-4">
                 <textarea key="txtarea_1" className="form-control" placeholder="Ingrese su consulta aquí" rows={3}
-                    onChange={actualizarMensaje} value={mensaje}></textarea>
+                    onChange={actualizarMensaje} value={mensaje} ></textarea>
             </div>
             <div className="col-md-1 mb-2 text-center">
                 <button type="button" className="p-2 btn btn-secondary opacity-50" onClick={enviarDatos} >ENVIAR</button>
             </div>
-        </div>
-        {mensajeEnviado == false &&
-            <div>Otro administrador le esta realizando consulta</div>}
+        </form>
+        {/* {mensajeEnviado == false &&
+            <div>Otro administrador le esta realizando consulta</div>} */}
     </div>
 }
 export default ChatArea;

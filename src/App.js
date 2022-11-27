@@ -3,6 +3,7 @@ import './App.css';
 
 import React from "react"
 
+
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -35,6 +36,9 @@ import ComprarMedicamento from './Paginas/Pacientes/comprarMedicamento';
 import EditarDatosPaciente from './Paginas/Pacientes/EditarDatosPaciente';
 import AgendarCita from './Paginas/Pacientes/AgendarCita';
 import CitaAgendada from './Paginas/Pacientes/CitaAgendada';
+ 
+
+
 
 function App() {
 
@@ -153,6 +157,7 @@ function App() {
                 <Route index element={<ConsultasPersonal />} />
                 <Route path="CanalSoporte" element={<CanalSoporte />} />
               </Route>
+              <Route path="RegistrarPersonal" element={<SignOut/>}/>
 
             </Route>
           </Route>

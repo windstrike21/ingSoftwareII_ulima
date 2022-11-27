@@ -10,7 +10,7 @@ const InicioAlChatPersonal = (props) => {
                         <label>Nombre: {props.nombre}</label><br></br>
                     </div>
                     <div className="col-5 mt-2 ">
-                        <button onClick={() => navigate("CanalSoporte",{state:{id:props.id,idPersonal:props.idPersonal,tipo:props.tipo}})}>chatArea</button>
+                        <button onClick={() => navigate("CanalSoporte",{state:{id:props.id,idUsuario:props.idUsuario,tipo:props.tipo}})}>chatArea</button>
                     </div>
                 </div>
             </center>

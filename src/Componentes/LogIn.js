@@ -1,25 +1,53 @@
 
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import '../css/LogIn.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 
 const LogIn = (props) => {
-  
+
   const location = useLocation();
   const navigate = useNavigate();
-  const [doc, setCar] = useState("selectDoc");
-  
-  const rutasIniciales=location.pathname.split("/")
-  const indiceFinal=rutasIniciales.length-1
-  const rutarequerida=rutasIniciales[indiceFinal]
-  const usuario=rutarequerida.slice(13)
 
-  const handleOnChange = (event) => {
-    setCar(event.target);
+  const [body, setBody] = useState({
+    num_documento: null,
+    contraseña: null
+  })
+  const [errorUsuario,setErrorUsuario]=useState(false)
+
+  const rutasIniciales = location.pathname.split("/")
+  const indiceFinal = rutasIniciales.length - 1
+  const rutarequerida = rutasIniciales[indiceFinal]
+  const usuario = rutarequerida.slice(13)
+
+  const handleChange = (event) => {
+
+    const { name, value } = event.target
+    setBody(prevBody => ({
+      ...prevBody,
+      [name]: value
+
+    }))
+  }
+  const iniciarSesion=()=>{
+    axios.post("/iniciarSesion",{
+      id:body.num_documento,
+      password:body.contraseña
+    }).then(res => {
+      
+      console.log(res.data);
+      if(res.data != null){
+         navigate("Inicio" + usuario, { state: { id: res.data.id, tipo: usuario } })
+      }else{
+         setErrorUsuario(true)
+      }
+
+    }).catch(console.log)
+    
   }
   console.log(usuario)
-  
+
   return (
 
     <body className='logpaciente'>
@@ -30,7 +58,7 @@ const LogIn = (props) => {
           <form action='#'>
 
             <div class="mb-4">
-              <select className='form-select' value={doc} onChange={handleOnChange}>
+              <select className='form-select'>
                 <option value="selectDoc">Tipo de documento</option>
                 <option value="selectDoc">DNI</option>
                 <option value="selectDoc">CARNET DE EXTRANJERIA</option>
@@ -40,33 +68,36 @@ const LogIn = (props) => {
             </div>
 
             <div class="mb-4">
-              <input type="text" className='form-control' placeholder='Nro de documento' />
+              <input type="number" className='form-control' placeholder='Nro de documento'
+                onChange={handleChange} name='num_documento' value={body.num_documento} />
             </div>
 
             <div class="mb-4">
-              <input type="password" className='form-control' placeholder='Contraseña' />
+              <input type="password" className='form-control' placeholder='Contraseña'
+                onChange={handleChange} name='contraseña' value={body.contraseña} />
             </div>
- 
 
-            <div>
-              <label> Código Captcha </label>
-              <input type="password" className='form-control' placeholder='Código Captcha' />
-              <br></br>
-            </div>
+
+
 
             <div class="d-grid">
-              <botton type="submit" class="btn btn-primary" onClick={() => navigate("Inicio"+usuario,{state:{id:4,tipo:usuario}})}> INICIAR SESIÓN</botton>
+              <botton type="submit" class="btn btn-primary" onClick={iniciarSesion}> INICIAR SESIÓN</botton>
             </div>
-            
-            
+
+
             <div class="my-3">
               <span><Link to="OldPassword">¿Olvidaste tu Contraseña?</Link></span>
             </div>
-            
+
             {location.state.registrar &&
               <div class="d-grid">
-                <botton type="submit" class="btn btn-primary" onClick={()=>navigate(props.toRegistrar)}> Registrate ahora </botton>
+                <botton type="submit" class="btn btn-primary" onClick={() => navigate(props.toRegistrar)}> Registrate ahora </botton>
               </div>
+            }
+            {errorUsuario &&
+               <div className='text-center mt-3'>
+                 No existe usuario ingresado
+               </div>
             }
           </form>
         </div>

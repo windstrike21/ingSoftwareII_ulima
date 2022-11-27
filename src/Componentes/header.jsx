@@ -17,6 +17,13 @@ const Header = (props) => {
                         <li className="nav-item mx-2">
                             <Link className="nav-link active" aria-current="page" to="#">Inicio</Link>
                         </li>
+                        {(props.tipo == "Administrador") &&
+                            <>
+                                <li>
+                                    <Link className="nav-link active" to="RegistrarPersonal" state={{idAdministrador:props.id}}>RegistrarPersonal</Link>
+                                </li>
+                            </>
+                        }
                         {props.tipo != "Administrador" &&
                             <li>
                                 <Link className="nav-link active" aria-current="page" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{ usuario: props.usuario, tipo: props.tipo }}>{`Consultar ${props.usuario}s`}</Link>
@@ -59,7 +66,7 @@ const Header = (props) => {
 
 
                             <li className="nav-item">
-                                <Link className="nav-link" to={props.tochat} state={{ id: props.id, tipo: props.tipo }} >¿Necesitas Ayuda?</Link>
+                                <Link className="nav-link" to={props.tochat} state={{ id: props.id, idUsuario: 5, tipo: props.tipo }} >¿Necesitas Ayuda?</Link>
                             </li>
 
 

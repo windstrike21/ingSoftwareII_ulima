@@ -25,7 +25,7 @@ const ConsultasPersonal = (props) => {
 
             <div className="container mt-4">
                 {usuariosPersonal.map((usuario)=>(
-                    <InicioAlChatPersonal nombre={usuario.nombre} id={3}  idPersonal={usuario.id} tipo="Administrador"/>
+                    <InicioAlChatPersonal nombre={usuario.nombre} id={props.id}  idUsuario={usuario.id} tipo="Administrador"/>
                 ))}
                 
             </div>
