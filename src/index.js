@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 
 import "./App.css";
 import App from "./App";
-import QR from './Paginas/Pacientes/QRPago'
 
 
 
