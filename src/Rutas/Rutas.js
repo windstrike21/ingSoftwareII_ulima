@@ -8,6 +8,7 @@ import EditarDatosPaciente from '../Paginas/Pacientes/EditarDatosPaciente';
 import MenuDesp from '../Components/menuDesp';
 import AgendarCita from '../Paginas/Pacientes/AgendarCita';
 import RecetaMedica from '../Paginas/Pacientes/RecetaMedica';
+import Calendario from '../../calendario';
 
 
 const Rutas = () => {
@@ -15,7 +16,7 @@ const Rutas = () => {
     <BrowserRouter>
       <Routes>
         <Route path = "/" index element ={<MenuDesp/>}/>
-        <Route path = "AgendarCita" index element ={<AgendarCita/>}/>
+        <Route path = "Calendario" index element ={<AgendarCita/>}/>
         <Route path = "EditarDatosPaciente" index element ={<EditarDatosPaciente/>}/>
         <Route path = "RecetaMedica" index element ={<RecetaMedica/>}/>
       </Routes>
