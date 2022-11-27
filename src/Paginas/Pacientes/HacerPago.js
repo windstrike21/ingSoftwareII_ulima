@@ -6,6 +6,7 @@ import { useState } from 'react';
 import img1 from '../../Imagenes/Paciente/Yape.jpg';
 import img2 from '../../Imagenes/Paciente/Plin.jpg';
 import '../../css/App.css'
+import QRCODIGO from '../Pacientes/CodigosQr.JS';
 
 
 export const MetodoPagoTarjeta = (props) => {
@@ -51,19 +52,8 @@ export const MetodoPagoTarjeta = (props) => {
                 <h2 className='mt-2 d-flex justify-content-center'> ¿Desea pagar con aplicativo de banca? </h2>
                 <h2 className='mt-2 d-flex justify-content-center'>¡Aquí están nuestros códigos!  </h2>
 
-            <div className='my-3 d-flex justify-content-center row'>
-
-                <div className="col-2">
-                <Label className='d-flex justify-content-center' for ='Yape'><h2> YAPE</h2> </Label> 
-                    <img src={img1} className="img-fluid img-thumbnail rounded-5" alt='Yape' id='Yape'/>
-                </div>
-
-                <div className="col-2">
-                <Label className='d-flex justify-content-center col' for='Plin'> <h2> Plin</h2></Label>
-                    <img src={img2} className="img-fluid img-thumbnail rounded-5" alt='Plin' id='Plin'/>
-                </div>
-            
-            </div>
+               <QRCODIGO/> 
+       
         </div>
 
         
