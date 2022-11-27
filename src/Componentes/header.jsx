@@ -20,7 +20,7 @@ const Header = (props) => {
                         {(props.tipo == "Administrador") &&
                             <>
                                 <li>
-                                    <Link className="nav-link active" to="RegistrarPersonal" state={{idAdministrador:props.id}}>RegistrarPersonal</Link>
+                                    <Link className="nav-link active" to="RegistrarPersonal" state={{ idAdministrador: props.id }}>RegistrarPersonal</Link>
                                 </li>
                             </>
                         }
@@ -29,7 +29,11 @@ const Header = (props) => {
                                 <Link className="nav-link active" aria-current="page" to={`Buscar_${props.usuario}s_Para_Ver_Perfil`} state={{ usuario: props.usuario, tipo: props.tipo }}>{`Consultar ${props.usuario}s`}</Link>
                             </li>
                         }
-
+                        {props.tipo == "Medico" &&
+                            <li>
+                                <Link className="nav-link active" aria-current="page" to="Calendario">Calendario</Link>
+                            </li>
+                        }
                         {props.tipo == "Personal" &&
                             <>
                                 <li>

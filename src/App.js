@@ -36,6 +36,8 @@ import ComprarMedicamento from './Paginas/Pacientes/comprarMedicamento';
 import EditarDatosPaciente from './Paginas/Pacientes/EditarDatosPaciente';
 import AgendarCita from './Paginas/Pacientes/AgendarCita';
 import CitaAgendada from './Paginas/Pacientes/CitaAgendada';
+import AgregarMedicamento from './Paginas/Medico/AgregarMedicamento';
+import Calendario from './Paginas/Medico/Calendario';
  
 
 
@@ -46,7 +48,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Principal />} />
+          <Route index element={<Principal/>} />
 
           {/* Rutas para personal */}
           <Route path="IniciarSesionPersonal">
@@ -177,7 +179,9 @@ function App() {
 
                   </Route>
                   <Route path="Citas" element={<Citas />} />
+                  <Route path="AgregarMedicamento" element={<AgregarMedicamento/>}/>
                 </Route>
+                <Route path="Calendario" element={<Calendario/>}/>
               </Route>
             </Route>
           </Route>
@@ -196,7 +200,9 @@ function App() {
 
                 </Route>
                 <Route path="Citas" element={<Citas />} />
+                <Route path="AgregarMedicamento" element={<AgregarMedicamento/>}/>
               </Route>
+              <Route path="Calendario" element={<Calendario/>}/>
             </Route>
 
           </Route>
