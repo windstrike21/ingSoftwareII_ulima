@@ -25,8 +25,7 @@ import EditarHoja from "./Paginas/Personal/EditarHoja";
 import ConsultasPersonal from "./Paginas/Administrador/ConsultasPersonal";
 
 import Pagar from './Paginas/Pacientes/HacerPago';
-
-
+import Comprobante from './Paginas/Pacientes/Comprobante';
 
 import RecetaMedica from './Paginas/Pacientes/Receta Medica';
 import EditarHistoria from './Componentes/EditarHistoria';
@@ -136,7 +135,9 @@ function App() {
                 <Route index element={<AgendarCita />} />
                 <Route path="CitaAgendada">
                   <Route index element={<CitaAgendada />} />
-                  <Route path="Pagar" element={<Pagar />} />
+                  <Route path="Pagar" index element={<Pagar />} />
+                  <Route path="Comprobante" element={<Comprobante />} />
+                   
                 </Route>
               </Route>
             </Route>

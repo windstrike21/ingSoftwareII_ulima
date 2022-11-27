@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Modal, ModalBody, ModalFooter, FormGroup, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export const ConfirmarPago = () =>{
 
@@ -21,6 +22,8 @@ export const ConfirmarPago = () =>{
       left: '50%',
       transform: 'translate(-50%, -50%)'
     }
+
+    const navigate = useNavigate();
     return(
       <>
       <div className="principal">
@@ -42,7 +45,7 @@ export const ConfirmarPago = () =>{
         </ModalBody>
 
         <ModalFooter>
-            <Button color="secondary" onClick={cerrarModal}>Confirmar pago</Button>
+        <button type="button" className="mt-3 btn btn-secondary" onClick={()=>navigate('Comprobante')}>Agendar</button>
         </ModalFooter>
       </Modal>
       </>

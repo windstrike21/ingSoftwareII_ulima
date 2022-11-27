@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 import "./App.css";
 import App from "./App";
-
+import Comprobante from "./Paginas/Pacientes/Comprobante";
 
 
 
@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
-    <App/>
+    <Comprobante/>
   </React.StrictMode>
 );
 
