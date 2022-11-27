@@ -3,7 +3,9 @@ import { FormGroup, Input, Label } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Confirmation from './ConfirmarPago';
 import { useState } from 'react';
-import QR from './QRPago.jsx';
+import img1 from '../../Imagenes/Paciente/Yape.jpg';
+import img2 from '../../Imagenes/Paciente/Plin.jpg';
+
 
 export const MetodoPagoTarjeta = (props) => {
 
@@ -45,9 +47,19 @@ export const MetodoPagoTarjeta = (props) => {
                 <Confirmation TarBody={TarjetaBody} setTarjetaBody={setTarjetaBody} />
             </div>
 
-            <div>
-                <QR/>
+            <div classname='col col-md-3'>
+
+                <div className="y-3 d-flex justify-content-center">
+                    <img src={img1} className="img-fluid img-thumbnail rounded-5" alt='Yape'/>
+                </div>
+
+                <div className="y-3 d-flex justify-content-center">
+                    <img src={img2} className="img-fluid img-thumbnail rounded-5" alt='Plin'/>
+                </div>
+            
             </div>
+           
+
         </div>
 
         
